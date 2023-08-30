@@ -12,7 +12,7 @@ this is a study plan
 Trauma, a physical injury of external origin together with the body's associated response constitutes 9% of global deaths each year. [@world2014injuries]
 Trauma care is a multidisciplinary, complex, and time-critical provision of healthcare and is therefore prone to errors that could have detrimental 
 consequences. In order to minimize furthermore foresee such errors, Quality improvement (IQ) programs have been established by the World Health Organisation (WHO) and the International Association for Trauma Surgery and Intensive Care (IATSIC). A technique that IQ programs avail is filtering certain factors that deviate from standard care, such factors are labeled as Audit filters (also known as quality indicators).
-Audit filters are factors that deviate from standard care and are used to filter out certain problems. An audit filter could be death, GCS score, etc. [@world2009guidelines]
+Audit filters are factors that deviate from standard care and are used to filter out certain problems. An audit filter could be death, the placement of 2 large bore intravenous lines within 15 mins from arrival to a healthcare facility, etc. [@world2009guidelines]
 What is known/not known?
 [@Evans09] sought to determine if audit filters could be used in improving processes of trauma care. None of the studies met the inclusion criteria. This means that there is still 
 a gap. 
