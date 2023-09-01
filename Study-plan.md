@@ -23,6 +23,7 @@ About these programs?
 A technique that IQ programs avail is filtering certain factors that deviate from standard care, such factors are labeled as audit filters (also known as quality indicators).
 Audit filters are factors that deviate from standard care and are used to filter out certain problems. An audit filter could be death, the placement of 2 large bore intravenous lines within 15 minutes from arrival to a healthcare facility, etc. [@world2009guidelines]
 What is known/not known?
+
 [@Pedro2007Preventable] Analysed the deaths of all trauma patients during a period of 8 years (January 1998 to December 2005) at two mature Trauma Level I centers, The Los Angeles County (LAC) and The University of Southern California (USC). Weekly Morbidity & Mortality (M&M) conferences followed by multidisciplinary conferences where then held in order to examine the cause of death followed by categorising them into preventable, potentially preventable and non-preventable. They found that 2,5% of deaths where classified as either preventable (0,53%) or potentially preventable (1,92%).
 
 [@chadbunchachai2001comparative] made use of 32 audit filters in order to evaluate their effectiveness in reducing mortality and preventable deaths. The use of audit filters showed decreases in mortality (2.6% vs. 2.4%) and preventable death (3.0% vs. 2.0%).
