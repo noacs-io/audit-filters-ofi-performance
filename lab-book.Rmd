@@ -6,3 +6,18 @@ and write about what you have tried and why, a place to write "dirty"
 code so that the rest of your project can be kept clean. See this
 mostly as a reference for your future self and use it in a way that
 makes sense to you.
+
+flow chart konferanschart (ML papper preprint)
+skrive en kort rapport en rad med övergripande vad som gått fel.
+inga barn med i datan (under 15)
+sensitivitet och specificitet för audit filters
+prata lite om OFI. Vilka OFI finns (kommunikation, handläggning)
+KI har traumaregister (kopplat till swetrau men har olika definition av trauma) KI har ISS 9
+kvalitetsregister det konferansera sammanställer (audit filters och sånt faller där)
+martin har byggt nice paket där man kan skapa OFI.
+OFI finns i kvalitetsregister från M&M konferanser.
+
+Kommer in i trauma rum (alla som är med i trauma teamet är där). Alla som är ,ed har en sökare. kommer till trauma rummet.
+CT, slätröntgen i taket och massa annat. Hur ser traumat ut. Går direkt till lap rum exempelvis. 
+
+Bra exempelfall finns i 2014 guidlines WHO (kan vara bra att ha inför presentationen.
