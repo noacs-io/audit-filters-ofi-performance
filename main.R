@@ -18,9 +18,11 @@
 ## them). They all need to be sourced however when you compile your
 ## manuscript file or run this file as a job, as that happens in a
 ## clean R session.
+library(rofi)
 noacsr::source_all_functions()
-
+prepared.data <- prepare_data(data)
 ## Import data
-data <- import_data(test = TRUE)
+
 
 ## Whatever you do next, maybe clean data?
+
