@@ -26,10 +26,54 @@ A similar study [@Ghorbani2018Analysis] at Karolinska University Hospital, also 
 
 [@Evans09] sought to determine if audit filters could be used in improving processes of trauma care. They reviewed that None of the studies that met the inclusion criteria. This means that there is still a gap. 
 
-It seems as if certain audit filters do not associate with OFIs.[@lewis2017delay]
-Trauma is a great burden globally and costs a lot for society 
+It seems as if certain audit filters do not associate with OFIs. [@lewis2017delay]
+Trauma is a great burden globally and costs a lot for society, which is why OFIs are of such importance in trauma care development. And while audit filters are good indicators of standard care, it is crucial that it
 
-There have been promising studies showing a reduction in preventable deaths after the use of audit filters in the clinical practice. However it is still not known how good audit filters are as a tool to identify OFIs 
+There have been promising studies showing a reduction in preventable deaths after the use of audit filters in the clinical practice. However, it is still not known how good audit filters are as a tool for identifying OFIs 
 
 Methods
 =======
+
+Study design 4 Present key elements of study design early in the paper
+This is a registry-based cohort study using data from the trauma registry and trauma care quality database at the Karolinska University Hospital in Solna. The trauma registry includes about 12000 patients treated between 2012 and 2022. The trauma care quality database is a subset of the trauma registry and includes about 6000 patients selected for review between 2014 and 2022. The outcome is opportunities for improvement, as identified by the multidisciplinary review board and recorded in the trauma care quality database. Data on the audit filters are available in the trauma registry. This project will link the two databases and assess the performance of each audit filter in terms of discrimination and accuracy. A 5% significance level and 95% confidence level will be used.
+
+Study setting and population
+=======
+Setting 5 Describe the setting, locations, and relevant dates, including periods of recruitment,
+
+Karolinska University Hospital is classified as a Trauma level I hospital. Every year around 1500 patients receive treatment at the hospital. If a patient case results in team activation it is added to the Karolinska trauma registry. If no team activation occurred but the patient had ISS>9 retrospectively it is also included in the registry. The Karolinska trauma registry is a subset of the national registry, the Swedish Trauma registry (SweTrau).    
+
+Karolinska trauma registry also contains a care quality database which contains specific audit filters and OFIs that are determined in M&M conferences
+
+M&M conferences are attended by all professionals involved in trauma care. surgeons, neurosurgeons, orthopedics, anesthesiologists, nurses, and radiologists. 
+exposure, follow-up, and data collection
+(a) Give the eligibility criteria and the sources and methods of selection of
+participants. Describe methods of follow-up
+
+eligibility criteria
+======
+In this study, we included all. who underwent screening for OFIs derived from both the trauma registry and the trauma care quality database during the period spanning from 2014 to 2021. Exclusion criteria were applied to individuals under the age of 15, as their clinical management process has notable distinctions compared to those applicable to the adult population.
+
+Variables 7 Clearly define all outcomes, exposures, predictors, potential confounders, and effect
+modifiers. Give diagnostic criteria, if applicable
+Participants 6
+(b) For matched studies, give matching criteria and the number of exposed and
+unexposed
+
+Data sources/measurement 8* For each variable of interest, give sources of data and details of methods of
+assessment (measurement). Describe comparability of assessment methods if there is
+more than one group
+
+Bias 9 Describe any efforts to address potential sources of bias
+
+Study size 10 Explain how the study size was arrived at
+Quantitative variables 
+
+11 Explain how quantitative variables were handled in the analyses. If applicable,
+describe which groupings were chosen and why
+(a) Describe all statistical methods, including those used to control for confounding
+(b) Describe any methods used to examine subgroups and interactions
+(c) Explain how missing data were addressed
+(d) If applicable, explain how loss to follow-up was addressed
+Statistical methods 12
+(e) Describe any sensitivity analyses 
