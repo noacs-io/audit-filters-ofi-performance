@@ -9,11 +9,11 @@ csl: bmcemerg.csl
 Introduction
 ============
 This is a study plan.
-Trauma, a physical injury of external origin together with the body's associated response constitutes 9% of global deaths each year. [@world2014injuries]
+Trauma, a physical injury of external origin together with the body's associated response constitutes 9% of global deaths each year. [@world2014injuries] It is the leading cause of death for individuals between the ages 10 to 49.[@vos2020global]
 
 Trauma care is a multidisciplinary, complex, and time-critical provision of healthcare and is therefore prone to errors [@Ghorbani2018Analysis] that could have detrimental consequences. Trauma care often consists of anesthesiologists, different surgical specialties, Emergency physicians, and nurses. 
 
-In order to minimize furthermore foresee such errors, Quality improvement (QI) programs have been established by the World Health Organisation (WHO) and the International Association for Trauma Surgery and Intensive Care (IATSIC). These programs have become a core part of the trauma process and its development all around the world.  
+In order to minimize furthermore foresee such errors, Quality improvement (QI) programs have been established by the World Health Organisation (WHO) and the International Association for Trauma Surgery and Intensive Care (IATSIC). These programs have become a core part of the trauma process and its development all around the world. They have shown great results in reducing mortality. [@O'Reilly2013Opportunities] showed that implementation of quality improvement systems was associated with a reduction in mortality.  
 
 QI programs consist of a set of recommended techniques that seek to enable discussion and analysis of the trauma process in order to take corrective measures for future success. Without conversing, little change ought to happen, which is why morbidity and mortality conferences (M&M), also known as "death and complications conferences", are a central part of QI techniques. They involve a conversation between individuals from different disciplines involved in the trauma care process about reported deaths and complications in selected patient cases. During the conferences, a preventable death panel determines whether the death of a patient or a complication could have been preventable. When effectively implemented M&M, serves as a crucial fault-examining tool. They can transform such faults from being solely negative marks against individual care providers into incentives for reporting. These conferences promote a broader, system-based approach that emphasizes the analysis of tasks, teamwork, and quality improvement.[@Lazzara2019morbidity]
 
@@ -54,17 +54,25 @@ eligibility criteria
 ======
 In this study, we included all. who underwent screening for OFIs derived from both the trauma registry and the trauma care quality database during the period spanning from 2014 to 2021. Exclusion criteria were applied to individuals under the age of 15, as their clinical management process has notable distinctions compared to those applicable to the adult population.
 
-Variables 7 Clearly define all outcomes, exposures, predictors, potential confounders, and effect
+Variables
+======
+Clearly define all outcomes, exposures, predictors, potential confounders, and effect
 modifiers. Give diagnostic criteria, if applicable
-Participants 6
+
+Participants
+======
 (b) For matched studies, give matching criteria and the number of exposed and
 unexposed
 
-Data sources/measurement 8* For each variable of interest, give sources of data and details of methods of
+Data sources/measurement
+======
+For each variable of interest, give sources of data and details of methods of
 assessment (measurement). Describe comparability of assessment methods if there is
 more than one group
 
-Bias 9 Describe any efforts to address potential sources of bias
+Bias 
+=====
+Describe any efforts to address potential sources of bias
 
 Study size 10 Explain how the study size was arrived at
 Quantitative variables 
