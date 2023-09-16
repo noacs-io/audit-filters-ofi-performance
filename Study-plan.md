@@ -9,8 +9,15 @@ csl: bmcemerg.csl
 Introduction
 ============
 This is a study plan.
-Trauma, a physical injury of external origin together with the body's associated response constitutes 9% of global deaths each year. [@world2014injuries] It is the leading cause of death for individuals between the ages 10 to 49.[@vos2020global]. Trauma Is categorized broadly into three groups: Penetrating, blunt and deceleration trauma.  
+Trauma, a physical injury of external origin together with the body's associated response constitutes 9% of global deaths each year. [@world2014injuries] It is the leading cause of death for individuals between the ages 10 to 49.[@vos2020global]. Trauma Is categorized broadly into two groups by mechanism: Penetrating and blunt trauma. Bullet wounds and knife cuts are common examples of penetrating trauma. Blunt trauma is attributed to injuries like road injuries and falls which are not sharp in nature. In Sweden, road traffic incidence and falls are at the top of the list of mechanisms of injury accounting for around 80% of injuries.[@SweTrau2022Årsrapport]
+When categorizing trauma with the intention to treat we use severity as measurement. However, since injuries can vary in so many ways and are categorized in so many ways it is important to categorise trauma with the intention to treat it. For this reason,since 1975, it is common practice to use the severity of the injury as a means to triage patient cases thus approaching the problem in a more effective way by improving ability to evaluate care of the injured.[@baker1974injury] 
+Severity
+Prevention
+Trauma centers
+Impact 
+Injuries are not only a burden to the afflicted individual but also in greater extent to society as a whole. There have been attempts to estimate the global cost of injury. It is however estimated that road injuries alone account for 2% of gross domestic product (GDP) in high income countries.[@world2014injuries]   
 
+(economical, emotional societal)
 Trauma care is a multidisciplinary, complex, and time-critical provision of healthcare and is therefore prone to errors [@Ghorbani2018Analysis] that could have detrimental consequences. Trauma care often consists of anesthesiologists, different surgical specialties, Emergency physicians, and nurses. 
 
 In order to minimize furthermore foresee such errors, Quality improvement (QI) programs have been established by the World Health Organisation (WHO) and the International Association for Trauma Surgery and Intensive Care (IATSIC). These programs have become a core part of the trauma process and its development all around the world. They have shown great results in reducing mortality. [@O'Reilly2013Opportunities] showed that implementation of quality improvement systems was associated with a reduction in mortality.  
