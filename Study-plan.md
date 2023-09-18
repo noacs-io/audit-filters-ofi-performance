@@ -10,15 +10,14 @@ Introduction
 ============
 This is a study plan.
 Trauma, a physical injury of external origin together with the body's associated response constitutes 9% of global deaths each year. [@world2014injuries] It is the leading cause of death for individuals between the ages 10 to 49.[@vos2020global]. Trauma Is categorized broadly into two groups by mechanism: Penetrating and blunt trauma. Bullet wounds and knife cuts are common examples of penetrating trauma. Blunt trauma is attributed to injuries like road injuries and falls which are not sharp in nature. In Sweden, road traffic incidence and falls are at the top of the list of mechanisms of injury accounting for around 80% of injuries.[@SweTrau2022Årsrapport]
-When categorizing trauma with the intention to treat we use severity as measurement. However, since injuries can vary in so many ways and are categorized in so many ways it is important to categorise trauma with the intention to treat it. For this reason,since 1975, it is common practice to use the severity of the injury as a means to triage patient cases thus approaching the problem in a more effective way by improving ability to evaluate care of the injured.[@baker1974injury] 
+When categorizing trauma with the intention to treat we use severity as measurement. However, since injuries can vary in so many ways and are categorized in so many ways it is important to categorise trauma with the intention to treat it. For this reason,since 1975, it is common practice to use the severity of the injury as a means to triage patient cases thus approaching the problem in a more effective way by improving the ability to evaluate care of the injured.[@baker1974injury] 
 Severity
 Prevention
 Trauma centers
-Impact 
-Injuries are not only a burden to the afflicted individual but also in greater extent to society as a whole. There have been attempts to estimate the global cost of injury. It is however estimated that road injuries alone account for 2% of gross domestic product (GDP) in high income countries.[@world2014injuries]   
+Injuries are not only a burden to the afflicted individual but also to greater extent to society as a whole. There have been attempts to estimate the global cost of injury. It is however estimated that road injuries alone account for 2% of gross domestic product (GDP) in high income countries.[@world2014injuries]   
 
 (economical, emotional societal)
-Trauma care is a multidisciplinary, complex, and time-critical provision of healthcare and is therefore prone to errors [@Ghorbani2018Analysis] that could have detrimental consequences. Trauma care often consists of anesthesiologists, different surgical specialties, Emergency physicians, and nurses. 
+Trauma care is a multidisciplinary, complex, and time-critical provision of healthcare and is therefore prone to errors [@Ghorbani2018Analysis] that could have detrimental consequences. Trauma care consists of a myriad of different specialties anesthesiologists, different surgical specialties, Emergency physicians, and nurses. 
 
 In order to minimize furthermore foresee such errors, Quality improvement (QI) programs have been established by the World Health Organisation (WHO) and the International Association for Trauma Surgery and Intensive Care (IATSIC). These programs have become a core part of the trauma process and its development all around the world. They have shown great results in reducing mortality. [@O'Reilly2013Opportunities] showed that implementation of quality improvement systems was associated with a reduction in mortality.  
 
@@ -40,7 +39,7 @@ A similar study [@Ghorbani2018Analysis] at Karolinska University Hospital, also 
 It seems as if certain audit filters do not associate with OFIs. [@lewis2017delay]
 Trauma is a great burden globally and costs a lot for society, which is why OFIs are of such importance in trauma care development. And while audit filters are good indicators of standard care, it is crucial that it
 
-There have been promising studies showing a reduction in preventable deaths after the use of audit filters in the clinical practice. However, it is still not known how good audit filters are as a tool for identifying OFIs 
+There have been promising studies showing a reduction in preventable deaths after the use of audit filters in the clinical practice. However, it is still not known how good audit filters are as a tool for predicting OFIs 
 
 Methods
 =======
@@ -52,11 +51,15 @@ Study setting and population
 =======
 Setting 5 Describe the setting, locations, and relevant dates, including periods of recruitment,
 
-Karolinska University Hospital is classified as a Trauma level I hospital. Every year around 1500 patients receive treatment at the hospital. If a patient case results in team activation it is added to the Karolinska trauma registry. If no team activation occurred but the patient had ISS>9 retrospectively it is also included in the registry. The Karolinska trauma registry is a subset of the national registry, the Swedish Trauma registry (SweTrau).    
+Karolinska University Hospital is classified as a Trauma level I hospital. Every year around 1500 patients receive treatment at the hospital. If a patient case results in team activation it is added to the Karolinska trauma registry. If no team activation occurred but the patient had ISS>9 retrospectively it is also included in the registry. The Karolinska trauma registry is a subset of the national registry, the Swedish Trauma registry (SweTrau). The registry includes data on vital signs, times, injuries, and interventions as well as patient demographics according to the European consensus statement, the Utstein template   
 
-Karolinska trauma registry also contains a care quality database which contains specific audit filters and OFIs that are determined in M&M conferences
+Karolinska trauma registry also contains a care quality database which contains specific audit filters and OFIs that are determined in M&M conferences through consensus decision. M&M conferences are attended by all professionals involved in trauma care. surgeons, neurosurgeons, orthopedics, anesthesiologists, nurses, and radiologists.
 
-M&M conferences are attended by all professionals involved in trauma care. surgeons, neurosurgeons, orthopedics, anesthesiologists, nurses, and radiologists. 
+This process of determining OFIs unfolds in multiple stages, characterized by escalating levels of scrutiny. Notably, instances of mortality are directly referred to the multidisciplinary conference, where, in addition to assessing OFIs, a determination is made regarding whether the fatality was preventable or potentially preventable, a classification also falling under the purview of OFIs.
+
+From 2014 to 2017 there was an effort put forward in identifying adverse outcomes which where unrelated to mortality, the review process underwent subsequent refinement and formalization during the study period. During this period each trauma patient case underwent individual assessments by a specialized trauma nurse in order to identify potential OFIs. It was, however not until 2017 in which this procedure was formalized and it became standardized to incorporat a prelimanary individual evaluation by a specialized trauma nurse upon data registration in the trauma registry and the trauma quality database.
+The trauma quality data underwent screening via audit filters, and all cases falling outside the criteria delineated by these filters, along with those trauma patients flagged by the nurse during the initial review for possible care failures, were subjected to a secondary review by two specialized nurses. Subsequent identification of a potential OFI during this second review prompted a comprehensive evaluation of the respective trauma patient's case.
+
 exposure, follow-up, and data collection
 (a) Give the eligibility criteria and the sources and methods of selection of
 participants. Describe methods of follow-up
@@ -69,6 +72,13 @@ Variables
 ======
 Clearly define all outcomes, exposures, predictors, potential confounders, and effect
 modifiers. Give diagnostic criteria, if applicable
+Outcome
+=====
+The outcome variable in this study is an OFI, as established by the M&M conference through unanimous decision and furthermore valued as a binary variable with "Yes - At least one OFI identified" and "No - No OFI identified". 
+
+Exposures
+=====
+The exposure variable is the audit filters.
 
 Participants
 ======
