@@ -38,6 +38,8 @@ The M&M conferences are regularly scheduled meetings in which specific patient c
 
 Another technique that IQ programs avail is audit filters (also known as quality indicators). Audit filters are certain established criteria involved in trauma processes and care. It is used to detect deviation from standardized care in order to further analyze the cause behind complications in Trauma patients. Examples of audit filters are death, the placement of 2 large bore intravenous lines within 15 minutes from arrival to a healthcare facility, etc. [@world2009guidelines]
 
+### Opportunities for improvement ###
+
 ## Knowledge Gap ##
 
 [@Pedro2007Preventable] Analysed the deaths of all trauma patients during a period of 8 years (January 1998 to December 2005) at two mature Trauma Level I centers, The Los Angeles County (LAC) and The University of Southern California (USC). Weekly Morbidity and mortality (M&M) conferences followed by multidisciplinary conferences were then held in order to examine the cause of death by categorizing them into preventable, potentially preventable, and non-preventable. They found that 2,5% of deaths were classified as either preventable (0,53%) or potentially preventable (1,92%).
