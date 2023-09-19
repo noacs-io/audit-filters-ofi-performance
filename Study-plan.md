@@ -10,7 +10,7 @@ csl: bmcemerg.csl
 
 ## Definition ##
 
-Trauma, a physical injury of external origin together with the body's associated response constitutes 9% of global deaths each year. [@world2014injuries] It is the leading cause of death for individuals between the ages 10 to 49.[@vos2020global]. Trauma Is categorized broadly into two groups by mechanism: Penetrating and blunt trauma. Bullet wounds and knife cuts are common examples of penetrating trauma. Blunt trauma is attributed to injuries like road injuries and falls which are not sharp in nature. Generally speaking, blunt trauma is caused by high-force impact over a larger surface area compared to penetrating trauma where that force is applied to a smaller surface area causing greater pressure thus piercing in character often resulting in deeper lacerations to tissues and organs. In Sweden, road traffic incidence and falls are at the top of the list of mechanisms of injury accounting for around 80% of injuries.[@SweTrau2022Årsrapport]
+Trauma, a physical injury of external origin together with the body's associated response constitutes 9% of global deaths each year. [@world2014injuries] It is the leading cause of death for individuals between the ages 10 to 49[@vos2020global]. Trauma Is categorized broadly into two groups by underlying mechanism: Penetrating and blunt trauma. Bullet wounds and knife cuts are common examples of penetrating trauma. Blunt trauma is attributed to injuries like road injuries and falls which are not sharp in nature. Generally speaking, blunt trauma is caused by high-force impact over a larger surface area compared to penetrating trauma where that force is applied to a smaller surface area causing greater pressure thus acting in a piercing manner often resulting in deeper lacerations to tissues and organs. Blunt trauma with enough force can however be penetrating in character[@hexdall2011Mechanism]. In Sweden, road traffic incidence and falls are at the top of the list of mechanisms of injury accounting for around 80% of injuries[@SweTrau2022Årsrapport].
 
 ## Severity of Injury ##
 
@@ -26,9 +26,11 @@ In order to effectively treat trauma patients in regards to its specific nature 
 
 ## Quality improvement ##
 
-In order to minimize furthermore foresee such errors, Quality improvement (QI) programs have been established by the World Health Organisation (WHO) and the International Association for Trauma Surgery and Intensive Care (IATSIC). These programs have become a core part of the trauma process and its development all around the world. They have shown great results in reducing mortality. [@O'Reilly2013Opportunities] showed that implementation of quality improvement systems was associated with a reduction in mortality.  
+In order to minimize furthermore foresee such errors, Quality improvement (QI) programs have been established by the World Health Organisation (WHO) and the International Association for Trauma Surgery and Intensive Care (IATSIC). These programs have become a core part of the trauma process and its development all around the world.  
 
 QI programs consist of a set of recommended techniques that seek to enable discussion and analysis of the trauma process in order to take corrective measures for future success. Without conversing, little change ought to happen, which is why morbidity and mortality conferences (M&M), also known as "death and complications conferences", are a central part of QI techniques. It is however a method which has been around in the healthcare community since 1904, the year that  Dr. Ernest Amory Codman brought forward the importance of physician accountability in healthcare settings. Since then M&M has made itself deeply rooted in universal healthcare and developed into an established framework of crucial components of anonymity, a focus on specific adverse events, realising flawed approaches, critical analysis and lastly the effort to change and practice that change. [@Alexander2016Morbidity]
+
+They have shown great results in reducing mortality. [@O'Reilly2013Opportunities] 
 
 ### Morbidity and mortality conferences ###
 
@@ -36,7 +38,7 @@ The M&M conferences are regularly scheduled meetings in which specific patient c
 
 ### Audit filters ###
 
-Another technique that IQ programs avail is audit filters (also known as quality indicators). Audit filters are certain established criteria involved in trauma processes and care. It is used to detect deviation from standardized care in order to further analyze the cause behind complications in Trauma patients. Examples of audit filters are death, the placement of 2 large bore intravenous lines within 15 minutes from arrival to a healthcare facility, etc. [@world2009guidelines]
+Another technique that IQ programs offer is the use of audit filters (also known as quality indicators). Audit filters are specific established criteria involved in trauma processes and care. It is used to detect deviation from standardized care in order to further analyze the cause behind complications in Trauma patients. Examples of audit filters are death, the placement of 2 large bore intravenous lines within 15 minutes from arrival to a healthcare facility, etc. [@world2009guidelines]
 
 ### Opportunities for improvement ###
 
