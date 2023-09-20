@@ -18,7 +18,7 @@ When categorizing trauma with the intention to treat we use severity as measurem
 
 ## Impact ##
 
-Injuries are not only a burden to the afflicted individual but also to a greater extent to society as a whole. There have been attempts to estimate the global cost of injury. It is however estimated that road injuries alone account for 2% of gross domestic product (GDP) in high-income countries.[@world2014injuries]  
+Injuries are not only a burden to the afflicted individual but also to a greater extent to society as a whole. There have been attempts to estimate the global cost of injury. It is however estimated that road injuries alone account for 2% of gross domestic product (GDP) in high-income countries[@world2014injuries].
 
 ## Trauma care ##
 
