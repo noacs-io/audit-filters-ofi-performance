@@ -37,21 +37,20 @@ measurement. However, since injuries can vary in so many ways and are
 categorized in so many ways it is important to categorise trauma with
 the intention to treat it. For this reason,since 1975, it is common
 practice to use the severity of the injury as a means to triage patient
-cases thus approaching the problem in a more effective way by improving
-the ability to evaluate care of the injured.[@baker1974injury]
+cases thus approaching the problem in a more effective way.[@baker1974injury]
 
 ## Impact
 
 Injuries are not only a burden to the afflicted individual but also to a
-greater extent to society as a whole. There have been attempts to
-estimate the global cost of injury. It is however estimated that road
+greater extent to society as a whole. One aspect of such societal effects are economic costs. There have been attempts to
+estimate the global cost of injury but due to its complexity it is not an easy task. It is however estimated that road
 injuries alone account for 2% of gross domestic product (GDP) in
 high-income countries[@world2014injuries].
 
 ## Trauma care
 
 In order to effectively treat trauma patients in regards to its specific
-nature and characteristics a special subdivision of healthcare, trauma
+nature and complexity a special subdivision of healthcare, trauma
 care, is used. Trauma care is a multidisciplinary, complex, and
 time-critical provision of healthcare. It uses a myriad of different
 specialties including but not limited to surgeons, anesthesiologists,
@@ -69,9 +68,14 @@ the trauma process and its development all around the world [@world2009guideline
 
 QI programs consist of a set of recommended techniques that seek to
 enable discussion and analysis of the trauma process in order to take
-corrective measures for future success. Without conversing, little
-change ought to happen, which is why morbidity and mortality conferences
-(M&M), also known as "death and complications conferences", are a
+corrective measures for future success. 
+
+They have shown great results in reducing mortality with the implementation of quality improvement programs.
+[@OReilly2013Opportunities]
+
+### Morbidity and mortality conferences
+
+Morbidity and mortality conferences (M&M), also known as "death and complications conferences", are a
 central part of QI techniques. It is however a method which has been
 around in the healthcare community since 1904, the year that Dr. Ernest
 Amory Codman brought forward the importance of physician accountability
@@ -80,12 +84,6 @@ universal healthcare and developed into an established framework of
 crucial components of anonymity, a focus on specific adverse events,
 realising flawed approaches, critical analysis and lastly the effort to
 change and practice that change. [@Alexander2016Morbidity]
-In order to label complex 
-
-They have shown great results in reducing mortality with the implementation of quality improvement programs.
-[@OReilly2013Opportunities]
-
-### Morbidity and mortality conferences
 
 The M&M conferences are regularly scheduled meetings in which specific
 patient cases are brought up and discussed between healthcare
@@ -110,68 +108,34 @@ to detect deviation from standardized care in order to further analyze
 the cause behind complications in Trauma patients. Examples of audit
 filters are death, the placement of 2 large bore intravenous lines
 within 15 minutes from arrival to a healthcare facility, etc.
-[@world2009guidelines]
-The use of audit filters have however been associated with high frequencies of false positives, ranging from 24% to 80%.[@sanddal2011analysis], [@roy2017learning], [@Ghorbani2018Analysis]
+[@world2009guidelines]. Audit filters have shown to be effective in reducing mortality after its implementation in some hospitals [@chadbunchachai2001comparative]. In 2009 there was an extensive review made that sought to determine if audit filters could be used in improving processes of trauma care however none of the studies met established inclusion criteria.[@evans2009audit]
+The use of audit filters have also been associated with high frequencies of false positives, ranging from 24% to 80%.[@sanddal2011analysis], [@roy2017learning], [@Ghorbani2018Analysis]. Some audit filters seem to not correlate with OFIs at all [@lewis2017delay]
 
 ### Opportunities for improvement
 
-Opportunities for improvement (OFI) is the endpoint and aim of M&M conferences. Following the review of individual patient cases there is a consensus decision of the existence of an OFI. It has been shown that such review process is associated with high-wualty trauma care. [@santana2014development]
-failures in initial care [@vioque2014classifying], specifically in airway management, fluid resucitation, hemorrhage controll and chest injury manegement [@sanddal2011analysis], [@roy2017learning], [@OReilly2013Opportunities].
+Opportunities for improvement (OFI) is the endpoint and aim of M&M conferences. Following the review of individual patient cases there is a consensus decision made regarding the existence of an OFI. It has been shown that such review process is associated with high-qualty trauma care. [@santana2014development]
+OFIs have shown failures in initial care [@vioque2014classifying], specifically in airway management, fluid resucitation, hemorrhage control and chest injury management [@sanddal2011analysis], [@roy2017learning], [@OReilly2013Opportunities]. 
 
 ## Knowledge Gap
 
-[@Pedro2007Preventable] Analysed the deaths of all trauma patients
-during a period of 8 years (January 1998 to December 2005) at two mature
-Trauma Level I centers, The Los Angeles County (LAC) and The University
-of Southern California (USC). Weekly Morbidity and mortality (M&M)
-conferences followed by multidisciplinary conferences were then held in
-order to examine the cause of death by categorizing them into
-preventable, potentially preventable, and non-preventable. They found
-that 2,5% of deaths were classified as either preventable (0,53%) or
-potentially preventable (1,92%). A similar study [@Ghorbani2018Analysis]
-at Karolinska University Hospital, also a trauma level-I center was made
-where a Multidisciplinary peer review committee (MPRC) reviewed the
-deaths of trauma patients within 30 days of admission during a period of
-4 years (April 2012 to March 2016). They came to the conclusion that
-(0.4%) of deaths were classified as preventable and (3.6%) were
-classified as potentially preventable.
 
-[@chadbunchachai2001comparative] made use of 32 audit filters in order
-to evaluate their effectiveness in reducing mortality and preventable
-deaths. The use of audit filters showed decreases in mortality (2.6% vs.
-2.4%) and preventable death (3.0% vs. 2.0%).
 
-[@Evans09] sought to determine if audit filters could be used in
-improving processes of trauma care. They reviewed that None of the
-studies that met the inclusion criteria. This means that there is still
-a gap.
 
-It seems as if certain audit filters do not associate with OFIs.
-[@lewis2017delay]
+
 
 ## Aim
 
 Trauma is a great burden globally and contribute to large economical
 costs for society, which is why OFIs are of such importance in trauma
 care development. While audit filters are good indicators of standard
-care, it is crucial to determine wheter audit filters are of high value
+care, it is crucial to determine whether audit filters are of high value
 as a tool for predicting OFIs.
 
 # Methods
 
-Study design 4 Present key elements of study design early in the paper
-This is a registry-based cohort study using data from the trauma
+This is a registry-based cohort study that uses data from the trauma
 registry and trauma care quality database at the Karolinska University
-Hospital in Solna. The trauma registry includes about 12000 patients
-treated between 2012 and 2022. The trauma care quality database is a
-subset of the trauma registry and includes about 6000 patients selected
-for review between 2014 and 2022. The outcome is opportunities for
-improvement, as identified by the multidisciplinary review board and
-recorded in the trauma care quality database. Data on the audit filters
-are available in the trauma registry. This project will link the two
-databases and assess the performance of each audit filter in terms of
-discrimination and accuracy. A 5% significance level and 95% confidence
-level will be used.
+Hospital in Solna in order to evaluate the performance of individual audit filters in predicting OFIs.
 
 ## Study setting and population
 
@@ -196,10 +160,10 @@ This process of determining OFIs unfolds in multiple stages,
 characterized by escalating levels of scrutiny. Notably, instances of
 mortality are directly referred to the multidisciplinary conference,
 where, in addition to assessing OFIs, a determination is made regarding
-whether the fatality was preventable or potentially preventable, a
+whether the death was preventable or potentially preventable, a
 classification also falling under the purview of OFIs.
 
-From 2014 to 2017 there was an effort put forward in identifying adverse
+From 2013 to 2017 there was an effort put forward in identifying adverse
 outcomes which where unrelated to mortality, the review process
 underwent subsequent refinement and formalization during the study
 period. During this period each trauma patient case underwent individual
@@ -220,7 +184,7 @@ trauma patient's case.
 
 In this study, we included all. who underwent screening for OFIs derived
 from both the trauma registry and the trauma care quality database
-during the period spanning from 2014 to 2021. Exclusion criteria were
+during the period spanning from 2013 to 2022. Exclusion criteria were
 applied to individuals under the age of 15, as their clinical management
 process has notable distinctions compared to those applicable to the
 adult population.
@@ -236,30 +200,38 @@ applicable
 The outcome variable in this study is an OFI, as established by the M&M
 conference through unanimous decision and furthermore valued as a binary
 variable with "Yes - At least one OFI identified" and "No - No OFI
-identified".
+identified". This project will link the two
+databases and assess the performance of each audit filter in terms of
+discrimination and accuracy. A 5% significance level and 95% confidence
+level will be used. 
 
 ### Exposures
 
 The exposure variable is the audit filters.
 
-## Participants
+### Predictors
 
-(b) For matched studies, give matching criteria and the number of
-    exposed and unexposed
+## Participants
+?
 
 ## Data sources/measurement
 
-For each variable of interest, give sources of data and details of
-methods of assessment (measurement). Describe comparability of
-assessment methods if there is more than one group
+To calculate the sensitivity and specificity of each individual audit filter in predicting an OFI a mathematical equation is used:
+True Positive (TP): Patient cases labeled with the specific audit filter and also show an OFI.
+False Negative (FN): Patient cases labeled with the specific audit filter but show no OFI.
+False Positive (FP): Patient cases not labeled with the specific audit filter but show an OFI.
+True Negative (TN): Patient cases not labeled with the specific audit filter and also show no OFI.
+
+The sensitivity is calculated using the simple equation: TP / (TP + FN) 
+The specificity is calculated accordingly: TN / (TN + FP)
 
 ## Bias
 
-Describe any efforts to address potential sources of bias
+The study results are generated by statistical analytics methods with the help of the statistical programming language, R. [@R2022language]. The data is already gathered thus there will be no bias in this study. 
 
 ## Study size
 
-Explain how the study size was arrived at
+The study cohort encompasses all eligible patients treated at the hospital from 2012 to 2022.
 
 ## Quantitative variables
 
@@ -270,6 +242,8 @@ applicable, describe which groupings were chosen and why
 
 (a) Describe all statistical methods, including those used to control
     for confounding
+    
+
 (b) Describe any methods used to examine subgroups and interactions
 (c) Explain how missing data were addressed
 (d) If applicable, explain how loss to follow-up was addressed
