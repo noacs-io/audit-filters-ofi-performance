@@ -1,17 +1,19 @@
 ---
-title: Performance of individual audit filters in predicting opportunities for improvement in adult trauma patients
+title: Performance of individual audit filters in predicting opportunities for improvement
+  in adult trauma patients
+author: "Josef Al-Khalili"
 subtitle: A registry based cohort study
-author: Josef Al-Khalili
-bibliography: bibliography.bib
-csl: bmcemerg.csl
-editor_options: 
-  markdown: 
+output:
+  word_document: default
+  pdf_document: default
+  csl: bmcemerg.csl
+editor_options:
+  markdown:
     wrap: 72
+bibliography: bibliography.bib
 ---
 
 # Introduction
-
-## Definition
 
 Trauma, a physical injury of external origin together with the body's
 associated response constitutes 9% of global deaths each year.
@@ -30,15 +32,6 @@ character[@hexdall2011Mechanism]. In Sweden, road traffic incidence and
 falls are at the top of the list of mechanisms of injury accounting for
 around 80% of injuries[@SweTrau2022Arsrapport].
 
-## Severity of Injury
-
-When categorizing trauma with the intention to treat we use severity as
-measurement. However, since injuries can vary in so many ways and are
-categorized in so many ways it is important to categorise trauma with
-the intention to treat it. For this reason,since 1975, it is common
-practice to use the severity of the injury as a means to triage patient
-cases thus approaching the problem in a more effective way.[@baker1974injury]
-
 ## Impact
 
 Injuries are not only a burden to the afflicted individual but also to a
@@ -47,16 +40,16 @@ estimate the global cost of injury but due to its complexity it is not an easy t
 injuries alone account for 2% of gross domestic product (GDP) in
 high-income countries[@world2014injuries].
 
-## Trauma care
+## Trauma care systems
 
 In order to effectively treat trauma patients in regards to its specific
 nature and complexity a special subdivision of healthcare, trauma
 care, is used. Trauma care is a multidisciplinary, complex, and
-time-critical provision of healthcare. It uses a myriad of different
+time-critical provision of healthcare delivered by specialized trauma centers. It uses a myriad of different
 specialties including but not limited to surgeons, anesthesiologists,
 emergency doctors and nurses. Because of its complexity and sensitivity
 to delay it is prone to errors that could have detrimental consequences
-[@Ghorbani2018Analysis].
+[@ghorbani2018analysis].
 
 ## Quality improvement
 
@@ -71,9 +64,9 @@ enable discussion and analysis of the trauma process in order to take
 corrective measures for future success. 
 
 They have shown great results in reducing mortality with the implementation of quality improvement programs.
-[@OReilly2013Opportunities]
+[@o2013opportunities]
 
-### Morbidity and mortality conferences
+### Morbidity and mortality conferences - A cornerstone in functioning QI programmes
 
 Morbidity and mortality conferences (M&M), also known as "death and complications conferences", are a
 central part of QI techniques. It is however a method which has been
@@ -83,7 +76,7 @@ in healthcare settings. Since then M&M has made itself deeply rooted in
 universal healthcare and developed into an established framework of
 crucial components of anonymity, a focus on specific adverse events,
 realising flawed approaches, critical analysis and lastly the effort to
-change and practice that change. [@Alexander2016Morbidity]
+change and practice that change. [@gregor2016morbidity]
 
 The M&M conferences are regularly scheduled meetings in which specific
 patient cases are brought up and discussed between healthcare
@@ -97,9 +90,9 @@ a crucial fault-examining tool. They can transform such faults from
 being solely negative marks against individual care providers into
 incentives for reporting. These conferences promote a broader,
 system-based approach that emphasizes the analysis of tasks, teamwork,
-and quality improvement.[@Lazzara2019morbidity]
+and quality improvement.[@lazzara2022morbidity]
 
-### Audit filters
+### Audit filters and Opportunities for improvement
 
 Another technique that IQ programs offer is the use of audit filters
 (also known as quality indicators). Audit filters are specific
@@ -109,19 +102,10 @@ the cause behind complications in Trauma patients. Examples of audit
 filters are death, the placement of 2 large bore intravenous lines
 within 15 minutes from arrival to a healthcare facility, etc.
 [@world2009guidelines]. Audit filters have shown to be effective in reducing mortality after its implementation in some hospitals [@chadbunchachai2001comparative]. In 2009 there was an extensive review made that sought to determine if audit filters could be used in improving processes of trauma care however none of the studies met established inclusion criteria.[@evans2009audit]
-The use of audit filters have also been associated with high frequencies of false positives, ranging from 24% to 80%.[@sanddal2011analysis], [@roy2017learning], [@Ghorbani2018Analysis]. Some audit filters seem to not correlate with OFIs at all [@lewis2017delay]
-
-### Opportunities for improvement
+The use of audit filters have also been associated with high frequencies of false positives, ranging from 24% to 80%.[@sanddal2011analysis], [@roy2017learning], [@ghorbani2018analysis]. Some audit filters seem to not correlate with OFIs at all [@lewis2017delay]
 
 Opportunities for improvement (OFI) is the endpoint and aim of M&M conferences. Following the review of individual patient cases there is a consensus decision made regarding the existence of an OFI. It has been shown that such review process is associated with high-qualty trauma care. [@santana2014development]
-OFIs have shown failures in initial care [@vioque2014classifying], specifically in airway management, fluid resucitation, hemorrhage control and chest injury management [@sanddal2011analysis], [@roy2017learning], [@OReilly2013Opportunities]. 
-
-## Knowledge Gap
-
-
-
-
-
+OFIs have shown failures in initial care [@vioque2014classifying], specifically in airway management, fluid resucitation, hemorrhage control and chest injury management [@sanddal2011analysis], [@roy2017learning], [@o2013opportunities]. 
 
 ## Aim
 
@@ -182,7 +166,7 @@ trauma patient's case.
 
 ## eligibility criteria
 
-In this study, we included all. who underwent screening for OFIs derived
+In this study, we included all who underwent screening for OFIs derived
 from both the trauma registry and the trauma care quality database
 during the period spanning from 2013 to 2022. Exclusion criteria were
 applied to individuals under the age of 15, as their clinical management
@@ -190,10 +174,6 @@ process has notable distinctions compared to those applicable to the
 adult population.
 
 ## Variables
-
-Clearly define all outcomes, exposures, predictors, potential
-confounders, and effect modifiers. Give diagnostic criteria, if
-applicable
 
 ### Outcome
 
@@ -211,18 +191,25 @@ The exposure variable is the audit filters.
 
 ### Predictors
 
+?
+
 ## Participants
 ?
 
 ## Data sources/measurement
 
 To calculate the sensitivity and specificity of each individual audit filter in predicting an OFI a mathematical equation is used:
+
 True Positive (TP): Patient cases labeled with the specific audit filter and also show an OFI.
+
 False Negative (FN): Patient cases labeled with the specific audit filter but show no OFI.
+
 False Positive (FP): Patient cases not labeled with the specific audit filter but show an OFI.
+
 True Negative (TN): Patient cases not labeled with the specific audit filter and also show no OFI.
 
-The sensitivity is calculated using the simple equation: TP / (TP + FN) 
+The sensitivity is calculated accordingly: TP / (TP + FN) 
+
 The specificity is calculated accordingly: TN / (TN + FP)
 
 ## Bias
@@ -235,16 +222,10 @@ The study cohort encompasses all eligible patients treated at the hospital from 
 
 ## Quantitative variables
 
-Explain how quantitative variables were handled in the analyses. If
-applicable, describe which groupings were chosen and why
+?
 
 ## Statistical methods
 
-(a) Describe all statistical methods, including those used to control
-    for confounding
-    
+?
 
-(b) Describe any methods used to examine subgroups and interactions
-(c) Explain how missing data were addressed
-(d) If applicable, explain how loss to follow-up was addressed
-(e) Describe any sensitivity analyses
+## References

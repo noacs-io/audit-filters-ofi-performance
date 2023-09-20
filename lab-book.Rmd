@@ -72,3 +72,12 @@ print(count.ofi)
 print(clean.data)
 ```
 
+
+## Severity of Injury
+
+When categorizing trauma with the intention to treat we use severity as
+measurement. However, since injuries can vary in so many ways and are
+categorized in so many ways it is important to categorise trauma with
+the intention to treat it. For this reason,since 1975, it is common
+practice to use the severity of the injury as a means to triage patient
+cases thus approaching the problem in a more effective way.[@baker1974injury]

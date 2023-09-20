@@ -2,7 +2,7 @@
 to evaluate their effectiveness in reducing mortality and preventable
 deaths. The use of audit filters showed decreases in mortality (2.6% vs.
 2.4%) and preventable death (3.0% vs. 2.0%).
-[@Pedro2007Preventable] Analysed the deaths of all trauma patients
+[@teixeira2007preventable] Analysed the deaths of all trauma patients
 during a period of 8 years (January 1998 to December 2005) at two mature
 Trauma Level I centers, The Los Angeles County (LAC) and The University
 of Southern California (USC). Weekly Morbidity and mortality (M&M)
