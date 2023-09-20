@@ -21,3 +21,10 @@ Kommer in i trauma rum (alla som är med i trauma teamet är där). Alla som är
 CT, slätröntgen i taket och massa annat. Hur ser traumat ut. Går direkt till lap rum exempelvis. 
 
 Bra exempelfall finns i 2014 guidlines WHO (kan vara bra att ha inför presentationen.
+
+specialistsjuksköterska applicerar alla filter. Om något av filtrerna blir ja så går de igenom detta med andra specialistsjuksköterskan. 
+ortoped och neurkirurg är med på M&M konferenser
+dokumenteras sen i kvalitetsdatabasen.
+2013-2017 uppdaterad variant.
+audit filtersarna är för inklusiva. Hur mycket missar vi när vi tar bort audit filters. 
+Modern lösning med maskininlärning skulle kunna ta bort behovet av audit filters.
