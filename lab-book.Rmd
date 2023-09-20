@@ -28,3 +28,5 @@ dokumenteras sen i kvalitetsdatabasen.
 2013-2017 uppdaterad variant.
 audit filtersarna är för inklusiva. Hur mycket missar vi när vi tar bort audit filters. 
 Modern lösning med maskininlärning skulle kunna ta bort behovet av audit filters.
+
+det som hältar studier är oftast att man inte hinner med datainsamling. 
