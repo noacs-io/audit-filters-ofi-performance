@@ -30,3 +30,44 @@ audit filtersarna är för inklusiva. Hur mycket missar vi när vi tar bort audi
 Modern lösning med maskininlärning skulle kunna ta bort behovet av audit filters.
 
 det som hältar studier är oftast att man inte hinner med datainsamling. 
+
+git fetch --all
+git reset --hard origin/master
+git pull origin master
+
+```{r}
+library(rofi)
+library(dplyr)
+noacsr::source_all_functions()
+prepared.data <- prepare_data(data)
+##Nedan är en lista på alla keywords för auditfilters som används på KUH.
+#Systolic blood pressure less than 90
+prepared.data$VK_sap_less90
+#Glasgow coma scale less than 9 and not intubated
+prepared.data$VK_gcs_less9_ej_intubTE
+#Injury severity score greater than 15 but not admitted to the intensive care unit
+prepared.data$VK_iss_15_ej_iva
+#Time to acute intervention more than 60 minutes from arrival to hospital
+prepared.data$VK_mer_60min_interv
+#Time to computed tomography more than 30 minutes from arrival to hospital
+prepared.data$VK_mer_30min_DT
+#No anticoagulant therapy within 72 hours after traumatic brain injury
+prepared.data$VK_ej_trombrof_TBI_72h
+#The presence of cardio-pulmonary resuscitation with thoracotomy
+prepared.data$VK_hlr_thorak
+#The presence of a liver or spleen injury
+prepared.data$VK_mjaltskada
+prepared.data$VK_leverskada
+#Massive transfusion, defined as 10 or more units of packed red blood cells within 24 hours
+prepared.data$VK_mass_transf
+
+selected.auditfilters <- prepared.data %>% select(starts_with("VK"),ofi)
+clean.data <- selected.auditfilters %>% filter_all(any_vars(!is.na(.)))
+#number of patients assigned a audit filter
+count.patient <- nrow(selected.auditfilters[selected.auditfilters$PersonIdentity,])
+print(count.patient)
+#number of ofi
+count.ofi <- nrow(selected.auditfilters[selected.auditfilters$ofi == "Yes",])
+print(count.ofi)
+print(clean.data)
+```
