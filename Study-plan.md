@@ -18,79 +18,95 @@ bibliography: bibliography.bib
 Trauma, a physical injury of external origin together with the body's
 associated response constitutes 9% of global deaths each year.
 [@world2014injuries] It is the leading cause of death for individuals
-between the ages 10 to 49[@vos2020global],[@roth2018global]. Trauma Is categorized broadly
-into two groups by underlying mechanism: Penetrating and blunt trauma.
-Bullet wounds and knife cuts are common examples of penetrating trauma.
-Blunt trauma is attributed to injuries like road injuries and falls
-which are not sharp in nature. Generally speaking, blunt trauma is
-caused by high-force impact over a larger surface area compared to
-penetrating trauma where that force is applied to a smaller surface area
-causing greater pressure thus acting in a piercing manner often
-resulting in deeper lacerations to tissues and organs. Blunt trauma with
-enough force can however be penetrating in
-character[@hexdall2011Mechanism]. In Sweden, road traffic incidence and
-falls are at the top of the list of mechanisms of injury accounting for
-around 80% of injuries[@SweTrau2022Arsrapport].
+between the ages 10 to 49[@vos2020global],[@roth2018global]<!--
+Multiple citations are written as [@vos2020global;
+@roth2018global]-->. Trauma Is categorized broadly into two groups by
+underlying mechanism: Penetrating and blunt trauma. Bullet wounds and
+knife cuts are common examples of penetrating trauma. Blunt trauma is
+attributed to injuries like road injuries and falls. Generally
+speaking, blunt trauma is caused by high-force impact over a larger
+surface area compared to penetrating trauma where that force is
+applied to a smaller surface area causing greater pressure thus acting
+in a piercing manner often resulting in deeper lacerations to tissues
+and organs. Blunt trauma with enough force can however be penetrating
+in character [@hexdall2011Mechanism]. In Sweden, road traffic incidence
+and falls are at the top of the list of mechanisms of injury
+accounting for around 80% of injuries [@SweTrau2022Arsrapport].
 
 ## Impact
 
-Injuries are not only a burden to the afflicted individual but also to a
-greater extent to society as a whole. One aspect of such societal effects are economic costs. There have been attempts to
-estimate the global cost of injury but due to its complexity it is not an easy task. It is however estimated that road
-injuries alone account for 2% of gross domestic product (GDP) in
-high-income countries[@world2014injuries].
+Injuries are not only a burden to the afflicted individual but also to
+a greater  extent to society as  a whole. One aspect  of such societal
+effects are economic  costs. There have been attempts  to estimate the
+global cost  of injury  but due to  its complexity it  is not  an easy
+task. It is however estimated that  road injuries alone account for 2%
+of   gross   domestic   product   (GDP)   in   high-income   countries
+[@world2014injuries].<!-- This is a very  short section, I suggest you
+elaborate-->
 
 ## Trauma care systems
 
-In order to effectively treat trauma patients in regards to its specific
-nature and complexity a special subdivision of healthcare, trauma
-care, is used. Trauma care is a multidisciplinary, complex, and
-time-critical provision of healthcare delivered by specialized trauma centers. It uses a myriad of different
-specialties including but not limited to surgeons, anesthesiologists,
-emergency doctors and nurses. Because of its complexity and sensitivity
-to delay it is prone to errors that could have detrimental consequences
-[@ghorbani2018analysis].
+In order to effectively treat trauma patients in regards to its
+specific nature and complexity a special subdivision of healthcare,
+trauma care, is used.<!-- Not sure if you need this first sentence-->
+Trauma care is a multidisciplinary, complex, and time-critical
+provision of healthcare delivered by specialized trauma
+centers. It<!-- By it, do you refer to trauma centers or trauma
+care?--> uses a myriad of different specialties including but not
+limited to surgeons, anesthesiologists, emergency doctors and
+nurses. Because of its complexity and sensitivity to delay it is prone
+to errors that could have detrimental consequences
+[@ghorbani2018analysis].<!-- What kind of errors and what
+consequences? Elaborate-->
 
 ## Quality improvement
 
-In order to minimize furthermore foresee such errors, Quality
-improvement (QI) programs have been established by the World Health
-Organisation (WHO) and the International Association for Trauma Surgery
-and Intensive Care (IATSIC). These programs have become a core part of
-the trauma process and its development all around the world [@world2009guidelines].
+In order to minimize furthermore foresee such errors<!-- This is an
+awkward sentence, revise-->, Quality improvement (QI) programs have
+been established by the World Health Organisation (WHO) and the
+International Association for Trauma Surgery and Intensive Care
+(IATSIC)<!-- Try to use more direct language: Quality improvement
+programmes were established to ...-->. These programs have become a
+core part of the trauma process<!-- Trauma care process?--> and its
+development all around the world [@world2009guidelines].
 
 QI programs consist of a set of recommended techniques that seek to
 enable discussion and analysis of the trauma process in order to take
-corrective measures for future success. 
+corrective measures for future success. <!-- List these techniques here-->
 
-They have shown great results in reducing mortality with the implementation of quality improvement programs.
-[@o2013opportunities]
+They have shown great results in reducing mortality with the
+implementation of quality improvement programs.<!-- Be specific in
+terms of results. By how much have they reduced mortality and
+where?--> [@o2013opportunities]
 
 ### Morbidity and mortality conferences - A cornerstone in functioning QI programmes
 
-Morbidity and mortality conferences (M&M), also known as "death and complications conferences", are a
-central part of QI techniques. It is however a method which has been
-around in the healthcare community since 1904, the year that Dr. Ernest
-Amory Codman brought forward the importance of physician accountability
-in healthcare settings. Since then M&M has made itself deeply rooted in
-universal healthcare and developed into an established framework of
-crucial components of anonymity, a focus on specific adverse events,
-realising flawed approaches, critical analysis and lastly the effort to
-change and practice that change. [@gregor2016morbidity]
+The morbidity and mortality conference (M&M), also known as "death and
+complications conference", is a central QI technique. It is however a
+method which has been around in the healthcare community since 1904,
+the year that Dr. Ernest Amory Codman brought forward the importance
+of physician accountability in healthcare settings. Since then M&M has
+made itself deeply rooted in universal healthcare<!-- By universal, do
+you mean that is done worldwide? Universal is often used in the
+context of universal healthcare coverage, which is something quite
+different--> and developed into an established framework of crucial
+components of anonymity, a focus on specific adverse events, realising
+flawed approaches, critical analysis and lastly the effort to change
+and practice that change. [@gregor2016morbidity]
 
 The M&M conferences are regularly scheduled meetings in which specific
 patient cases are brought up and discussed between healthcare
-professionals from all the different disciplines involved in trauma care
-and its processes. It is recommended that they are held for around 40
+professionals from all the different disciplines involved in trauma
+care and its processes. It is recommended that they are around 40
 minutes but this varies between different
 hospitals.[@world2009guidelines] During the conferences, a preventable
-death panel determines whether the death of a patient or a complication
-could have been preventable. When effectively implemented M&M, serves as
-a crucial fault-examining tool. They can transform such faults from
-being solely negative marks against individual care providers into
-incentives for reporting. These conferences promote a broader,
-system-based approach that emphasizes the analysis of tasks, teamwork,
-and quality improvement.[@lazzara2022morbidity]
+death panel determines whether the death of a patient or a
+complication could have been preventable. When effectively implemented
+M&M, serves as a crucial fault-examining tool. They can transform such
+faults from being solely negative marks against individual care
+providers into incentives for reporting. These conferences promote a
+broader, system-based approach that emphasizes the analysis of tasks,
+teamwork, and quality improvement.[@lazzara2022morbidity]
 
 ### Audit filters and Opportunities for improvement
 
@@ -98,28 +114,49 @@ Another technique that IQ programs offer is the use of audit filters
 (also known as quality indicators). Audit filters are specific
 established criteria involved in trauma processes and care. It is used
 to detect deviation from standardized care in order to further analyze
-the cause behind complications in Trauma patients. Examples of audit
-filters are death, the placement of 2 large bore intravenous lines
-within 15 minutes from arrival to a healthcare facility, etc.
-[@world2009guidelines]. Audit filters have shown to be effective in reducing mortality after its implementation in some hospitals [@chadbunchachai2001comparative]. In 2009 there was an extensive review made that sought to determine if audit filters could be used in improving processes of trauma care however none of the studies met established inclusion criteria.[@evans2009audit]
-The use of audit filters have also been associated with high frequencies of false positives, ranging from 24% to 80%.[@sanddal2011analysis], [@roy2017learning], [@ghorbani2018analysis]. Some audit filters seem to not correlate with OFIs at all [@lewis2017delay]
+the cause behind complications in Trauma patients. Two examples of
+audit filters are death and the placement of 2 large bore intravenous
+lines within 15 minutes from arrival to a healthcare facility
+[@world2009guidelines]. Audit filters have shown to be effective in
+reducing mortality after its implementation in some hospitals
+[@chadbunchachai2001comparative]. In 2009 there was an extensive
+review made that sought to determine if audit filters could be used in
+improving processes of trauma care however none of the studies met
+established inclusion criteria [@evans2009audit]<!-- These last to
+sentences are a bit contradictory, in the sence that one says that
+they reduce mortality while the next says that there is no high
+quality evidence showing that they do-->. The use of audit filters
+have also been associated with high frequencies of false positives,
+ranging from 24% to 80%.[@sanddal2011analysis], [@roy2017learning],
+[@ghorbani2018analysis]. Some audit filters seem to not correlate with
+OFIs at all [@lewis2017delay]
 
-Opportunities for improvement (OFI) is the endpoint and aim of M&M conferences. Following the review of individual patient cases there is a consensus decision made regarding the existence of an OFI. It has been shown that such review process is associated with high-qualty trauma care. [@santana2014development]
-OFIs have shown failures in initial care [@vioque2014classifying], specifically in airway management, fluid resucitation, hemorrhage control and chest injury management [@sanddal2011analysis], [@roy2017learning], [@o2013opportunities]. 
+Opportunities for improvement (OFI) is the endpoint and aim of M&M
+conferences. Following the review of individual patient cases there is
+a consensus decision made regarding the existence of an OFI. It has
+been shown that such review process is associated with high-qualty
+trauma care. [@santana2014development] OFIs have shown failures in
+initial care [@vioque2014classifying], specifically in airway
+management, fluid resucitation, hemorrhage control and chest injury
+management [@sanddal2011analysis], [@roy2017learning],
+[@o2013opportunities].
 
 ## Aim
 
 Trauma is a great burden globally and contribute to large economical
 costs for society, which is why OFIs are of such importance in trauma
-care development. While audit filters are good indicators of standard
-care, it is crucial to determine whether audit filters are of high value
-as a tool for predicting OFIs.
+care development<!--This is not really part to the aim-->. While audit
+filters are good indicators of standard care, it is crucial <!-- Your
+aim starts here-->to determine whether audit filters are of high value
+as a tool for predicting OFIs<!-- and ends here. Consider rephrasing
+high value tool to something more specific-->.
 
 # Methods
 
 This is a registry-based cohort study that uses data from the trauma
 registry and trauma care quality database at the Karolinska University
-Hospital in Solna in order to evaluate the performance of individual audit filters in predicting OFIs.
+Hospital in Solna in order to evaluate the performance of individual
+audit filters in predicting OFIs.
 
 ## Study setting and population
 
@@ -134,7 +171,7 @@ signs, times, injuries, and interventions as well as patient
 demographics according to the European consensus statement, the Utstein
 template
 
-Karolinska trauma registry also contains a care quality database which
+The Karolinska trauma registry also contains a care quality database which
 contains specific audit filters and OFIs that are determined in M&M
 conferences through consensus decision. M&M conferences are attended by
 all professionals involved in trauma care. surgeons, neurosurgeons,
@@ -191,10 +228,10 @@ The exposure variable is the audit filters.
 
 ### Predictors
 
-?
+<!-- You can remove this heading, or change it to "covariates"-->
 
 ## Participants
-?
+?<!-- Here you describe your eligibility criteria-->
 
 ## Data sources/measurement
 
@@ -212,9 +249,11 @@ The sensitivity is calculated accordingly: TP / (TP + FN)
 
 The specificity is calculated accordingly: TN / (TN + FP)
 
+<!-- What you write above should be part of the statistical methods section rather than this section. This section is about where the data come from-->
+
 ## Bias
 
-The study results are generated by statistical analytics methods with the help of the statistical programming language, R. [@R2022language]. The data is already gathered thus there will be no bias in this study. 
+The study results are generated by statistical analytics methods with the help of the statistical programming language, R. [@R2022language]. The data is already gathered thus there will be no bias in this study. <!-- Not true. There are several biases that may come into play, like selection bias-->
 
 ## Study size
 
@@ -227,5 +266,7 @@ The study cohort encompasses all eligible patients treated at the hospital from 
 ## Statistical methods
 
 ?
+
+<!-- You will determine the associations between audit filters and ofi. You will do that using the measures outlined above, and perhaps also logistic regression-->
 
 ## References
