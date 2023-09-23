@@ -16,12 +16,9 @@ bibliography: bibliography.bib
 # Introduction
 
 Trauma, a physical injury of external origin together with the body's
-associated response constitutes 9% of global deaths each year.
-[@world2014injuries] <!-- KS: always cite before the final punctuation. ie "[@who]." and not ".[@who]" --> It is the leading cause of death for individuals
-between the ages 10 to 49[@vos2020global],[@roth2018global]<!--
-Multiple citations are written as [@vos2020global;
-@roth2018global]-->. Trauma Is categorized broadly into two groups by
-underlying mechanism: Penetrating and blunt trauma. Bullet wounds and
+associated response constitutes 9% of global deaths each year [@world2014injuries]. It is the leading cause of death for individuals
+between the ages 10 to 49[@vos2020global];[@roth2018global].
+Trauma Is categorized broadly into two groups by underlying mechanism: Penetrating and blunt trauma. Bullet wounds and
 knife cuts are common examples of penetrating trauma. Blunt trauma is
 attributed to injuries like road injuries and falls. Generally
 speaking, blunt trauma is caused by high-force impact over a larger
@@ -35,39 +32,28 @@ accounting for around 80% of injuries [@SweTrau2022Arsrapport].
 
 ## Impact
 
-Injuries are not only a burden to the afflicted individual but also to
-a greater  extent to society as  a whole. One aspect  of such societal
+Injuries are not only a burden to the afflicted individual but also to communities and to society as a whole [@newnam2014impacts]. One aspect  of such societal
 effects are economic  costs. There have been attempts  to estimate the
 global cost  of injury  but due to  its complexity it  is not  an easy
 task. It is however estimated that  road injuries alone account for 2%
 of   gross   domestic   product   (GDP)   in   high-income   countries
-[@world2014injuries].<!-- This is a very  short section, I suggest you
-elaborate-->
+[@world2014injuries]. 
 
 ## Trauma care systems <!-- KS: Use title casing -->
 
-In order to effectively treat trauma patients in regards to its
-specific nature and complexity a special subdivision of healthcare,
-trauma care, is used.<!-- Not sure if you need this first sentence-->
-Trauma care is a multidisciplinary, complex, and time-critical
+Trauma care systems has shown to be superior to ordinary  is a multidisciplinary, complex, and time-critical
 provision of healthcare delivered by specialized trauma
-centers. It<!-- By it, do you refer to trauma centers or trauma
-care?--> uses a myriad of different specialties including but not
+centers. uses a myriad of different specialties including but not
 limited to surgeons, anesthesiologists, emergency doctors and
 nurses. Because of its complexity and sensitivity to delay it is prone
-to errors that could have detrimental consequences
-[@ghorbani2018analysis].<!-- What kind of errors and what
-consequences? Elaborate-->
+to errors which could lead to preventable deaths. It is estimated that 20% of trauma-related deaths are preventable. [@kwon2014pooled].
 
 ## Quality improvement
 
-In order to minimize furthermore foresee such errors<!-- This is an
-awkward sentence, revise-->, Quality improvement (QI) programs have
-been established by the World Health Organisation (WHO) and the
+In order to minimize errors in trauma care, Quality improvement (QI) programs were established by the World Health Organisation (WHO) and the
 International Association for Trauma Surgery and Intensive Care
-(IATSIC)<!-- Try to use more direct language: Quality improvement
-programmes were established to ...-->. These programs have become a
-core part of the trauma process<!-- Trauma care process?--> and its
+(IATSIC). These programs have become a
+core part of the trauma care process and its
 development all around the world [@world2009guidelines].
 
 QI programs consist of a set of recommended techniques that seek to
@@ -86,10 +72,7 @@ complications conference" <!-- KS: by who? I don't think I have seen this anywhe
 method which has been around in the healthcare community since 1904 <!-- KS: I would focus on information regarding directly to your work rather that history -->,
 the year that Dr. Ernest Amory Codman brought forward the importance
 of physician accountability in healthcare settings. Since then M&M has
-made itself deeply rooted in universal healthcare<!-- By universal, do
-you mean that is done worldwide? Universal is often used in the
-context of universal healthcare coverage, which is something quite
-different--> and developed into an established framework of crucial
+made itself deeply rooted in healthcare worldwide and developed into an established framework of crucial
 components of anonymity, a focus on specific adverse events, realising
 flawed approaches, critical analysis and lastly the effort to change
 and practice that change. [@gregor2016morbidity]
@@ -144,11 +127,7 @@ management [@sanddal2011analysis], [@roy2017learning],
 
 ## Aim
 
-Trauma is a great burden globally and contribute to large economical
-costs for society, which is why OFIs are of such importance in trauma
-care development<!--This is not really part to the aim-->. While audit
-filters are good indicators of standard care, it is crucial <!-- Your
-aim starts here-->to determine whether audit filters are of high value
+The aim of the study is to determine whether audit filters are of high value
 as a tool for predicting OFIs<!-- and ends here. Consider rephrasing
 high value tool to something more specific-->.
 
@@ -228,7 +207,7 @@ level will be used.
 
 The exposure variable is the audit filters.
 
-### Predictors
+### Covariates
 
 <!-- You can remove this heading, or change it to "covariates"-->
 
@@ -236,24 +215,7 @@ The exposure variable is the audit filters.
 ?<!-- Here you describe your eligibility criteria-->
 
 ## Data sources/measurement
-
-To calculate the sensitivity and specificity of each individual audit filter in predicting an OFI a mathematical equation is used:
-
-True Positive (TP): Patient cases labeled with the specific audit filter and also show an OFI.
-
-False Negative (FN): Patient cases labeled with the specific audit filter but show no OFI.
-
-False Positive (FP): Patient cases not labeled with the specific audit filter but show an OFI.
-
-True Negative (TN): Patient cases not labeled with the specific audit filter and also show no OFI.
-
-The sensitivity is calculated accordingly: TP / (TP + FN) 
-
-The specificity is calculated accordingly: TN / (TN + FP)
-
-<!-- What you write above should be part of the statistical methods section rather than this section. This section is about where the data come from-->
-<!-- KS: also no need to define each formula, this is common information -->
-
+no need to write every formula
 ## Bias
 
 The study results are generated by statistical analytics methods with the help of the statistical programming language, R. [@R2022language]. The data is already gathered thus there will be no bias in this study. <!-- Not true. There are several biases that may come into play, like selection bias-->
@@ -269,7 +231,19 @@ The study cohort encompasses all eligible patients treated at the hospital from 
 
 ## Statistical methods
 
-?
+To calculate the sensitivity and specificity of each individual audit filter in predicting an OFI a mathematical equation is used:
+
+True Positive (TP): Patient cases labeled with the specific audit filter and also show an OFI.
+
+False Negative (FN): Patient cases labeled with the specific audit filter but show no OFI.
+
+False Positive (FP): Patient cases not labeled with the specific audit filter but show an OFI.
+
+True Negative (TN): Patient cases not labeled with the specific audit filter and also show no OFI.
+
+The sensitivity is calculated accordingly: TP / (TP + FN) 
+
+The specificity is calculated accordingly: TN / (TN + FP)
 
 <!-- You will determine the associations between audit filters and ofi. You will do that using the measures outlined above, and perhaps also logistic regression-->
 
