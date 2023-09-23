@@ -16,10 +16,9 @@ bibliography: bibliography.bib
 # Introduction
 
 Trauma, a physical injury of external origin together with the body's
-associated response constitutes 9% of global deaths each year.
-[@world2014injuries] It is the leading cause of death for individuals
-between the ages 10 to 49[@vos2020global],[@roth2018global]. Trauma Is categorized broadly into two groups by
-underlying mechanism: Penetrating and blunt trauma. Bullet wounds and
+associated response constitutes 9% of global deaths each year [@world2014injuries]. It is the leading cause of death for individuals
+between the ages 10 to 49[@vos2020global];[@roth2018global].
+Trauma Is categorized broadly into two groups by underlying mechanism: Penetrating and blunt trauma. Bullet wounds and
 knife cuts are common examples of penetrating trauma. Blunt trauma is
 attributed to injuries like road injuries and falls. Generally
 speaking, blunt trauma is caused by high-force impact over a larger
@@ -40,7 +39,7 @@ task. It is however estimated that  road injuries alone account for 2%
 of   gross   domestic   product   (GDP)   in   high-income   countries
 [@world2014injuries]. 
 
-## Trauma care systems
+## Trauma care systems <!-- KS: Use title casing -->
 
 Trauma care systems has shown to be superior to ordinary  is a multidisciplinary, complex, and time-critical
 provision of healthcare delivered by specialized trauma
@@ -69,8 +68,8 @@ where?--> [@o2013opportunities]
 ### Morbidity and mortality conferences - A cornerstone in functioning QI programmes
 
 The morbidity and mortality conference (M&M), also known as "death and
-complications conference", is a central QI technique. It is however a
-method which has been around in the healthcare community since 1904,
+complications conference" <!-- KS: by who? I don't think I have seen this anywhere -->, is a central QI technique. It is however a
+method which has been around in the healthcare community since 1904 <!-- KS: I would focus on information regarding directly to your work rather that history -->,
 the year that Dr. Ernest Amory Codman brought forward the importance
 of physician accountability in healthcare settings. Since then M&M has
 made itself deeply rooted in healthcare worldwide and developed into an established framework of crucial
@@ -84,17 +83,18 @@ professionals from all the different disciplines involved in trauma
 care and its processes. It is recommended that they are around 40
 minutes but this varies between different
 hospitals.[@world2009guidelines] During the conferences, a preventable
-death panel determines whether the death of a patient or a
+death panel <!-- KS: WHO defines these as two seperate entities --> determines whether the death of a patient or a
 complication could have been preventable. When effectively implemented
 M&M, serves as a crucial fault-examining tool. They can transform such
 faults from being solely negative marks against individual care
 providers into incentives for reporting. These conferences promote a
 broader, system-based approach that emphasizes the analysis of tasks,
 teamwork, and quality improvement.[@lazzara2022morbidity]
+<!-- KS: You have forgotten the "morbidity" part of the conference. -->
 
 ### Audit filters and Opportunities for improvement
 
-Another technique that IQ programs offer is the use of audit filters
+Another technique that IQ <!-- KS: QI --> programs offer is the use of audit filters
 (also known as quality indicators). Audit filters are specific
 established criteria involved in trauma processes and care. It is used
 to detect deviation from standardized care in order to further analyze
@@ -115,11 +115,11 @@ ranging from 24% to 80%.[@sanddal2011analysis], [@roy2017learning],
 [@ghorbani2018analysis]. Some audit filters seem to not correlate with
 OFIs at all [@lewis2017delay]
 
-Opportunities for improvement (OFI) is the endpoint and aim of M&M
+Opportunities for improvement (OFI) <!-- KS: No need to re-abbreviate --> is the endpoint and aim of M&M
 conferences. Following the review of individual patient cases there is
 a consensus decision made regarding the existence of an OFI. It has
 been shown that such review process is associated with high-qualty
-trauma care. [@santana2014development] OFIs have shown failures in
+trauma care. [@santana2014development] OFIs are typically failures in
 initial care [@vioque2014classifying], specifically in airway
 management, fluid resucitation, hemorrhage control and chest injury
 management [@sanddal2011analysis], [@roy2017learning],
@@ -133,7 +133,7 @@ high value tool to something more specific-->.
 
 # Methods
 
-This is a registry-based cohort study that uses data from the trauma
+This <!-- KS: prefer not using "this". use "we conducted a" or "a registry-based study was conducted" --> is a registry-based cohort study that uses data from the trauma
 registry and trauma care quality database at the Karolinska University
 Hospital in Solna in order to evaluate the performance of individual
 audit filters in predicting OFIs.
@@ -145,7 +145,7 @@ hospital. Every year around 1500 patients receive treatment at the
 hospital. If a patient case results in team activation it is added to
 the Karolinska trauma registry. If no team activation occurred but the
 patient had ISS\>9 retrospectively it is also included in the registry.
-The Karolinska trauma registry is a subset of the national registry, the
+The Karolinska trauma registry is a subset <!-- KS: it is enough to say "reports to" --> of the national registry, the
 Swedish Trauma registry (SweTrau). The registry includes data on vital
 signs, times, injuries, and interventions as well as patient
 demographics according to the European consensus statement, the Utstein
@@ -153,7 +153,7 @@ template
 
 The Karolinska trauma registry also contains a care quality database which
 contains specific audit filters and OFIs that are determined in M&M
-conferences through consensus decision. M&M conferences are attended by
+conferences through consensus decision. M&M conferences <!-- KS: you have already written this, so I suggest you add "conferences at Karolinska University Hospital" to be KUH specific --> are attended by
 all professionals involved in trauma care. surgeons, neurosurgeons,
 orthopedics, anesthesiologists, nurses, and radiologists.
 
@@ -162,24 +162,25 @@ characterized by escalating levels of scrutiny. Notably, instances of
 mortality are directly referred to the multidisciplinary conference,
 where, in addition to assessing OFIs, a determination is made regarding
 whether the death was preventable or potentially preventable, a
-classification also falling under the purview of OFIs.
+classification also falling under the purview of OFIs. 
 
 From 2013 to 2017 there was an effort put forward in identifying adverse
 outcomes which where unrelated to mortality, the review process
 underwent subsequent refinement and formalization during the study
-period. During this period each trauma patient case underwent individual
+period. During the initial period each trauma patient case underwent individual
 assessments by a specialized trauma nurse in order to identify potential
 OFIs. It was, however not until 2017 in which this procedure was
 formalized and it became standardized to incorporate a prelimanary
 individual evaluation by a specialized trauma nurse upon data
 registration in the trauma registry and the trauma quality database. The
 trauma quality data underwent screening via audit filters, and all cases
-falling outside the criteria delineated by these filters, along with
+falling outside  <!-- KS: it is actually within, the criteria are ex. <90 sbp, outside would thus be >90 sbp--> the criteria delineated by these filters, along with
 those trauma patients flagged by the nurse during the initial review for
 possible care failures, were subjected to a secondary review by two
 specialized nurses. Subsequent identification of a potential OFI during
 this second review prompted a comprehensive evaluation of the respective
 trauma patient's case.
+<!-- KS: add a flowchart -->
 
 ## eligibility criteria
 
@@ -199,7 +200,7 @@ conference through unanimous decision and furthermore valued as a binary
 variable with "Yes - At least one OFI identified" and "No - No OFI
 identified". This project will link the two
 databases and assess the performance of each audit filter in terms of
-discrimination and accuracy. A 5% significance level and 95% confidence
+discrimination and accuracy <!-- KS: which metrics? Accuracy is a type of discrimination metric. This should also be under statistical methods -->. A 5% significance level and 95% confidence
 level will be used. 
 
 ### Exposures
@@ -214,17 +215,14 @@ The exposure variable is the audit filters.
 ?<!-- Here you describe your eligibility criteria-->
 
 ## Data sources/measurement
-
-
-
-<!-- This section is about where the data come from-->
-
+no need to write every formula
 ## Bias
 
 The study results are generated by statistical analytics methods with the help of the statistical programming language, R. [@R2022language]. The data is already gathered thus there will be no bias in this study. <!-- Not true. There are several biases that may come into play, like selection bias-->
 
 ## Study size
 
+<!-- KS: there are two patients from December 28th 2012. You will thus have to be specific that you are not using all trauma patients from 2012-->
 The study cohort encompasses all eligible patients treated at the hospital from 2012 to 2022.
 
 ## Quantitative variables
