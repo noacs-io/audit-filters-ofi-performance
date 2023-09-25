@@ -26,3 +26,9 @@ PDRs were widely distributed from 2.5 to 58.5 %, and sample sizes varied from 13
 
 
 The results of our study indicate that patient treatment at an institution that is part of a trauma system was observed to improve patients’ survival rates in the current study.
+
+[@stelfox2010quality]
+no consensus in quality indicators
+
+[@alharbi2021effectiveness]
+Showed positive results of trauma care systems (centers). Reduced mortality
