@@ -4,14 +4,13 @@ title: Performance of individual audit filters in predicting opportunities for i
 author: "Josef Al-Khalili"
 subtitle: A registry based cohort study
 output:
-  word_document: default
   pdf_document: default
+  word_document: default
   csl: bmcemerg.csl
 editor_options:
   markdown:
     wrap: 72
 bibliography: bibliography.bib
-biblio-style: numeric
 ---
 
 # Introduction
@@ -190,7 +189,25 @@ identified".
 
 ### Exposures
 
-The exposure variable is the audit filters.
+The exposure variable is the audit filters. The following audit filters are of interest:
+
+ • Systolic blood pressure less than 90
+
+ • Glasgow coma scale less than 9 and not intubated
+
+ • Injury severity score greater than 15 but not admitted to the intensive care unit
+
+ • Time to acute intervention more than 60 minutes from arrival to hospital
+
+ • Time to computed tomography more than 30 minutes from arrival to hospital
+
+ • No anticoagulant therapy within 72 hours after traumatic brain injury
+
+ • The presence of cardio-pulmonary resuscitation with thoracotomy
+
+ • The presence of a liver or spleen injury
+
+ • Massive transfusion, defined as 10 or more units of packed red blood cells within 24 hours.
 
 ## Data sources/measurement
 

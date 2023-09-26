@@ -1,28 +1,17 @@
-## Welcome!
-
-## This is your project's main script file and together with
-## manuscript.Rmd it provides and entry point for you and other people
-## coming to the project. The code in this file should give an outline
-## of the different steps conducted in your study, from importing data
-## to producing results.
-
-## This file should be relatively short, and most of the heavy
-## lifting should be done by specialised functions. These functions
-## live in the folder functions/ and you create a new function using
-## create_function().
-
-## Feel free to remove this introductory text as you get started.
-
-## Source all functions (if you tick the box "Source on save" in
-## RStudio functions will be automatically sourced when you save
-## them). They all need to be sourced however when you compile your
-## manuscript file or run this file as a job, as that happens in a
-## clean R session.
 library(rofi)
+library(dplyr)
 noacsr::source_all_functions()
-prepared.data <- prepare_data(data)
-## Import data
+selected.auditfilters <- selected_auditfilters(data)
+## Import data and select variables
+clean.data <- clean_data(selected.auditfilters)
+## clean the data from NA values 
+#calculate.data <- calculate_data("VK_sap_less90")
+list.auditfilters <- c("VK_sap_less90", "VK_gcs_less9_ej_intubTE", "VK_iss_15_ej_iva", "VK_mer_60min_interv","VK_mer_30min_DT","VK_ej_trombrof_TBI_72h","VK_hlr_thorak","VK_mjaltskada", "VK_leverskada", "VK_mass_trans")
 
+#print(calculate.data)
 
-## Whatever you do next, maybe clean data?
-
+for (individual.auditfilters in list.auditfilters){
+  calculated.data <- calculate_data(individual.auditfilters)
+  print(calculated.data)
+  
+}
