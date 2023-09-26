@@ -6,7 +6,7 @@ subtitle: A registry based cohort study
 output:
   pdf_document: default
   word_document: default
-  csl: bmcemerg.csl
+  csl: vancouver.csl
 editor_options:
   markdown:
     wrap: 72
