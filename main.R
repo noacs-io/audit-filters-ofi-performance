@@ -6,4 +6,4 @@ selected.auditfilters <- selected_auditfilters(data)
 clean.data <- clean_data(selected.auditfilters)
 ## clean the data from NA values 
 display.result <- display_result(clean.data)
-print(results)
+print(display.result)
