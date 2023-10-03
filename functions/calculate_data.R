@@ -8,14 +8,6 @@ calculate_data <- function(auditfilter){
   FP <- sum(two.variable.data[,auditfilter] == "Nej" & two.variable.data$ofi == "Yes")
   #sum of false negative values
   FN <- sum(two.variable.data[,auditfilter] == "Ja" & two.variable.data$ofi == "No")
-  sum.of.values <- data.frame(
-    Auditfilter = auditfilter,
-    TruePositives = TP,
-    TrueNegatives = TN,
-    FalsePositives = FP,
-    FalseNegatives = FN
-  )
-  print(sum.of.values)
   # Calculate Sensitivity (True Positive Rate)
   auditfilter.sensitivity <- TP / (TP + FN)
   # Calculate Specificity (True Negative Rate)
