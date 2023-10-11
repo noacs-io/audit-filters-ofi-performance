@@ -1,9 +1,6 @@
-logistic_regression <- function(dataset,auditfilters){
-  for (auditfilter in auditfilters){
-    two.variable <- na.omit(clean.data[,c(auditfilter,"ofi")])
-    two.variable[,auditfilter]<- as.numeric(two.variable[,auditfilter] == "Ja")
-    two.variable$ofi <- as.numeric(two.variable$ofi == "Yes")
-    roc_data <- roc(two.variable$ofi, two.variable[,auditfilter])
-    plot(roc_data, print.auc = TRUE, auc.polygon = TRUE, grid = TRUE, main = as.character(auditfilter))
-  }
+logistic_regression <- function(dataSet,auditFilter){
+  dataSet[,auditFilter]<- as.numeric(dataSet[,auditFilter] == "ja")
+  dataSet$ofi <- as.numeric(dataSet$ofi == "yes")
+  roc_data <- roc(dataSet$ofi, dataSet[,auditFilter])
+  plot(roc_data, print.auc = TRUE, auc.polygon = TRUE, grid = TRUE, main = as.character(auditFilter))
 }
