@@ -1,5 +1,6 @@
 calculate_data <- function(cleanDataSet, auditfilter){
   #sum of true positive values
+  sumOfAuditfilterOccurence <- sum(cleanDataSet[,auditfilter] == "ja" | cleanDataSet[,auditfilter] == "nej")
   TP <- sum(cleanDataSet[,auditfilter] == "ja" & cleanDataSet$ofi == "yes")
   #sum of true negative values
   TN <- sum(cleanDataSet[,auditfilter] == "nej" & cleanDataSet$ofi == "no")
@@ -11,7 +12,14 @@ calculate_data <- function(cleanDataSet, auditfilter){
   sensitivityOfAuditfilter <- TP / (TP + FN)
   # Calculate Specificity (True Negative Rate)
   specificityOfAuditfilter <- TN / (TN + FP)
-  specAndSens <- data.frame(Auditfilter = auditfilter, Specificity = specificityOfAuditfilter, Sensitivity = sensitivityOfAuditfilter)
+  calculatedData <- data.frame(Auditfilter = auditfilter, 
+                               Number = sumOfAuditfilterOccurence, 
+                               Truepositives = TP, 
+                               Truenegatives = TN, 
+                               Falsepositives = FP, 
+                               Truenegatives = TN, 
+                               Specificity = specificityOfAuditfilter, 
+                               Sensitivity = sensitivityOfAuditfilter)
   
-  return(specAndSens)
+  return(calculatedData)
 }

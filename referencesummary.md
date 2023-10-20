@@ -1,3 +1,8 @@
+
+[@roth2018global]
+IMPACT: in 2017. 11,9% of global YLL. 8% of global death (27,7% from road traffic injuries)
+
+
 [@chadbunchachai2001comparative] made use of 32 audit filters in order
 to evaluate their effectiveness in reducing mortality and preventable
 deaths. The use of audit filters showed decreases in mortality (2.6% vs.
@@ -12,6 +17,8 @@ order to examine the cause of death by categorizing them into
 preventable, potentially preventable, and non-preventable. They found
 that 2,5% of deaths were classified as either preventable (0,53%) or
 potentially preventable (1,92%).
+
+[@orlander2003morbidity] MMC: frequency is often monthly. Unexpected mortality, morbidity and error are case selections.
 
 [@Ghorbani2018Analysis]
 at Karolinska University Hospital, also a trauma level-I center was made

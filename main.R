@@ -2,6 +2,7 @@ library(rofi)
 library(dplyr)
 library(ggplot2)
 library(pROC)
+library(gtsummary)
 
 listOfAuditfilters <- c("VK_sap_less90","VK_mjaltskada", 
                         "VK_mass_transf", "VK_gcs_less9_ej_intubTE", 
@@ -10,9 +11,14 @@ listOfAuditfilters <- c("VK_sap_less90","VK_mjaltskada",
 # "VK_ej_trombrof_TBI_72h" funkar ej för att sensitivitet är 1 och specificitet är 0
 #  "VK_avslutad" borde inte användas?
 
-tableOfSensAndSpec <- data.frame(Auditfilter = character(0),
-                                 Specificity = numeric(0),
-                                 Sensitivity = numeric(0)
+tableOfCalculatedData <- data.frame(Auditfilter = character(0),
+                                    Number = numeric(0),
+                                    Truepositives = numeric(0),
+                                    Truenegatives = numeric(0),
+                                    Falsepositives = numeric(0),
+                                    Truenegatives = numeric(0),
+                                    Specificity = numeric(0),
+                                    Sensitivity = numeric(0)
 )
 #A table of sensitivity and specificity
 
@@ -23,10 +29,17 @@ for(auditFilter in listOfAuditfilters){
   cleanData <- clean_data(selectedData, auditFilter)
   #clean data by turning values to lower case and remove rows with NA values
   calculatedData <- calculate_data(cleanData, auditFilter)
-  #calculate the sensitivity and spe
-  tableOfSensAndSpec <- rbind(tableOfSensAndSpec,calculatedData)
+  #calculate the sensitivity and specificity
+  tableOfCalculatedData <- rbind(tableOfCalculatedData,calculatedData)
   #bind together the values from calculate_data function into the table defined above
   rocOfData <- logistic_regression(cleanData, auditFilter)
   #draw ROC curves
+  plot(rocOfData, print.auc = TRUE, auc.polygon = TRUE, grid = TRUE, main = as.character(auditFilter))
 }
-print(tableOfSensAndSpec)
+
+myTable <- tbl_summary(tableOfCalculatedData)
+myTable
+
+
+print(tableOfCalculatedData)
+

@@ -33,7 +33,11 @@ Globally, the leading cause of injury are road traffic accidents [@vos2020global
 In Sweden, road traffic incidence account for around 40% of injuries and falls account for 40% of injuries [@SweTrau2022Arsrapport].
 
 ## Impact
-The impact of trauma depends greatly on the type of trauma, where it occurred LMIC show higher levels of DALY and to whom it affected. Trauma contributes to 11.9% of global Years of life lost (YLL) [@roth2018global]. Furthermore, trauma is associated with higher tendency to depression, post traumatic stress syndrome (PTSD), negative effects on cognitive functions etc. [@north1999psychological];[@muscatelli2017prevalence]. People who witness traumatic injuries are also subject to PTSD.  
+The impact of trauma depends on the type of trauma, where it occurred and to whom it affected. 
+
+Trauma contributes to 
+
+Trauma contributes to 11.9% of global Years of life lost (YLL) [@roth2018global]. Furthermore, trauma is associated with higher tendency to depression, post traumatic stress syndrome (PTSD), negative effects on cognitive functions etc. [@north1999psychological];[@muscatelli2017prevalence]. Up to 11% of trauma patients have PTSD 3 years after event[@visser2017course]. Individual who witness traumatic injuries are also subject to higher risk of PTSD.  
 Traumatic injuries are associated with 36% not coming back to work within 1 year [@david2022measuring]. 
 
 Injuries are, however, not only a burden to the afflicted individual but also to communities and to society as a whole [@newnam2014impacts]. One aspect of such societal effects are the economic costs. There have been attempts to estimate the
@@ -239,4 +243,32 @@ This project will link the two
 databases and assess the performance of each audit filter in terms of discrimination and accuracy. Logistic regression and a 5% significance level and 95% confidence
 level will be used. 
 
+## Results
+Participants 13*
+(c) Consider use of a flow diagram
+(a) Give characteristics of study participants (eg demographic, clinical, social) and information
+on exposures and potential confounders
+(b) Indicate number of participants with missing data for each variable of interest
+Descriptive
+data
+14*
+(c) Cohort study—Summarise follow-up time (eg, average and total amount)
+Cohort study—Report numbers of outcome events or summary measures over time
+Case-control study—Report numbers in each exposure category, or summary measures of
+exposure
+Outcome data 15*
+Cross-sectional study—Report numbers of outcome events or summary measures
+(a) Give unadjusted estimates and, if applicable, confounder-adjusted estimates and their
+precision (eg, 95% confidence interval). Make clear which confounders were adjusted for and
+why they were included
+(b) Report category boundaries when continuous variables were categorized
+Main results 16
+(c) If relevant, consider translating estimates of relative risk into absolute risk for a meaningful
+time period
+Other analyses 17 Report other analyses done—eg analyses of subgroups and interactions, and sensitivity
+analyses
+
+
 ## References
+
+

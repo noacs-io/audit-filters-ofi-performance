@@ -18,6 +18,8 @@ bibliography: bibliography.bib
 Trauma is defined as a physical injury of external origin together with the body's
 associated response. This phenomenon constitutes 9% of global deaths each year [@world2014injuries]. 
 It is the leading cause of death for individuals between the ages 10 to 49[@vos2020global];[@roth2018global].
+The most common type of trauma among individuals of all ages are road traffic accidents [@vos2020global];[@roth2018global].
+In Sweden, road traffic incidence account for around 40% of injuries and falls account for 40% of injuries [@SweTrau2022Arsrapport].
 
 Trauma is broadly  categorized into two groups by the underlying causal mechanism: penetrating and blunt trauma. Common examples of penetrating trauma are bullet wounds and knife cuts. Blunt trauma, however, is
 attributed to injuries like road traffic injuries and falls. Generally
@@ -27,11 +29,15 @@ in a piercing manner and often resulting in deeper lacerations to tissues
 and organs. Blunt trauma with enough force can however be penetrating
 in character [@hexdall2011Mechanism]. 
 
-Globally, the leading cause of injury are road traffic accidents [@vos2020global];[@roth2018global]
-In Sweden, road traffic incidence account for around 40% of injuries and falls account for 40% of injuries [@SweTrau2022Arsrapport].
+
 
 ## Impact
-The impact of trauma depends greatly on the type of trauma, where it occurred and to whom it affected. Trauma contributes for 11.9% of global Years of life lost (YLL) [@roth2018global]. Furthermore, Trauma is associated with higher tendency to depression, post traumatic stress syndrome (PTSD), negative effects on cognitive functions etc. [@north1999psychological];[@muscatelli2017prevalence]. 
+The impact of trauma depends greatly on the type of trauma, where it occurred and to whom it affected. 
+
+Trauma contributes for 11.9% of global Years of life lost (YLL) [@roth2018global]. Furthermore, Trauma is associated with higher tendency to depression, post traumatic stress syndrome (PTSD), negative effects on cognitive functions etc. [@north1999psychological];[@muscatelli2017prevalence].
+
+Up to 11% of trauma patients have PTSD 3 years after the traumatic event[@visser2017course]. Furthermore, individuals who witness traumatic injuries are also subject to higher risk of PTSD.  
+Traumatic injuries are associated with 36% not coming back to work within 1 year [@david2022measuring]. 
 
 Injuries are, however, not only a burden to the afflicted individual but also to communities and to society as a whole [@newnam2014impacts]. One aspect of such societal effects are the economic costs. There have been attempts to estimate the
 global cost  of injury it is a complicated task due to its variabitity. It is however estimated that the cost of road injuries alone account for 2%
@@ -45,7 +51,8 @@ provision of healthcare delivered by specialized trauma
 centres. A myriad of different specialities are involved in trauma care, including but not
 limited to surgeons, orthopaedics, anaesthesiologists, emergency doctors and
 nurses. 
-
+Trauma care is divided into three components: prehospital, hospital and posthospital.
+The prehospital component is 
 Trauma centres have shown significantly less mortality compared to non-trauma centres. And the level of maturity of a trauma center is also correlated with reduced mortality which shows the significance of high quality and specialized care for trauma [@alharbi2021effectiveness];[@mann1999systematic]. A similar study in Sweden [@candefjord2020mortality] showed 41% less 30-day mortality in a mature trauma centre compared to a non-trauma centre. However,  
 even with established trauma care systems, due to its complexity and sensitivity to delay, it is prone
 to errors [@nikouline2021errors];[@vioque2014classifying] which in turn can lead to complications and death.
@@ -66,15 +73,17 @@ corrective measures for future success. Following techniques are being used: A m
 
 ### Morbidity and Mortality Conferences and Preventable Death Review Panels
 
-The MMC is a central QI technique. It is and established framework of crucial
+The MMC is a central QI technique. It is an established framework of crucial
 components of anonymity, a focus on specific adverse events, realising
 flawed approaches, critical analysis and lastly the effort to change
-and practice that change. [@gregor2016morbidity]
+and practice that change [@gregor2016morbidity].
 
 The MMC are regularly scheduled meetings in which specific
-patient cases are brought up and discussed between healthcare
-professionals from all the different disciplines involved in trauma
-care and its processes. It is recommended that they are around 40
+patient cases are brought up for discussion. The conference attendees are healthcare
+professionals involved in trauma
+care and its processes, not necessarily involved in the specific patient case. The patient case selection process varies but common themes for discussion are unexpected mortality, unexpected morbidity and errors [@orlander2003morbidity].
+
+It is recommended that they are around 40
 minutes but this varies between different
 hospitals [@world2009guidelines].
 
