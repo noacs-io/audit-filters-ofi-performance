@@ -1,4 +1,5 @@
-
+https://rcsyd.se/swetrau/wp-content/uploads/sites/10/2015/10/Revised_Utstein_Template_-_Data_Dictionary_v1.1.1.pdf
+Ustein template
 [@roth2018global]
 IMPACT: in 2017. 11,9% of global YLL. 8% of global death (27,7% from road traffic injuries)
 
