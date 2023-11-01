@@ -6,3 +6,84 @@ and write about what you have tried and why, a place to write "dirty"
 code so that the rest of your project can be kept clean. See this
 mostly as a reference for your future self and use it in a way that
 makes sense to you.
+
+flow chart konferanschart (ML papper preprint)
+skrive en kort rapport en rad med övergripande vad som gått fel.
+inga barn med i datan (under 15)
+sensitivitet och specificitet för audit filters
+prata lite om OFI. Vilka OFI finns (kommunikation, handläggning)
+KI har traumaregister (kopplat till swetrau men har olika definition av trauma) KI har ISS 9
+kvalitetsregister det konferansera sammanställer (audit filters och sånt faller där)
+martin har byggt nice paket där man kan skapa OFI.
+OFI finns i kvalitetsregister från M&M konferanser.
+
+Kommer in i trauma rum (alla som är med i trauma teamet är där). Alla som är ,ed har en sökare. kommer till trauma rummet.
+CT, slätröntgen i taket och massa annat. Hur ser traumat ut. Går direkt till lap rum exempelvis. 
+
+Bra exempelfall finns i 2014 guidlines WHO (kan vara bra att ha inför presentationen.
+
+specialistsjuksköterska applicerar alla filter. Om något av filtrerna blir ja så går de igenom detta med andra specialistsjuksköterskan. 
+ortoped och neurkirurg är med på M&M konferenser
+dokumenteras sen i kvalitetsdatabasen.
+2013-2017 uppdaterad variant.
+audit filtersarna är för inklusiva. Hur mycket missar vi när vi tar bort audit filters. 
+Modern lösning med maskininlärning skulle kunna ta bort behovet av audit filters.
+
+det som hältar studier är oftast att man inte hinner med datainsamling. 
+
+git fetch --all
+git reset --hard origin/master
+git pull origin master
+
+```{r}
+library(rofi)
+library(dplyr)
+noacsr::source_all_functions()
+prepared.data <- prepare_data(data)
+##Nedan är en lista på alla keywords för auditfilters som används på KUH.
+#Systolic blood pressure less than 90
+prepared.data$VK_sap_less90
+#Glasgow coma scale less than 9 and not intubated
+prepared.data$VK_gcs_less9_ej_intubTE
+#Injury severity score greater than 15 but not admitted to the intensive care unit
+prepared.data$VK_iss_15_ej_iva
+#Time to acute intervention more than 60 minutes from arrival to hospital
+prepared.data$VK_mer_60min_interv
+#Time to computed tomography more than 30 minutes from arrival to hospital
+prepared.data$VK_mer_30min_DT
+#No anticoagulant therapy within 72 hours after traumatic brain injury
+prepared.data$VK_ej_trombrof_TBI_72h
+#The presence of cardio-pulmonary resuscitation with thoracotomy
+prepared.data$VK_hlr_thorak
+#The presence of a liver or spleen injury
+prepared.data$VK_mjaltskada
+prepared.data$VK_leverskada
+#Massive transfusion, defined as 10 or more units of packed red blood cells within 24 hours
+prepared.data$VK_mass_transf
+
+selected.auditfilters <- prepared.data %>% select(starts_with("VK"),ofi)
+clean.data <- selected.auditfilters %>% filter_all(any_vars(!is.na(.)))
+#number of patients assigned a audit filter
+count.patient <- nrow(selected.auditfilters[selected.auditfilters$PersonIdentity,])
+print(count.patient)
+#number of ofi
+count.ofi <- nrow(selected.auditfilters[selected.auditfilters$ofi == "Yes",])
+print(count.ofi)
+print(clean.data)
+```
+
+
+## Severity of Injury
+
+When categorizing trauma with the intention to treat we use severity as
+measurement. However, since injuries can vary in so many ways and are
+categorized in so many ways it is important to categorise trauma with
+the intention to treat it. For this reason,since 1975, it is common
+practice to use the severity of the injury as a means to triage patient
+cases thus approaching the problem in a more effective way.[@baker1974injury]
+
+table of auditfilters.
+ethical considerations.
+layout not vancouver
+language (understandable)
+unfocused material and method. Flow should be clear.
