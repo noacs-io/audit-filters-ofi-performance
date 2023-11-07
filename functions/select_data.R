@@ -12,7 +12,6 @@ select_data <- function(dataSet) {
   combinedDataset <- combinedDataset[!(is.na(combinedDataset$ofi)), ]
   #Remove rows where no OFI value is assigned
   numberofrows <- nrow(combinedDataset)
-  print(numberofrows)
   
   combinedDataset$AF_sap_less90 <- combinedDataset$ed_sbp_value < 90 | combinedDataset$ed_sbp_rtscat <= 3
   combinedDataset$AF_sap_less90[is.na(combinedDataset$AF_sap_less90)] <- FALSE
@@ -46,7 +45,6 @@ select_data <- function(dataSet) {
   combinedDataset$ofi <- combinedDataset$ofi == "yes"
   combinedDataset$ofi[is.na(combinedDataset$ofi)] <- FALSE
   #turning values into boolean
-  combinedDataset$de
   selectedData <- select(combinedDataset,starts_with("AF_"), ofi, 
                          Deceased, Gender,ISS, pt_age_yrs, ed_sbp_value, ed_gcs_sum,
                          dt_ed_first_ct, ed_intubated,res_survival )

@@ -43,7 +43,6 @@ tableOne <- tbl_summary(tableOneData,
                 stat_1 = "**No**",
                 stat_2 = "**Yes**") %>%
   modify_spanning_header(c("stat_1", "stat_2") ~ "**OFI**")
-tableOne
 #plotting my table one
 
 
@@ -75,7 +74,6 @@ tableTwo <- gt(tableOfCalculatedData1) %>%
   tab_header(
     title = "Performance of auditfilters in predicting OFI") %>%
   cols_align(align = "left")
-tableTwo
 #missing = "no",
 #label = list(AF_iss_15_ej_TE ~ "ISS>15 no trauma larm", 
  #            AF_sap_less90 ~ "SAP<90", 

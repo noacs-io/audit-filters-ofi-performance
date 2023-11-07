@@ -4,15 +4,30 @@ title: Performance of individual audit filters in predicting opportunities for i
 author: "Josef Al-Khalili"
 subtitle: A registry based cohort study
 output:
- pdf_document: default
- word_document: default
+  pdf_document: default
+  word_document: default
+  html_document: 
+    df_print: paged
 csl: bmcemerg.csl
 editor_options:
   markdown:
     wrap: 72
 bibliography: bibliography.bib
 ---
+```{r Table1, echo=FALSE, fig.cap=" IN_CAPTION", fig.align="center", warning=FALSE, message=FALSE,error=FALSE}
+source("main.R")
+library(rofi)
+library(dplyr)
+library(ggplot2)
+library(pROC)
+library(gtsummary)
+library(gt)
+library(boot)
 
+tableOne
+tableTwo
+
+```
 # Introduction
 
 Trauma is defined as a physical injury of external origin together with
@@ -298,9 +313,14 @@ each audit filter in terms of discrimination and accuracy. Logistic
 regression and a 5% significance level and 95% confidence level will be
 used.
 
-## References
+# Results
+```
+
+```
+# Discussion
+# References
 
 ::: {#refs}
 :::
 
-##Appendices
+#Appendices
