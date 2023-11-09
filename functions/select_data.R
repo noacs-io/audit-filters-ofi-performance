@@ -7,12 +7,11 @@ select_data <- function(dataSet) {
   #Add OFI to database
   
   combinedDataset[] <- lapply(combinedDataset, function(x) if(is.character(x)) tolower(x) else x)
-  #Turn everything into lower case
+  #Turn everything into lower case because some values were mixed
   
   combinedDataset <- combinedDataset[!(is.na(combinedDataset$ofi)), ]
   #Remove rows where no OFI value is assigned
   numberofrows <- nrow(combinedDataset)
-  
   combinedDataset$AF_sap_less90 <- combinedDataset$ed_sbp_value < 90 | combinedDataset$ed_sbp_rtscat <= 3
   combinedDataset$AF_sap_less90[is.na(combinedDataset$AF_sap_less90)] <- FALSE
   #VK_sap_less90
@@ -45,13 +44,17 @@ select_data <- function(dataSet) {
   combinedDataset$ofi <- combinedDataset$ofi == "yes"
   combinedDataset$ofi[is.na(combinedDataset$ofi)] <- FALSE
   #turning values into boolean
-  selectedData <- select(combinedDataset,starts_with("AF_"), ofi, 
-                         Deceased, Gender,ISS, pt_age_yrs, ed_sbp_value, ed_gcs_sum,
-                         dt_ed_first_ct, ed_intubated,res_survival )
+  
+  selectedData <- select(combinedDataset,starts_with("AF_"), ofi,
+                         Gender,ISS, pt_age_yrs, ed_sbp_value, ed_gcs_sum,
+                         dt_ed_first_ct, ed_intubated,res_survival,dt_ed_emerg_proc )
+  
+  
   selectedData$ed_intubated <- ifelse(selectedData$ed_intubated == 1, "No","Yes")
-  selectedData$Deceased <- ifelse(selectedData$Deceased == "true", "Yes","No")
-  selectedData$Gender <- ifelse(selectedData$Gender == "k","Women","Men")
-  selectedData$res_survival <- ifelse(selectedData$res_survival == 1,"Dead","Alive")
+  selectedData$Gender <- ifelse(selectedData$Gender == "k","Female","Male")
+  selectedData$res_survival <- ifelse(selectedData$res_survival == 1,"Yes","No")
+
+
   #select what i want
   return(selectedData)
 }

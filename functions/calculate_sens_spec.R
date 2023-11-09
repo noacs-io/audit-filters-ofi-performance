@@ -6,9 +6,10 @@ calculate_sens_spec <- function(twoVariableData){
   FP <- sum(!twoVariableData[1] & twoVariableData[2])
   FN <- sum(twoVariableData[1] & !twoVariableData[2])
   # Calculate Sensitivity (True Positive Rate)
+  numberOfTrue <- TP + FP
   sensitivityOfAuditFilter <- round((TP / (TP + FN)*100),digits = 1)
   # Calculate Specificity (True Negative Rate)
   specificityOfAuditFilter <- round((TN / (TN + FP)*100), digits = 1)
   
-  return(c(sensitivityOfAuditFilter,specificityOfAuditFilter))
+  return(c(sensitivityOfAuditFilter,specificityOfAuditFilter, numberOfTrue))
 }

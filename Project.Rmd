@@ -314,10 +314,56 @@ regression and a 5% significance level and 95% confidence level will be
 used.
 
 # Results
-```
+Results
+## 1 Participants
+### 1.2 Study Participants and Setting
 
-```
+In this retrospective cohort, a total of 8312 trauma care cases were assessed. The study was conducted at Karolinska University Hospital, which is a level I trauma center specializing in trauma care.
+
+### 1.3 Participant Characteristics
+
+Table 1 presents the baseline characteristics of the study participants. Men constituted the majority of patients in the study. The average age for individuals presented with no OFI is 42 and with OFI, 49. The average ISS was 17 for the group presented with OFI and 9 for the group not presented with an OFI (p <0.001). The average GCS at ED was 15 for both groups.
+
+## 2. Individual Audit Filters
+###2.1. Performance of Individual Audit Filters
+
+Table 2 summarizes the performance of each individual audit filter in identifying opportunities for improvement in trauma care. For each filter, we report the following:
+
+The total number of cases in which the filter was applied.
+The number of cases in which the filter identified opportunities for improvement.
+The percentage of opportunities detected by each filter.
+
+5. Adverse Events
+5.1. Adverse Events
+
+Any adverse events related to the identified opportunities for improvement are presented in Table 5. We report the type and frequency of adverse events associated with the interventions or lack thereof following the identification of opportunities.
+
+6. Additional Analyses
+6.1. Additional Analyses
+
+We performed additional statistical analyses to assess the overall impact of the audit filters on patient outcomes. These results are detailed in Table 6 and include [briefly describe the key findings from additional analyses, e.g., adjusted odds ratios, p-values].
+
+7. Sensitivity Analyses
+7.1. Sensitivity Analyses
+
+Sensitivity analyses were conducted to test the robustness of our results. The findings of these sensitivity analyses are presented in Table 7, highlighting any variations in the performance of audit filters under different scenarios.
+
+8. Reporting of Missing Data
+8.1. Reporting of Missing Data
+
+We provide a detailed account of missing data in Table 8, including the number of cases with missing data for each variable, the reasons for missing data, and any actions taken to address missing data in the analysis.
+
+9. Harms
+9.1. Harms
+
+The potential harms associated with the implementation of audit filters or the identification of opportunities for improvement are summarized in Table 9. This includes any unintended consequences or adverse effects observed during the study.
+
+10. Limitations
+10.1. Limitations
+
+We acknowledge several limitations in our study, including [enumerate the study limitations, e.g., potential selection bias, data quality, and generalizability]. These limitations should be considered when interpreting the results.
 # Discussion
+
 # References
 
 ::: {#refs}
