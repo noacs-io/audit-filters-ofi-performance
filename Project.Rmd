@@ -14,145 +14,80 @@ editor_options:
     wrap: 72
 bibliography: bibliography.bib
 ---
-```{r Table1, echo=FALSE, fig.cap=" IN_CAPTION", fig.align="center", warning=FALSE, message=FALSE,error=FALSE}
-source("main.R")
-library(rofi)
-library(dplyr)
-library(ggplot2)
-library(pROC)
-library(gtsummary)
-library(gt)
-library(boot)
 
-tableOne
-tableTwo
+# Abbreviations
+OFI – Opportunities For Improvement
+AF – Audit filter
+CI – confidence interval
+GCS – Glascow Coma Scale
+ISS – Injury Severity Score
+ED – Emergency Department
+AUC – Area Under Curve
+ROC – Reciever Operating Characteristic
+CPR – Cardiopulmonary Resuscitation
+SBP – Systolic Blood Pressure
+WHO – World Health Organisation
+YLL – Years Life Lost
+DALY – Disability Adjusted Life Years
+PTSD – Post Traumatic Stress Disorder 
 
-```
 # Introduction
 
-Trauma is defined as a physical injury of external origin together with
-the body's associated response. This phenomenon constitutes 9% of global
-deaths annually [@world2014injuries]. Trauma affects lower and middle
-income countries to a greater degree. Furthermore, young people are at
-higher risk for trauma compared to the general population. It is the
-leading cause of death for individuals between the ages 10 to
-49[@vos2020global];[@roth2018global]. The most common type of trauma
-among individuals of all ages are road traffic injuries
-[@vos2020global];[@roth2018global]. In Sweden, road traffic injuries
-account for around 40% of injuries and falls account for 40% of injuries
+Trauma is defined as a physical injury of external origin together with the associated reaction of the body. This phenomenon accounts for 9% of global deaths annually [@world2014injuries]. Trauma affects low- and middle-income countries at a higher rate. In addition, young people are at higher risk of trauma compared to the general population. It is the leading cause of death in people between the ages of 10 and 49 [@vos2020global];[@roth2018global]. The most common type of trauma for people of all ages is road traffic injuries
+[@vos2020global];[@roth2018global]. In Sweden, road traffic injuries account for about 40% of injuries and falls for 40%
 [@SweTrau2022Arsrapport].
 
-Trauma is broadly categorized into two groups by the underlying causal
-mechanism: penetrating and blunt trauma. Common examples of penetrating
-trauma are bullet wounds and knife cuts. Blunt trauma, however, is
-attributed to injuries like road traffic injuries and falls. Generally
-speaking, the two types of trauma can also be characterized by the size
-of force causing it and the area of impact. Blunt trauma is caused by a
-high-force impact over a larger surface area. In contrast, penetrating
-trauma results from a force applied to a smaller surface area causing
-greater pressure thus acting in a piercing manner and often resulting in
-deeper lacerations to tissues and organs. Blunt trauma with enough force
-can however be penetrating in character [@hexdall2011Mechanism].
+Trauma is broadly divided into two groups according to the underlying causal mechanism: penetrating and blunt trauma. Common examples of penetrating trauma are gunshot wounds and knife cuts. Blunt trauma, on the other hand, is caused by injuries such as road traffic accidents and falls. In general, the two types of trauma can also be characterized by the size of the force causing the injury and the area of impact. Blunt trauma is caused by a high force impact over a larger area. In contrast, penetrating trauma is caused by a force applied to a smaller area, causing greater pressure so that it is penetrating and often results in deeper lacerations to tissues and organs. However, blunt trauma with sufficient force can be penetrating in nature [@hexdall2011Mechanism].
 
 ## Impact
 
-The impact of trauma depends greatly on the type of trauma, where it
-occurred and to whom it affected.
+The effects of a trauma depend greatly on the type of trauma, where it happened and whom it affected.
 
-Trauma contributes for 11.9% of global Years of life lost (YLL)
-[@roth2018global]. Furthermore, Trauma is associated with higher
-tendency to depression, post traumatic stress syndrome (PTSD) and
-negative effects on cognitive functions etc.
+Trauma is responsible for 11.9% of years of life lost (YLL) worldwide
+[@roth2018global]. In addition, trauma is associated with a higher propensity for depression, post-traumatic stress disorder (PTSD) and negative effects on cognitive function, etc.
 [@north1999psychological];[@muscatelli2017prevalence].
 
-It is calculated that up to 11% of trauma patients have PTSD 3 years
-after the traumatic event[@visser2017course]. Furthermore, individuals
-who witness traumatic injuries are also subject to higher risk of PTSD.\
-Traumatic injuries are associated with 36% not coming back to work
-within 1 year [@david2022measuring].
+It is estimated that up to 11% of trauma patients have PTSD 3 years after the traumatic event [@visser2017course]. In addition, people who witness traumatic injuries are also at a higher risk of developing PTSD.\
+Traumatic injuries are associated with 36% not returning to work within 1 year [@david2022measuring].
 
-Injuries are, however, not only a burden to the afflicted individual but
-also to society as a whole [@newnam2014impacts]. One aspect of such
-societal effects are the economic costs. There have been attempts to
-estimate the global cost of injury it is a complicated task due to its
-variabitity. It is however estimated that the cost of road injuries
-alone account for 2% of gross domestic product (GDP) in high-income
-countries [@world2014injuries].
+However, injuries are not only a burden on the person affected, but also on society as a whole [@newnam2014impacts]. One aspect of such societal impact is the economic cost. Attempts have been made to estimate the global cost of injuries, which is a complicated task due to their variability. However, it is estimated that the cost of road traffic injuries alone accounts for 2% of gross domestic product (GDP) in high-income countries [@world2014injuries].
 
 ## Trauma Care Systems
 
-Trauma care is a multidisciplinary, complex, and time-critical provision
-of healthcare delivered by specialized trauma centres. A myriad of
-different specialities are involved in trauma care, including but not
-limited to surgeons, orthopaedics, anaesthesiologists, emergency doctors
-and nurses. Trauma care is divided into three components: prehospital,
-hospital and posthospital. The prehospital component is Trauma centres
-have shown significantly less mortality compared to non-trauma centres.
-And the level of maturity of a trauma center is also correlated with
-reduced mortality which shows the significance of high quality and
-specialized care for trauma
+Trauma care is a multidisciplinary, complex and time-critical healthcare service provided by specialised trauma centres. A variety of different specialties are involved in trauma care, including surgeons, orthopedists, anesthesiologists, emergency physicians and nurses. Trauma care is divided into three components: pre-hospital, in-hospital and post-hospital. The prehospital component is trauma centres have a significantly lower mortality rate compared to non-trauma centres.
+And the maturity of a trauma centre also correlates with lower mortality, demonstrating the importance of high-quality, specialised trauma care
 [@alharbi2021effectiveness];[@mann1999systematic]. A similar study in
-Sweden [@candefjord2020mortality] showed 41% less 30-day mortality in a
-mature trauma centre compared to a non-trauma centre. However,\
-even with established trauma care systems, due to its complexity and
-sensitivity to delay, it is prone to errors
-[@nikouline2021errors];[@vioque2014classifying] which in turn can lead
-to complications and death. Studies between 1990 and 2014 have shown a
-pooled preventable death rate of 20% with newer studies showing less
-[@kwon2014pooled]. In a more recent study in A Swedish level I trauma
-centre they showed a 4% preventable death rate [@ghorbani2018analysis].
+Sweden [@candefjord2020mortality] showed that 30-day mortality is 41% lower in a mature trauma centre compared to a non-trauma centre. However, \
+even in established trauma care systems, it is prone to error due to its complexity and susceptibility to delays
+[@nikouline2021errors];[@vioque2014classifying], which in turn can lead to complications and death. Studies between 1990 and 2014 have shown a pooled preventable death rate of 20%, with more recent studies showing less
+[@kwon2014pooled]. A recent study in a Swedish Level I trauma centre found a preventable death rate of 4% [@ghorbani2018analysis].
 
 ## Quality Improvement
 
-In order to minimize errors in trauma care, Quality improvement (QI)
-programs were established by the World Health Organisation (WHO) and the
+To minimize errors in trauma care, quality improvement (QI) programs have been established by the World Health Organization (WHO)
+programs by the World Health Organization (WHO) and the International
 International Association for Trauma Surgery and Intensive Care (IATSIC)
-[@world2009guidelines]. These programs are at the core of current trauma
-care systems and its development all around the world.
+[@world2009guidelines]. These programs form the core of current trauma care systems and their development around the world.
 
-QI programs consist of a set of recommended techniques that seek to
-enable discussion and analysis of the trauma process in order to take
-corrective measures for future success. Following techniques are being
-used: A multidisciplinary mortality and morbidity conference (MMC), A
-preventable death review panel and the use of audit
-filters[@world2009guidelines].
+QI programs consist of a series of recommended techniques aimed at facilitating discussion and analysis of the trauma process in order to take corrective action for future success. The following techniques are
+used: A multidisciplinary mortality and morbidity conference (MMC), a preventable death review panel, and the use of audit filters[@world2009guidelines].
 
 ### Morbidity and Mortality Conferences and Preventable Death Review Panels
+The MMC is a central QI technique. It is a proven framework with the critical components of anonymity, focusing on specific adverse events, recognising flawed approaches, critical analysis, seeking
+ change and implementing that change [@gregor2016morbidity].
 
-The MMC is a central QI technique. It is an established framework of
-crucial components of anonymity, a focus on specific adverse events,
-realising flawed approaches, critical analysis and lastly the effort to
-change and practice that change [@gregor2016morbidity].
+MMCs are regular meetings at which specific patient cases are presented for discussion. The conference participants are healthcare professionals involved in trauma care and its processes, but not necessarily the specific patient case. The selection of patient cases varies, but common themes for discussion are unexpected mortality, unexpected morbidity and errors [@orlander2003morbidity].
 
-The MMC are regularly scheduled meetings in which specific patient cases
-are brought up for discussion. The conference attendees are healthcare
-professionals involved in trauma care and its processes, not necessarily
-involved in the specific patient case. The patient case selection
-process varies but common themes for discussion are unexpected
-mortality, unexpected morbidity and errors [@orlander2003morbidity].
+It is recommended that they last about 40 minutes, but this varies from hospital to hospital [@world2009guidelines].
 
-It is recommended that they are around 40 minutes but this varies
-between different hospitals [@world2009guidelines].
+Five themes have been proposed that broadly define QI-centred MMC: (1)
+clear definition of the role of the MMC (2), involvement of stakeholders, (3)
+recognising and selecting appropriate patient cases for presentation, (4)
+structuring focused discussions, and (5) formulating recommendations and assigning follow-up actions[@giesbrecht2016morbidity];[@churchill2020quality].
 
-Five themes have been proposed that broadly define QI centred MMC: (1)
-clear definition of the role of MMC (2), involving stakeholders, (3)
-detecting and selecting appropriate patient cases for presentation, (4)
-structuring goal-directed discussion, and (5) forming recommendations
-and assigning
-follow-up[@giesbrecht2016morbidity];[@churchill2020quality].
+When implemented effectively, MMCs serve as an important tool for error proofing without serving solely as a negative for individual care providers, but rather as an incentive for reporting. These conferences promote a more comprehensive, systems-based approach that emphasizes task analysis, teamwork and quality improvement[@lazzara2022morbidity]. The introduction of MMC has been shown to increase morbidity and mortality reporting[@kong2016analysis].
 
-When effectively implemented, MMC serve as a crucial fault-examining
-tool without being solely negative marks against individual care
-providers, instead being incentives for reporting. These conferences
-promote a broader, system-based approach that emphasizes the analysis of
-tasks, teamwork, and quality improvement[@lazzara2022morbidity]. The
-implementation of MMC have been shown to increase reporting of morbidity
-and mortality[@kong2016analysis].
-
-Following the MMC there is a preventable death review panel with the
-soul purpose of determining whether the death of a patient could have
-been preventable [@ghorbani2014clinical].
-
+Following MMC, there is an avoidable death review panel whose role is to determine whether a patient's death could have been avoided [@ghorbani2014clinical].
 ### Audit filters and Opportunities for improvement
 
 Audit filters also known as quality indicators are specific established
@@ -253,41 +188,24 @@ identified".
 
 ### Exposures
 
-The exposure variable is the audit filters. The following audit filters
-are of interest:
-
-• Systolic blood pressure less than 90
-
-• Glasgow coma scale less than 9 and not intubated
-
-• Injury severity score greater than 15 but not admitted to the
-intensive care unit
-
-• Time to acute intervention more than 60 minutes from arrival to
-hospital
-
-• Time to computed tomography more than 30 minutes from arrival to
-hospital
-
-• No anticoagulant therapy within 72 hours after traumatic brain injury
-
-• The presence of cardio-pulmonary resuscitation with thoracotomy
-
-• The presence of a liver or spleen injury
-
-• Massive transfusion, defined as 10 or more units of packed red blood
-cells within 24 hours.
+The exposure variable is the 10 audit filters used at Karolinska university hospital.
 
 ## Data sources/measurement
+Data for this cohort were retrieved from the trauma registry and the trauma care quality database during the period spanning from 2012 to 2022. 
 
-The data will be retrieved from the trauma registry and the trauma care
-quality database during the period spanning from 2012 to 2022.
+The individual audit filters, was identified through the trauma registry
 
+The OFIs was extracted from the trauma care quality database
+
+All data were anonymized to protect patient privacy.
 ## Bias
 
 Selection bias since the outcome of this study has already occurred.\
-There is a possibility that concensus decisions from the MMC conferences
-are flawed which causes misclassification bias.
+There is a possibility that consensus decisions from the MMC conferences
+are flawed which causes misclassification bias. Furthermore, the process of flagging a patient case with an audit filter is done manually by a specialised nurse as mentioned above. This means that there may be a selection bias
+
+Recall bias. Individuals who attend the MMC and has also been a witness to the speific patient case in question might not remember certain key elements that might affect the decision.
+
 
 ## Study size
 
@@ -308,13 +226,11 @@ positives + false negatives)
 The specificity is calculated accordingly: True negatives / (true
 negatives + false positives)
 
-This project will link the two databases and assess the performance of
-each audit filter in terms of discrimination and accuracy. Logistic
-regression and a 5% significance level and 95% confidence level will be
-used.
+A receiver operating curve (ROC) will be made and the area under the curve (AUC) calculated in order to compare the performance of each audit filter [@robin2011proc]
+
+Using a bootstrapping method with 1000 iterations of the selected data, a 95% confidence interval for sensitivity, specificity and AUC will be calculated. Furthermore, comparing AUC of each audit filter with that of coincidence (AUC = 0.5) through a one sample T test will be done to determine significance. This applies soley to any audit filter that might have an AUC confidence interval spanning 0.5.
 
 # Results
-Results
 ## 1 Participants
 ### 1.2 Study Participants and Setting
 
@@ -322,48 +238,94 @@ In this retrospective cohort, a total of 8312 trauma care cases were assessed. T
 
 ### 1.3 Participant Characteristics
 
-Table 1 presents the baseline characteristics of the study participants. Men constituted the majority of patients in the study. The average age for individuals presented with no OFI is 42 and with OFI, 49. The average ISS was 17 for the group presented with OFI and 9 for the group not presented with an OFI (p <0.001). The average GCS at ED was 15 for both groups.
+Table 1 presents the baseline characteristics of the study participants.After excluding patients under 15 years old and patients not screened for OFI, a total of 8309 individuals where admitted to the hospital and also screened for an OFI. A total of 7797 of the screened individuals had no OFI and 512 had an OFI.
+69% out of all patients included in the study where men and 31% where women. 
+
+Among the 512 patients with an OFI compared to the 7797 patients without, the mean age was slightly higher (mean 49 vs 42 years old) and the ISS was higher (mean 17 vs 9). The number of intubations was also higher (16% vs 8,3%).
+Patients with OFI had longer times to definitive treatment compared to patients without OFI (median: 144 vs 102 minutes from hospital arrival). Furthermore the time to first CT was also longer in the group with OFI compared to the group without OFI (39 min vs 33 min). 
+
+The mean systolic blood pressure in the OFI group did not differ from the systolic blood pressure in the no OFI group. 
+
+The variables with the highest amount of missing data was "time to definitive treatment" [n=5990] and "time to first CT" [n=1012].
 
 ## 2. Individual Audit Filters
 ###2.1. Performance of Individual Audit Filters
 
-Table 2 summarizes the performance of each individual audit filter in identifying opportunities for improvement in trauma care. For each filter, we report the following:
+Table 2 summarizes the performance of each individual audit filter in identifying opportunities for improvement in trauma care.
 
-The total number of cases in which the filter was applied.
-The number of cases in which the filter identified opportunities for improvement.
-The percentage of opportunities detected by each filter.
+There where varying amounts of patient cases flagged with each audit filter. The audit filter that was flagged most frequently was ">30 min until CT". The least flagged audit filter was "GCS<9 and not intubated".
 
-5. Adverse Events
-5.1. Adverse Events
+The audit filter with the highest specificity was "GCS<9 and not intubated" (98.7% CI: 98.5-98.9) was also the auditfilter with the lowest sensitivity (1.2% CI: 0.1-2).
 
-Any adverse events related to the identified opportunities for improvement are presented in Table 5. We report the type and frequency of adverse events associated with the interventions or lack thereof following the identification of opportunities.
+The audit filter with the highest sensitivity was ">30min until CT" (59.2% Ci: 55.3-63.3). The same audit filter had the lowest specificity (53.8% CI: 52.7-55.2).
 
-6. Additional Analyses
-6.1. Additional Analyses
+The confidence intervals varied between sensitivity and specificity with sensitivity having greater span.
 
-We performed additional statistical analyses to assess the overall impact of the audit filters on patient outcomes. These results are detailed in Table 6 and include [briefly describe the key findings from additional analyses, e.g., adjusted odds ratios, p-values].
-
-7. Sensitivity Analyses
-7.1. Sensitivity Analyses
-
-Sensitivity analyses were conducted to test the robustness of our results. The findings of these sensitivity analyses are presented in Table 7, highlighting any variations in the performance of audit filters under different scenarios.
-
-8. Reporting of Missing Data
-8.1. Reporting of Missing Data
-
-We provide a detailed account of missing data in Table 8, including the number of cases with missing data for each variable, the reasons for missing data, and any actions taken to address missing data in the analysis.
-
-9. Harms
-9.1. Harms
-
-The potential harms associated with the implementation of audit filters or the identification of opportunities for improvement are summarized in Table 9. This includes any unintended consequences or adverse effects observed during the study.
+three of the ten audit filters, "Dead at 30 days", "GCS<9 and not intubated" and "CPR and thoracotomy" showed a performance in predicting an OFI equal to that of coincidence. >60 min until first intervention had the highest AUC.
 
 10. Limitations
 10.1. Limitations
 
 We acknowledge several limitations in our study, including [enumerate the study limitations, e.g., potential selection bias, data quality, and generalizability]. These limitations should be considered when interpreting the results.
 # Discussion
+##  Interpretation of Results 
+The aim of the study was to determine the performance of individual audit filters in predicting OFI in order to assess wether they should be used as screening method for OFI or not.
 
+Male admission to trauma centres outnumbered females with almost double. This is similar to other studies.
+
+Earlier review articles sought to review the evidence for audit filters found no evidence supporting the use of audit filters in improving trauma care [@evans2009audit]. This shows that even though audit filters are wildly used there is not much support for the use of it.
+
+The audit filters that did not prove to be better than randomness   suggest that their use as a screening method for determining OFI is not valuable and should not be used for that purpose.
+
+in a 2008 study by Willis [@willis2008interpreting] they look at the individual risk for poor outcome in 14 audit filters. Out of these 14 audit filters only three audit filters showed an increased risk for poor outcome while the rest showd no significant ability to predict poor outcome. One audit filter, GCS<9 and not intubated, which was used by Willis is also used at the trauma center at Karolinska University Hospital. Similarly the audit filter showed no significant ability to predict poor outcome.     
+
+Some of the audit filters, however, showed promising results in predicting OFI. 
+
+The possible reason behind the audit filters having a high specificity relative to their sensitivity may be due to the outcome being rather uncommon whilst every individual audit filter miss the majority of OFI. Theoretically, adding all audit filters together would result in the sensitivity increasing. 
+
+Both audit filters measuring delay (>60 until first intervention and >30min until CT) showed promising results in predicting opportunities for improvement which could be explained by the fact that delay have shown to correlate with increased risk for adverse outcomes like preventable death [@teixeira2007preventable]. An injured individual might be standing on a thin line between survival and death if the adequate intervetion does not occur in time. This makes delay in general a good predictor of outcome. 
+
+The reason behind the fact that audit filter 1 showed no difference from randomness could be because severe traumatic injuries might inevitably die within 30 days of admission to the hospital resulting in no consensus on the existence of an OFI in such particular case.
+
+A similar explanation can be done with audit filter 9 which also showed a insignificant performance in predicting OFI. CPR and thoracotomy generally has a very low survival rate and might only be done to those who are severely injured.
+
+
+
+##Generalizability
+Since the screening method for identifying an OFI may vary at different trauma centres there will be a difference in results. 
+
+The audit filters being used differ between trauma centrer which adds to the difficulty of creating a standard screening system.
+##Limitations
+Opportunity for improvement, while defined as a binary variable, includes a diverse set of
+outcomes ranging from preventable deaths to bad documentation. This makes it difficult to create audit filters that do well in predicting an OFI.
+
+The current screening system for OFI might also introduce bias since the filters would favour the
+identification of some, but not all, errors
+
+Future research should focus on identifying potential subgroups of OFI
+that proves to be relatively hard to predict and adjust accordingly.
+ 
+
+The way the audit filters performance were individually calculated, as stated in the method section, was to look at every patientcase with or without an OFI and silmuntaniously flagged or not flagged with the audit filter. THis means that even tho an audit filter presented a true positive correlation with an OFI, there is still a chance, if the same patient case had more than one audit filter flagged, that it was not the tested audit filter that predicted truthfully rather it was the other audit filter.
+
+
+This further strengthens the idea that OFI should be divided in subgroups in order to better asses the performance of each audit filters with the corresponding OFI subgroup.
+##Health Equity 
+#Conclusion
+#Tables
+```{r Table1, echo=FALSE, fig.cap=" IN_CAPTION", fig.align="center", warning=FALSE, message=FALSE,error=FALSE}
+source("main.R")
+library(rofi)
+library(dplyr)
+library(ggplot2)
+library(pROC)
+library(gtsummary)
+library(gt)
+library(boot)
+
+tableOne
+
+```
 # References
 
 ::: {#refs}

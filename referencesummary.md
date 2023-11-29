@@ -1,3 +1,5 @@
+[@willis2008interpreting]: Patients with Glasgow Coma Scale <9 who are not intubated. Flagged vs not flagged showed no difference significant diference in mortality. The investigated QIs generally demonstrated poor construct validity and limited usefulness in predicting outcomes
+
 https://rcsyd.se/swetrau/wp-content/uploads/sites/10/2015/10/Revised_Utstein_Template_-_Data_Dictionary_v1.1.1.pdf
 Ustein template
 [@roth2018global]
