@@ -1,11 +1,14 @@
-clean_data <- function(dataOFI,auditFilter){
+clean_data <- function(dataOFI){
   dataOFI[] <- lapply(dataOFI, function(x) if(is.character(x)) tolower(x) else x)
   ##CONVERT TO LOWER
   underFifteen <- dataOFI$pt_age_yrs <= 14
   notScreenedForOFI <- is.na(dataOFI$ofi)
   includedData <- dataOFI[!(underFifteen | notScreenedForOFI),]
   ##ONLY INCLUDED DATA SELECTED
-  
+  listOfAuditFilters2 <- c("VK_hlr_thorak","VK_sap_less90","VK_leverskada",
+                           "VK_gcs_less9_ej_intubTE","VK_mjaltskada","VK_mer_30min_DT",
+                           "VK_mass_transf","VK_mer_60min_interv","VK_iss_15_ej_iva",
+                           "VK_ej_trombrof_TBI_72h","VK_iss_15_ej_TE")
   var99 <- c("ed_emergency_pro","TraumaAlarmAtHospital","pt_age_yrs","pre_sbp_value","ed_sbp_value","hosp_vent_days","hosp_los_days","iva_dagar_n","iva_vardtillfallen_n")
   includedData[, -which(names(includedData) %in% var99)][includedData[, -which(names(includedData) %in% var99)] == 99 ] <- NA
   includedData[includedData == 999] <- NA
@@ -14,12 +17,8 @@ clean_data <- function(dataOFI,auditFilter){
   includedData$ed_intubated <- ifelse(includedData$ed_intubated == 1, "Yes","No")
   includedData$Gender <- ifelse(includedData$Gender == "k","Female","Male")
   includedData$res_survival <- ifelse(includedData$res_survival == 1,"Yes","No")
- 
-  uniqueAuditFilterValues <- unique(as.vector(as.matrix(includedData[,auditFilter])))
-  print(uniqueAuditFilterValues)
- 
-  includedData[,auditFilter][includedData[,auditFilter] == "nn"] <- NA
-  ##REMOVE "nn"
   
+  includedData[,listOfAuditFilters2][includedData[,listOfAuditFilters2] == "nn"] <- NA
+  ##REMOVE "nn"
   return(includedData)
 }

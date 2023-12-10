@@ -2,10 +2,6 @@ create_flowchart <- function(combinedDataset){
   ################################
   ## Data/numbers for flowchart ##
   ################################
-  #combined.datasets[combined.datasets$tra_id == "92386","tra_DodsfallsanalysGenomford"] <- 1
-  
-  #Remove documentation OFI
-  #combined.datasets$ofi <- ifelse(grepl("Dokumetation|dokumentation|Dokumentation", combined.datasets$Problemomrade_.FMP), "No", combined.datasets$ofi)
   nTraumaRegistry <- nrow(combinedDataset)
   underFifteen <- combinedDataset$pt_age_yrs <= 14 & !is.na(combinedDataset$ofi)
   nUnderFifteen <- sum(underFifteen)
@@ -19,7 +15,7 @@ create_flowchart <- function(combinedDataset){
   ### Yes and No from mortality conferance
   nYesOFI <- sum(includedData$ofi == "Yes", na.rm=TRUE)
   nNoOFI <- sum(includedData$ofi == "No", na.rm=TRUE)
-  grViz("
+  DiagrammeR::grViz("
 digraph graph2 {
 fontname=Helvetica
 graph [layout = dot, splines=ortho, nodesep=0.3, fontname = \"helvetica\"]

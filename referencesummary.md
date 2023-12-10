@@ -42,3 +42,7 @@ no consensus in quality indicators
 
 [@alharbi2021effectiveness]
 Showed positive results of trauma care systems (centers). Reduced mortality
+
+[@horster2020empirical] Interventions and events showed better
+results than measurements of procedural
+times
