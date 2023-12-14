@@ -11,15 +11,14 @@ create_audit_filters <- function(cleanData){
   cleanData$AF_mer_60_min_interv <- cleanData$dt_ed_emerg_proc > 60
   cleanData$AF_mer_60_min_interv[is.na(cleanData$AF_mer_60_min_interv)] <- FALSE
   #VK_mer_60_min_interv
-  cleanData$AF_iss_15_ej_iva <- cleanData$ISS >= 15 & cleanData$host_care_level != 5
+  cleanData$AF_iss_15_ej_iva <- cleanData$ISS >= 15 & cleanData$host_care_level != "Intensive care unit"
   cleanData$AF_iss_15_ej_iva[is.na(cleanData$AF_iss_15_ej_iva)] <- FALSE
   #VK_iss_15_ej_iva
   cleanData$AF_death_30d <- cleanData$res_survival == "Yes"
   cleanData$AF_death_30d[is.na(cleanData$AF_death_30d)] <- FALSE
   #death after 30d
-  cleanData$VK
-  cleanData$AF_iss_15_ej_TE <- cleanData$ISS >= 15 & (cleanData$Tr_Nivå == 2 | cleanData$Tr_Nivå == 4 | cleanData$Tr_Nivå == 33)
-  cleanData$AF_iss_15_ej_TE[is.na(cleanData$iss_15_ej_TE)] <- FALSE
+  cleanData$AF_iss_15_ej_TE <- cleanData$ISS >= 15 & cleanData$Tr_Nivå == "No"
+  cleanData$AF_iss_15_ej_TE[is.na(cleanData$AF_iss_15_ej_TE)] <- FALSE
   #ISS 15 och ingen trauma larm
   cleanData$AF_ej_trombrof_TBI_72h <- cleanData$VK_ej_trombrof_TBI_72h == "ja"
   #turning values into boolean

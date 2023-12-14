@@ -17,7 +17,14 @@ clean_data <- function(dataOFI){
   includedData$ed_intubated <- ifelse(includedData$ed_intubated == 1, "Yes","No")
   includedData$Gender <- ifelse(includedData$Gender == "k","Female","Male")
   includedData$res_survival <- ifelse(includedData$res_survival == 1,"Yes","No")
+  includedData$Tr_Nivå <- ifelse(includedData$Tr_Nivå == (2 | 4 | 33), "No", "Yes")
+  includedData$host_care_level[includedData$host_care_level == 1] <- "Emergency department"
+  includedData$host_care_level[includedData$host_care_level == 2] <- "General ward"
+  includedData$host_care_level[includedData$host_care_level == 3] <- "Surgical ward"
+  includedData$host_care_level[includedData$host_care_level == 4] <- "Specialist ward/Intermediate ward"
+  includedData$host_care_level[includedData$host_care_level == 5] <- "Intensive care unit"
   
+
   includedData[,listOfAuditFilters2][includedData[,listOfAuditFilters2] == "nn"] <- NA
   ##REMOVE "nn"
   return(includedData)
