@@ -2,10 +2,11 @@
 title: Performance of individual audit filters in predicting opportunities for improvement
   in adult trauma patients
 author: "Josef Al-Khalili"
-subtitle: A registry based cohort study
+subtitle: A single-center registry-based retrospective cohort
 output:
+  word_document: 
+    reference_docx: JosefAlKhaliliExJobbSeminarieVersion.docx
   pdf_document: default
-  word_document: default
   html_document:
     df_print: paged
 csl: bmcemerg.csl
@@ -15,6 +16,7 @@ editor_options:
 bibliography: bibliography.bib
 always_allow_html: yes
 ---
+
 ```{r sourcecode, echo=FALSE, fig.align="center", warning=FALSE, message=FALSE,error=FALSE}
 source("main.R")
 library(rofi)
@@ -30,127 +32,160 @@ library(knitr)
 
 # Abbreviations
 
-OFI – Opportunities for Improvement 
+OFI -- Opportunities for Improvement
 
-CI – Confidence Interval 
+CI -- Confidence Interval
 
-GCS – Glascow Coma Scale 
+GCS -- Glasgow Coma Scale
 
-ISS – Injury Severity Score 
+ISS -- Injury Severity Score
 
-ED – Emergency Department 
+ED -- Emergency Department
 
-AUC – Area Under Curve 
+AUC -- Area Under Curve
 
-ROC – Receiver Operating Characteristics 
+ROC -- Receiver Operating Characteristics
 
-CPR – Cardiopulmonary Resuscitation 
+CPR -- Cardiopulmonary Resuscitation
 
-SBP – Systolic Blood Pressure 
+SBP -- Systolic Blood Pressure
 
-WHO – World Health Organisation 
+WHO -- World Health Organisation
 
-YLL – Years Life Lost
+YLL -- Years Life Lost
 
-DALY – Disability Adjusted Life Years 
+DALY -- Disability Adjusted Life Years
 
-PTSD – Post Traumatic Stress Disorder
+PTSD -- Post Traumatic Stress Disorder
 
-<!-- Add abstract -->
+# Sammanfattning
+
+*Bakgrund:* Trauma står för 9% av globala dödsfall årligen och har en
+betydande påverkan på individer och samhället.
+Kvalitetsförbättringsprogram (QI) syftar till att minimera dessa
+ogynnsamma utfall genom användning av audit filter som indikatorer för
+standardvård och genom att utvärdera patientfall för potentiella
+förbättringsmöjligheter (OFI). *Syfte:* Denna studie syftade till att
+utvärdera prestandan hos audit filter för att förutsäga OFI och att
+bedöma deras relevans som screeningverktyg för Morbiditets- och
+Mortalitetskonferenser (MMC). *Material och Metoder:* Sensitivitet,
+specificitet och Area Under the Receiver Operating Characteristics Curve
+(AUC) beräknades för att utvärdera prestanda. En t-test för AUC
+genomfördes för att jämföra prestanda med slumpmässighet. *Resultat:* Av
+de 11 audit filter som utvärderades hade 3 en AUC på 0,5 (p \> 0,05). De
+återstående audit filterna visade en korrelation med OFI, med AUC-värden
+som varierade från 0,51 till 0,63. Audit filtret "\> 60 min till första
+ingrepp" uppvisade den högsta AUC på 0,63. *Slutsats:* Ingen enskild
+revisionsfilter tycktes prestera väl i att förutsäga OFI. Detta antyder
+behovet av att ompröva den nuvarande screeningmetoden för MMC.
+
+# Abstract
+
+*Introduction:* Trauma is responsible for 9% of global deaths anually
+and has a significant impact on individuals and society. Quality
+Improvement (QI) programs seek to minimize these adverse outcomes
+through the use of audit filters as indicators of standard care and
+through assessing patient cases for potential Opportunities for
+Improvement (OFI). *Aims:* This study aimed to evaluate the performance
+of audit filters in predicting OFI and to assess their relevance as a
+screening tool for Morbidity and Mortality Conferences (MMC). *Material
+and Methods:* The sensitivity, specificity and Area Under the Reciever
+Operating Characteristics Curve (AUC) was calculate din order to assess
+performance. A t-test for AUC was conducted to compare the performance
+to coincidence. *Results:* Of the 11 audit filters assessed, 3 had an
+AUC of 0.5 (p \> 0.05). The remaining audit filters demonstrated a
+correlation with OFI, with AUC ranging from 0.51 to 0.63. The audit
+filter "\> 60 min until first intervention" exhibited the highest AUC of
+0.63. *Conclusion:* No individual audit filter seemed to perform well in
+predicting OFI, which suggest rethinking the current screening method
+for MMC.
+
+*Keywords:* Trauma, Opportunities for Improvement, audit filter,
+performance
 
 # Introduction
 
 Trauma is defined as a physical injury of external origin together with
 the associated reaction of the body. This phenomenon accounts for 9% of
 global deaths annually [@world2014injuries]. Trauma affects low- and
-middle-income countries at a higher rate. In addition, young people are
+middle-income countries at a higher rate compared to high-income countries. In addition, young people are
 at higher risk of trauma compared to the general population. It is the
 leading cause of death in people between the ages of 10 and 49
-<!-- If you want to combine citations you should write
-[@vos2020global; @roth2018global] -->
-[@vos2020global];[@roth2018global]. The most common type of trauma for
-people of all ages is road traffic injuries
-[@vos2020global];[@roth2018global]. In Sweden, road traffic injuries
-account for about 40% of injuries and falls for 40%
+[@vos2020global; @roth2018global]. The most common type of trauma for
+people of all ages is road traffic injuries [@vos2020global;
+@roth2018global]. In Sweden, road traffic injuries account for
+approximately 40% of injuries and falls for 40%
 [@SweTrau2022Arsrapport].
 
 Trauma is broadly divided into two groups according to the underlying
-causal mechanism: penetrating and blunt trauma. Common examples of
-penetrating trauma are gunshot wounds and knife cuts. Blunt trauma, on
-the other hand, is caused by injuries such as road traffic accidents and
-falls. In general, the two types of trauma can also be characterized by
-the size of the force causing the injury and the area of impact. Blunt
-trauma is caused by a high force impact over a larger area. In contrast,
-penetrating trauma is caused by a force applied to a smaller area,
-causing greater pressure so that it is penetrating and often results in
-deeper lacerations to tissues and organs. However, blunt trauma with
-sufficient force can be penetrating in nature [@hexdall2011Mechanism].
-Trauma varies widely and has both long term and short term consequences on an individual, a societal level and economical level.  
-
-## Impact
-<!-- Consider merging this section with the paragraphs above, as they
-are all about the characteristics and impact of trauma -->
-The effects of a trauma depend greatly on the type of trauma, where it
-happened and whom it affected.
+causal mechanism: penetrating and blunt trauma. Commonly known examples
+of penetrating trauma are gunshot wounds and knife injuries. Blunt trauma,
+on the other hand, is caused by injuries such as road traffic accidents
+and falls. In general, both types of trauma can also be characterised
+by the magnitude of the force causing the injury and the area of impact.
+Blunt trauma is caused by a high force impact over a larger area. In
+contrast, penetrating trauma is caused by a force applied to a smaller
+area, causing greater pressure so that it is penetrating and often
+results in deeper lacerations to tissues and organs. However, blunt
+trauma with sufficient force can be penetrating in nature
+[@hexdall2011Mechanism]. Trauma varies widely and has both long and
+short term consequences on an individual, societal and economic level.
 
 Trauma is responsible for 11.9% of years of life lost (YLL) worldwide
 [@roth2018global]. In addition, trauma is associated with a higher
-propensity for depression, post-traumatic stress disorder (PTSD) and
-negative effects on cognitive function, etc.
-[@north1999psychological];[@muscatelli2017prevalence].
+propensity towards depression, post-traumatic stress disorder (PTSD) and
+negative effects on cognitive function [@north1999psychological;
+@muscatelli2017prevalence].
 
-<!-- Do you mean the same thing by "trauma" and "traumatic injuries"? 
-If so, I suggest that you stick to just "trauma"-->
-It is estimated that up to 11% of trauma patients have PTSD 3 years
-after the traumatic event [@visser2017course]. In addition, people who
-witness traumatic injuries are also at a higher risk of developing
-PTSD. Traumatic injuries are associated with 36% not returning to work within
-1 year [@david2022measuring].
+It is estimated that up to 11% of trauma patients have PTSD three years
+after a traumatic event [@visser2017course]. In addition, people who
+witness trauma are also at a higher risk of developing PTSD. Trauma is
+associated with 36% not returning to work within one year
+[@david2022measuring].
 
-<!-- By "injuries", do you mean the same thing as "trauma"? Be consistent in
-how you use words, stick to one -->
-However, injuries are not only a burden on the person affected, but also
-on society as a whole [@newnam2014impacts]. One aspect of such societal
+However, trauma is not only a burden on the person affected, but also on
+society as a whole [@newnam2014impacts]. One aspect of such societal
 impact is the economic cost. Attempts have been made to estimate the
-global cost of injuries, which is a complicated task due to their
+global cost of trauma, which is a complicated task due to its
 variability. However, it is estimated that the cost of road traffic
 injuries alone accounts for 2% of gross domestic product (GDP) in
 high-income countries [@world2014injuries].
 
 ## Trauma Care Systems
 
-<!-- Trauma care is not only provided by specialised trauma centres.
-A lot of trauma care is provided in general hospitals, so I suggest 
-that you remove that part -->
-Trauma care is a multidisciplinary, complex and time-critical healthcare
-service provided by specialised trauma centres. A variety of different
-specialties are involved in trauma care, including surgeons,
-orthopedists, anesthesiologists, emergency physicians and nurses. Trauma
-care is divided into three components: pre-hospital, in-hospital and
-post-hospital. The prehospital component constitutes first responders, basic life support and advanced life support.[@world2005prehospital]. The in hospital component is defined as the instance a trauma patient is admitted to a health care facility, often a trauma center. The post-hospital component is about the rehabilitation and recovery of treated trauma patients.  
+Trauma care is a multidisciplinary, complex and time-critical health
+care service provided by hospitals. A variety of different specialities
+are involved in trauma care, including surgeons, orthopaedists,
+anaesthesiologists, emergency physicians and nurses. Trauma care is
+divided into three components: pre-hospital, in-hospital and
+post-hospital. The pre-hospital component constitutes first responders,
+basic life support and advanced life support.[@world2005prehospital].
+The in-hospital component is defined as the moment a trauma patient is
+admitted to a health care facility, often a trauma centre. The
+post-hospital component involves the rehabilitation and recovery of
+treated trauma patients.
 
-Trauma centres have a significantly lower mortality rate compared to non-trauma centres, and
-the maturity of a trauma centre correlates with lower mortality,
-demonstrating the importance of high-quality, specialised trauma care
-[@alharbi2021effectiveness];[@mann1999systematic]. A similar study in
-Sweden [@candefjord2020mortality] showed that 30-day mortality is 41%
-lower in a mature trauma centre compared to a non-trauma centre.
-<!-- I don't think it was mortality that was 41% lower, but the adjusted 
-risk of death. This means that if you arrive to a trauma centre your risk of 
-death is 41% lower, all other things equal. But the actual mortality is much lower -->
-However, even established trauma care systems are prone to error due to its
-complexity and susceptibility to delays
-[@nikouline2021errors];[@vioque2014classifying], which in turn can lead
+Trauma centres have a significantly lower mortality rate compared to
+non-trauma centres, and the maturity of a trauma centre correlates with
+lower mortality, demonstrating the importance of high-quality,
+specialised trauma care [@alharbi2021effectiveness;
+@mann1999systematic]. Similarly in Sweden
+[@candefjord2020mortality] showed that the 30-day adjusted risk of death is
+41% lower in a mature trauma centre compared to a non-trauma centre.
+Despite this, even established trauma care systems are prone to error
+due to its complexity and susceptibility to delays
+[@nikouline2021errors; @vioque2014classifying], which in turn can lead
 to complications and death. Studies between 1990 and 2014 have shown a
 pooled preventable death rate of 20%, with more recent studies showing
-less [@kwon2014pooled]. A recent study in a Swedish Level I trauma
-centre found a preventable death rate of 4% [@ghorbani2018analysis].
+less [@kwon2014pooled]. For example, a recent study in a Swedish Level I
+trauma centre found a preventable death rate of 4%
+[@ghorbani2018analysis].
 
 ## Quality Improvement
 
-To minimize errors in trauma care, quality improvement (QI) programs
-have been established by the World Health Organization (WHO) and the International
-Association for Trauma Surgery and Intensive Care (IATSIC)
+To minimise errors in trauma care, quality improvement (QI) programs
+have been established by the World Health Organization (WHO) and the
+International Association for Trauma Surgery and Intensive Care (IATSIC)
 [@world2009guidelines]. These programs form the core of current trauma
 care systems and their development around the world.
 
@@ -163,438 +198,600 @@ filters[@world2009guidelines].
 
 ### Morbidity and Mortality Conferences and Preventable Death Review Panels
 
+<!-- ändra ordning -->
+
 The MMC is a central QI technique. It is a proven framework with the
 critical components of anonymity, focusing on specific adverse events,
-recognising flawed approaches, critical analysis, seeking change and
-implementing that change [@gregor2016morbidity].
+recognising flawed approaches, critical analysis, improvement proposals and
+implementing such [@gregor2016morbidity].
 
 MMCs are regular meetings at which specific patient cases are presented
 for discussion. The conference participants are healthcare professionals
 involved in trauma care and its processes, but not necessarily the
 specific patient case. The selection of patient cases varies, but common
 themes for discussion are unexpected mortality, unexpected morbidity and
-errors [@orlander2003morbidity].
+errors [@orlander2003morbidity]. It is recommended that they last about
+40 minutes, but this varies from hospital to hospital
+[@world2009guidelines].
 
-It is recommended that they last about 40 minutes, but this varies from
-hospital to hospital [@world2009guidelines].
-
-Five themes have been proposed that broadly define QI-centred MMC: (1)
-clear definition of the role of the MMC (2), involvement of
+Five themes have been proposed that broadly define QI-centred MMC: (1) a
+clear definition of the role of the MMC, (2) involvement of
 stakeholders, (3) recognising and selecting appropriate patient cases
-for presentation, (4) structuring<!-- Do you mean structured?--> focused discussions, and (5)
+for presentation, (4) structured and focused discussions, and (5)
 formulating recommendations and assigning follow-up
-actions[@giesbrecht2016morbidity];[@churchill2020quality].
+actions [@giesbrecht2016morbidity; @churchill2020quality].
 
-When implemented effectively, MMCs serve as an important tool for error
-proofing without serving solely as a negative for individual care
+Implemented effectively, MMCs serve as an important tool for error
+reduction without being perceived as negative feedback for individual care
 providers, but rather as an incentive for reporting. These conferences
-promote a more comprehensive, systems-based approach that emphasizes
-task analysis, teamwork and quality improvement[@lazzara2022morbidity].
+promote a more comprehensive, systems-based approach that emphasises
+task analysis, teamwork and quality improvement [@lazzara2022morbidity].
 The introduction of MMC has been shown to increase morbidity and
-mortality reporting[@kong2016analysis].
+mortality reporting [@kong2016analysis].
 
-<!-- I suggest you remove this part about the avoidable death panel, as it
-is specific to KUH -->
-Following MMC, there is an avoidable death review panel whose role is to
-determine whether a patient's death could have been avoided
-[@ghorbani2014clinical]. 
+### Audit Filters and Opportunities for Improvement
 
-### Audit filters and Opportunities for improvement
+Audit filters, also known as quality indicators are specific established
+criteria used in trauma processes and care. They are used to detect
+deviations from standardised care in order to further analyse the cause
+of complications in trauma patients. An audit filter can involve outcomes such as "death" or criteria related to guidelines and gold standards such as
+"the placement of two large bore intravenous lines within 15 minutes from
+arrival to a health care facility" [@world2009guidelines]. The purpose of
+audit filters is to improve the quality of care.
 
-Audit filters also known as quality indicators are specific established
-criteria involved in trauma processes and care. They are used to detect
-deviations from standardized care in order to further analyse the cause
-behind complications in trauma patients. An audit filter can be death
-and the placement of two large bore intravenous lines within 15 minutes
-from arrival to a healthcare facility [@world2009guidelines]. The
-purpose of audit filters is to improve the quality of care.
-
-Earlier studies showed a reduction in trauma related mortality after the
-implementation of audit filters [@chadbunchachai2001comparative].
-However, newer studies seem to differ. In 2009 there was an extensive
-review made that sought to determine if audit filters could be used in
-improving processes of trauma care however none of the studies met
+Previous studies have shown a reduction in trauma-related mortality after the
+implementation of audit filters [@chadbunchachai2001comparative]. Per
+contra, newer studies seem to differ. In 2009, an extensive
+review that sought to determine if audit filters could be used in
+improving processes in trauma care. None of the studies met
 established inclusion criteria [@evans2009audit]. The use of audit
-filters have also been associated with high frequencies of false
+filters has also been associated with high frequencies of false
 positives, ranging from 24% to 80%.[@sanddal2011analysis];
 [@roy2017learning].
 
-OFIs are the endpoint and aim of MMC. Following the review of individual
-patient cases there is a consensus decision made regarding the existence
-of an OFI. It has been shown that such review process is associated with
-high-quality trauma care [@santana2014development]. OFIs are typically
-associated with failures in initial care [@vioque2014classifying],
-specifically in airway management, fluid resuscitation, haemorrhage
-control and chest injury management [@sanddal2011analysis];
-[@roy2017learning]; [@o2013opportunities]. Some audit filters seem to
-not correlate with OFIs at all [@lewis2017delay]
+Opportunities for improvement (OFIs) are the endpoint of patient care.
+Following the review of individual patient cases there is a consensus
+decision made regarding the existence of an OFI. It has been shown that
+such review processes are associated with high-quality trauma care
+[@santana2014development]. OFIs are typically associated with failures
+in initial care [@vioque2014classifying], specifically in airway
+management, fluid resuscitation, haemorrhage control and chest injury
+management [@sanddal2011analysis]; [@roy2017learning;
+@o2013opportunities].
+
+Audit filters can provide guidance in determining OFI which in turn can serve
+as basis for developing new audit filters. There seems to be a lack of
+evidence for the use of audit filters in predicting OFI
+[@evans2009audit] and some audit filters do not appear to correlate with OFIs
+at all [@lewis2017delay].
 
 ## Aim
 
-The aim of the study is to determine the performance of audit filters in predicting OFIs.
+The aim of this study is to determine the performance of audit filters in
+predicting OFIs and furthermore assess their relevance as a screening
+tool for MMC.
 
 # Methods
 
-We conducted a single center, registry-based, retrospective cohort study with data from the
-trauma registry and trauma care quality database at the Karolinska
-University Hospital in Solna in order to evaluate the performance of
-individual audit filters in predicting OFIs.
+The research employed a single centre, registry-based, retrospective cohort study
+with data from the Swedish Trauma Registry (SweTrau) and the local
+trauma care quality database at Karolinska University Hospital in Solna, to evaluate the performance of individual audit filters in
+predicting OFIs.
 
 ## Study setting and population
 
 Karolinska University Hospital is classified as a Trauma level I
-hospital. Every year around 1500 trauma patients receive treatment at the
-hospital. If a patient case results in team activation it is added to
-the Karolinska trauma registry. If no team activation occurred but the
-patient had ISS>9 retrospectively it is also included in the registry.
-The Karolinska trauma registry reports to the Swedish Trauma registry
-(SweTrau). The registry includes data on vital signs, times, injuries,
-and interventions as well as patient demographics according to the
-European consensus statement, the Utstein template [@ringdal2008utstein]
+hospital. Every year around 1,500 trauma patients receive treatment at
+the hospital. If a patient case results in team activation it is added
+to the Karolinska trauma registry. If no team activation occurs but
+the patient has an Injury Severity Score (ISS) of less than 9
+retrospectively, it is also included in the registry. The Karolinska
+trauma registry reports to SweTrau. The registry includes data on
+vital signs, times, injuries, and interventions as well as patient
+demographics according to the European Consensus Statement, the Utstein
+template [@ringdal2008utstein]
 
-The Karolinska trauma registry also contains a local care quality database
-including specific audit filters and OFIs that are determined in MMC
-conferences through consensus decisions.
+The Karolinska trauma registry also contains a local care quality
+database including specific audit filters and OFIs that are determined
+in MMC conferences through consensus decisions.
 
 This process of determining OFIs unfolds in multiple stages,
-characterized by escalating levels of scrutiny. Notably, instances of
+characterised by escalating levels of scrutiny. Notably, instances of
 mortality are directly referred to the multidisciplinary conference,
 where, in addition to assessing OFIs, a decision is made regarding
 whether the death was preventable or potentially preventable, a
 classification also falling under the purview of OFIs.
 
-From 2013 to 2017 there was an effort put forward in identifying adverse
-outcomes that where unrelated to mortality, whereafter the review process
-underwent subsequent refinement and formalization during the study
-period. During the initial period each trauma patient case underwent
-individual assessments by a specialized trauma nurse in order to
-identify potential OFIs. It was, however not until 2017 in which this
-procedure was formalized and it became standardized to incorporate a
-preliminary individual evaluation by a specialized trauma nurse upon
-data registration in the trauma registry and the trauma quality
-database. The trauma quality data underwent screening of audit filters.
-All cases falling within the criteria delineated by these filters, along
-with those trauma patients flagged by the nurse during the initial
-review for possible care failures, were subjected to a secondary review
-by two specialized nurses. Subsequent identification of a potential OFI
-during this second review prompted a comprehensive evaluation of the
-respective trauma patient's case.
+From 2013 to 2017 there was an effort to identify adverse
+outcomes that where unrelated to mortality, whereafter the review
+process underwent subsequent refinement and formalisation during the
+study period. During the initial period each trauma patient case
+underwent individual assessments by a specialised trauma nurse
+to identify potential OFIs. Only in 2017 was this procedure formalised
+and it became standard practice to incorporate a preliminary individual
+evaluation by a specialised trauma nurse upon data registration in the
+trauma registry and the trauma quality database. The trauma quality data
+underwent screening of audit filters. All cases falling within the
+criteria delineated by these filters, along with those trauma patients
+flagged by the nurse during the initial review for possible care
+failures, were subjected to a secondary review by two specialised
+nurses. Subsequent identification of a potential OFI during this second
+review prompted a comprehensive evaluation of the relevant trauma
+patient's case.
 
 ## Participants
 
-In this study, we included all who underwent screening for OFIs.
-Exclusion criteria were applied to individuals under the age of 15, as
-their clinical management process has notable distinctions compared to
-those applicable to the adult population.
+The study included all patient cases who underwent screening for
+OFIs. Exclusion criteria were applied to those not screened for OFI and
+to individuals under the age of 15, as their clinical management process
+has notable distinctions compared to those applicable to the adult
+population.
 
 ## Variables
 
 ### Outcome
 
 The outcome variable in this study is an OFI, as established by the MMC
-conference and furthermore treated as a dichotomous
-variable with "Yes - At least one OFI identified" and "No - No OFI
-identified".
+conference and furthermore treated as a dichotomous variable with "Yes -
+At least one OFI identified" and "No - No OFI identified".
 
 ### Exposures
 
-The exposure variable is the 11 audit filters used at Karolinska
-University Hospital.
+The 11 audit filters used at Karolinska University Hospital function as
+the exposure variable. These filters can be seen in Table 1. Each audit filter is labelled as either
+"original" or "manually created" depending on how they were managed.
+Manually created audit filters were calculated using trauma registry
+data instead of relying on the decision by the specialised nurse as
+recorded in the quality database. The original audit filters were
+instead used as recorded in the quality database, since their criteria
+encompassed variables outside of what could be retrieved from the
+existing data in the registry.
 
 ## Data sources/measurement
 
-The data used in this retrospective cohort was retrieved from the trauma registry and the
-trauma care quality database during the period spanning from 2012 to
-2022.
+The data used in this retrospective cohort was retrieved from the
+Karolinska University Hospital trauma registry and trauma care quality
+database during the period from 2012 to 2022.
 
-Patient data on vital signs, care processes and interventions, level of care and time aspects etc. was retrieved from the national trauma registry while both exposures (audit filters) and outcome (OFI) was retrieved from the local trauma care quality database. 
+Patient data on vital signs, care processes and interventions, level of
+care and time aspects was retrieved from SweTrau while both exposures
+(audit filters) and outcome (OFI) were retrieved from the Karolinska
+University Hospital trauma care quality database.
 
-All data were anonymized to protect patient privacy. 
+All data was anonymised to protect patient privacy.
 
 ## Bias
 
-There is a possibility that consensus decisions from the MMC conferences
-are flawed which causes misclassification bias. Furthermore, the process
-of flagging a patient case with an audit filter is done manually by a
+It is possible that consensus decisions from the MMC conferences are
+flawed, leading to misclassification bias. Furthermore, the process of
+flagging a patient case with an audit filter is done manually by a
 specialised nurse as mentioned above. This means that there may be a
 selection bias.
 
-There is a level of recall bias in these sort of studies. Care professionals who attend the MMC and has also been a witness
-to the specific patient case in question might not remember certain key
-elements that might affect the decision-making around OFI. 
+Health care professionals who attend MMCs and have also been a witness
+to a specific patient case might not remember certain key elements that
+may affect the decision-making around OFI. Patient case reviews in this
+fashion are subject to recall bias. On the other hand, health care
+professionals who have not witnessed that particular case may be over-
+or underestimating the significance of an OFI.
 
 ## Study size
 
-The study cohort encompasses all eligible patients treated at the
-hospital from 2012 to 2022. 
-
+The study cohort encompasses all eligible patients treated at Karolinska
+University Hospital from 2012 to 2022.
+<!--number
 ## Statistical methods
 
-The study results are generated by statistical analytics methods with
-the help of the statistical programming language, R. [@R2022language]
+The study results will be generated by statistical analytics methods
+with the help of the statistical programming language, R
+[@R2022language].
 
-To evaluate the predictive performance of audit filters, the sensitivity and specificity of each individual 
-audit filter in predicting OFI will be calculated. Furthermore, a receiver 
-operating curve (ROC) for binary classification were constructed and the area under the
-curve (AUC) calculated in order to compare the performance of each audit
-filter [@robin2011proc]
+To evaluate the predictive performance of audit filters, the sensitivity
+and specificity of each individual audit filter in predicting OFI will
+be calculated. Additionally, a receiver operating curve (ROC) for binary
+classification will be constructed and the area under the curve (AUC)
+calculated in order to compare the performance of each audit filter
+[@robin2011proc].
 
-<!-- Be careful about using correct tense. You mix future and past tense, but 
-when you're done you should use past tense consistently -->
 Using a bootstrapping method with 1000 iterations of the selected data,
- 95% confidence intervals for sensitivity, specificity and AUC were
-calculated. The significance of the AUC of each audit filter will then be compared with that of
-coincidence (AUC = 0.5), through a one sample T-test. 
+95% confidence intervals for sensitivity, specificity and AUC will be
+calculated. The significance of the AUC of each audit filter will then
+be compared with that of coincidence (AUC = 0.5), through a one sample
+T-test.
 
-<!-- Consider introducing the filters earlier, perhaps under "Exposure"-->
-Table 1 shows a list of the audit filters currently in use at Karolinska university hospital. 
-Each audit filter is also labelled with either original or manually created. 
-following audit filters: "SBP<90", "GCS < 9 and not
-intubated", ">30 min until first CT", ">60 min until first
-intervention", "ISS>15 and not in intensive care unit", "ISS>15 and
-no team activation", "death in 30 days" were manually generated from registry data to 
-minimize selection bias during the specialized nurse's manual flagging of audit filters. 
-It is noteworthy that the remaining audit filters cannot be derived from the existing data in the registry.
-<!-- The distinction between the "original" and "manually generated" filters need to be 
-clarified. You mean that some were assessed as they were recorded in the quality database whereas 
-others where calculated from the trauma registry data?-->
+Instances of missing values for audit filters will be treated as
+negative, as in "not flagged".
 
-Instances of missing data for audit filters were treated as indicative of the absence of the respective audit filter.
-<!-- Do you mean that they were treated as negative, i.e. not flagging a specific patient? -->
+## Ethical considerations
 
-## Ethical considerations 
+In Sweden register-based studies do not require informed consent by
+patients in the registry. Approval by the Swedish Ethical Review
+Authority is required in order to execute a study in this manner. This
+authority comprises of medical, judicial and lay members appointed by
+the government. In order to uphold the principle of autonomy, measures
+are in place to ensure integrity of each patient.
 
-All patient data is anonymized. However there is data on
-various factors like date, time of admission, etc. and different patient characteristics such as age, gender, etc. Theoretically, these attributes could make patient cases identifiable through external sources like news reports. However this means that such information has to be leaked which would only be possible through direct registry access. In order to minimize the risk of a potential data breach, access to the registry is only possible while connected to a VPN with a special credentials.
+All patient data is anonymised according to General Data protection
+Regulation (GDPR) standard [@gdpr2016EU]. In the registry used, there is
+data on various factors such as date and time of admission, and patient
+characteristics e.g. age and gender. Theoretically, these attributes
+could make patient cases identifiable through external sources like news
+reports. Nonetheless, this means that such information must be leaked,
+which would only be possible through direct registry access. In order to
+minimise the risk of a potential data breach, the registry is password
+protected and access to the registry server is only possible while
+connected to a VPN with special credentials requiring two-factor
+authentication.
 
-<!-- Please review the KI guidelines and check that what you have here is adequate. 
-If not, consider discussing the ethical considerations using the different principles
-of medical research ethics -->
+This was a retrospective cohort study and as such, no patients were put
+through any additional interventions and all patients were given care
+according to standard. Thus, patients were at no risk of any harm due
+the study.
 
-The study was approved by
-Stockholm Research Ethics Review Board, approval 107<!-- Where does this 107 come from?--> number 2021-02541
-and 2021-03531. 
+This study will possibly give new insights to current quality
+improvement programs by assessing the advantage of audit filters. These
+new insights, if implemented, might further lead to a better outcome for
+trauma patients in terms of reduced mortality and morbidity.
 
-# Results 
+This study was approved by Stockholm Research Ethics Review Board,
+approval number 2021-02541 and 2021-03531.
 
-Figure 1 presents a flowchart showcasing the exclusion and inclusion of the patient cases from the trauma registry. After excluding patients under 15 years old and patients not screened
-for OFI, a total of 8309 individuals were included in the study. 7797 out of 8309 (X%)<!-- Consider adding % here--> patient cases did not have an OFI and 512 out of 8309 <!-- Same here -->patient cases had an OFI.
+# Results
+
+Figure 1 presents a flowchart showcasing the exclusion and inclusion of
+the patient cases from the trauma registry. After excluding patients
+under 15 years old and patients not screened for OFIs, a total of 8309
+individuals were included in the study. 7797 out of 8309 (93.8%) patient
+cases did not have an OFI and 512 out of 8309 (6.2%) had an OFI.
+
+## Missing Data
+
+Table 2 shows the missing data for each audit filter. As mentioned in
+the method section, these values where interpreted as not flagged with
+an audit filter. The variables with the highest amount of missing data
+was "time to definitive treatment" (n = 5990, 72.1%) and "time to first
+CT" (n = 1012, 12.2%). The least amount of missing data was found in
+"SBP\<90" (n = 13, 0.2%).
 
 ## Participant Characteristics
 
-Table 2 presents the baseline characteristics of the study participants, comparing those with and those without an assigned OFI. The variables presented in Table 2 exhibited a direct correlation with the manually created audit filters. <!-- Not sure I understand this last sentence. Do you mean that Table 2 shows the manually created filters?-->
+Table 3 presents the baseline characteristics of the study participants,
+comparing those with and without an assigned OFI. The variables
+presented in Table 3, except gender and age, were used in the
+calculation of audit filters.
 
-<!-- Add numbers as well-->
-69% out of all patients included in the study where men and 31% where women. 
-Among the patients with an OFI compared to the  patients
-without, the mean age was slightly higher `r inline_text(tableOne, variable = pt_age_yrs, column = stat_2)` vs `r inline_text(tableOne, variable = pt_age_yrs, column = stat_1)` and
-the ISS was higher `r inline_text(tableOne, variable = ISS, column = stat_2)` vs `r inline_text(tableOne, variable = ISS, column = stat_1)`. The number of intubations in the emergency department was also
-higher `r inline_text(tableOne, variable = ed_intubated, column = stat_2)` vs `r inline_text(tableOne, variable = ed_intubated, column = stat_1)`. Patients with OFI had longer times to definitive
-treatment from hospital arrival compared to patients without OFI `r inline_text(tableOne, variable = dt_ed_emerg_proc, column = stat_2)` vs `r inline_text(tableOne, variable = dt_ed_emerg_proc, column = stat_1)`. Furthermore the time to first CT was also longer
-in the group with OFI compared to the group without: `inline_text(tableOne, variable = dt_ed_first_ct, column = stat_2)` vs `r inline_text(tableOne, variable = dt_ed_first_ct, column = stat_1)`. 
+5755 (69%) out of all patients included in the study were men and 2554
+(31%) women. Results varied depending on whether patients had an OFI or
+not. The mean age was slightly higher
+`r inline_text(tableOne, variable = pt_age_yrs, column = stat_2)` vs
+`r inline_text(tableOne, variable = pt_age_yrs, column = stat_1)` and
+the ISS was higher
+`r inline_text(tableOne, variable = ISS, column = stat_2)` vs
+`r inline_text(tableOne, variable = ISS, column = stat_1)`. The number
+of intubations in the emergency department was higher
+`r inline_text(tableOne, variable = ed_intubated, level = "Yes", column = stat_2)`
+vs
+`r inline_text(tableOne, variable = ed_intubated, level = "No", column = stat_1)`.
+Patients with OFI had longer times to definitive treatment from hospital
+arrival compared to patients without OFI
+`r inline_text(tableOne, variable = dt_ed_emerg_proc, column = stat_2)`
+vs
+`r inline_text(tableOne, variable = dt_ed_emerg_proc, column = stat_1)`.
+Moreover, the time to the first CT was also longer in patients with OFIs
+`r inline_text(tableOne, variable = dt_ed_first_ct, column = stat_2)` vs
+`r inline_text(tableOne, variable = dt_ed_first_ct, column = stat_1)`.
 
-The mean systolic blood pressure in the OFI group did not differ from
-the systolic blood pressure in the no OFI group.
+The mean systolic blood pressure and GCS at the emergency department did
+not differ between the OFI and no OFI group.
 
-Table 2 shows the missing data for each audit filter. As mentioned in the method section, these values where interpreted as not flagged with an audit filter.
-The variables with the highest amount of missing data was "time to
-definitive treatment" [n=5990] and "time to first CT" [n=1012].
+## Individual Audit Filters
 
-<!-- Note that you haven't numbered sections before here -->
-## 2. Individual Audit Filters
+### Performance of Individual Audit Filters
 
-### 2.1. Performance of Individual Audit Filters
+The performance of each audit filter was determined through a
+calculation of sensitivity and specificity. This is demonstrated in
+Table 4.
 
-The performance of each audit filter was determined through a calculation of sensitivty and specificity. 
-Table 3 summarizes the performance of each individual audit filter in
-identifying opportunities for improvement in trauma care by specificity
-and sensitivity. <!-- This is a bit repetitive, consider merging the two sentences -->
+Varying numbers of patient cases were flagged with each audit filter.
+The audit filter flagged most frequently was "\>30 min until CT". The
+least flagged audit filter was "GCS\<9 and not intubated".
 
-There where varying numbers of patient cases flagged with each audit
-filter. The audit filter that was flagged most frequently was ">30 min
-until CT". The least flagged audit filter was "GCS<9 and not
-intubated".
+The audit filter with the highest sensitivity was "\>30min until CT"
+(59.2% CI: 55.3-63.3). The audit filter with the lowest sensitivity was
+"GCS\<9 and not intubated" (1.2% CI: 0.1-2).
 
-<!-- I recommend that you present sensitivity and specificity in the 
-same order always, otherwise you will confuse your readers. I would suggest
-sensitivity first and then specificity -->
-The audit filter with the highest specificity was "GCS<9 and not
-intubated" (98.7% CI: 98.5-98.9) was also the audit filter with the
-lowest sensitivity (1.2% CI: 0.1-2).
+The audit filter with the highest specificity was "GCS\<9 and not
+intubated" (98.7% CI: 98.5-98.9). The The audit filter with the lowest
+specificity was "\>30min until CT" (53.8% CI: 52.7-55.2).
 
-The audit filter with the highest sensitivity was ">30min until CT"
-(59.2% Ci: 55.3-63.3). The same audit filter had the lowest specificity
-(53.8% CI: 52.7-55.2).
+Generally, the confidence intervals varied between sensitivity and
+specificity, with sensitivity having a greater interval span.
 
-The confidence intervals varied between sensitivity and specificity with
-sensitivity having greater span.
-<!-- Do you mean for all filters? Do you mean that sensitivity estimates, 
-in general, where associated with larger uncertainty?-->
+Table 5 summarizes the performance of each individual audit filter in
+identifying OFIs in trauma care by AUC. Three of the ten audit filters,
+"dead at 30 days", "GCS\<9 and not intubated" and "CPR and thoracotomy"
+showed a performance in predicting an OFI as good as coincidence (AUC =
+0.5). \>60 min until first intervention had the highest AUC.
 
-Table 5 summarizes the performance of each individual
-audit filter in identifying OFIs in trauma care by AUC.
-Three of the ten audit filters, "Dead at 30 days", "GCS<9 and not
-intubated" and "CPR and thoracotomy" showed a performance in predicting
-an OFI as good as flipping a coin. >60 min until first intervention
-had the highest AUC. 
+Table 2: Comparison of missing values for each audit filter as a number
+and percentage of the total amount of patient cases (n = 8309).\
+`r tableTwo` Table 3: Patient characteristics of individuals with and
+without an OFI. Missing values are shown only when they exist.
+`r tableOne` Table 4: Comparison of performance for each audit filter in
+predicting OFIs. Performance is defined by sensitivity (%) and
+specificity (%). A 95% confidence interval is shown together with each
+performance indicator. The number of cases flagged by each filter is
+displayed.\
+`r tableThree` Table 5: Comparison of performance for each audit filter
+in predicting OFIs. Performance is defined by the area under the
+receiver operating characteristics curve. P-values show the significance
+of AUC compared to coincidence (AUC = 0.5) through a t-test. A 95%
+confidence interval is used. `r tableFour`
 
-## Missing Data 
-<!-- Missing data is often presented earlier in results, maybe even the
-first paragraph-->
-The audit filter that displayed the highest amount of missing data was
-">60 min until first intervention" (n = 5990, 72.1%). The least amount
-of missing data was found in "SBP<90" 
-
-Table 2: Patient characteristics of individuals with and without an OFI. Missing values is shown only were there is any. 
-`r tableOne`
-Table 3: Comparison of missing values for each audit filter as a number and as a percentage of the total amount of instances.  
-`r tableTwo`
-Table 4: Comparison of performance for each audit filter in predicting OFI. Performance is defined by sensitivity (%) and specificity (%). A 95% confidence interval is shown together with each performance indicator. The number of cases flagged by each filter is displayed.     
-`r tableThree`
-Table 5: Comparison of performance for each audit filter in predicting OFI. Performance is defined by the area under the receiver operating curve. P-value show significance of AUC compared to 0.5 through t-test. A 95% confidence interval is used.
-`r tableFour`
 ```{r fig1, echo=FALSE, fig.align="center", warning=FALSE, message=FALSE, error=FALSE}
 knitr::include_graphics("ofi-flowchart.pdf")
 ```
-Figure 1: Flowchart of the patient selection process. Shows the patients excluded and included in this study. 
 
-# Discussion 
+Figure 1: Flowchart of the patient selection process. Shows the patients
+excluded and included in this study.
 
-## Interpretation of Results 
+# Discussion
 
-The aim of the study was to evaluate the performance of individual audit filters in predicting OFI to assess their suitability as a screening tool for morbidity and mortality conferences.
+## Interpretation of Results
+
+The aim of this study was to evaluate the performance of individual
+audit filters in predicting OFIs, to assess their suitability as a
+screening tool for morbidity and mortality conferences.
 <!-- Before you start discussing how demographics differed between groups I suggest that you summarise your key findings. What were the most important findings? That all filters performed poorly? -->
 
-The observed twofold prevalence of male trauma patients compared to females is consistent with previous findings both nationally [@SweTrau2022Arsrapport] and globally [@roth2018global]. It is thought that the reason for this lies in the higher-risk behaviors by males.
+The observed twofold prevalence of male trauma patients compared to
+females is consistent with previous findings both nationally
+[@SweTrau2022Arsrapport] and globally [@roth2018global]. This is
+believed to lie in the tendecy to high-risk behaviours in males.
 
-The higher ISS in the OFI group as opposed to the group without OFI could be explained by the greater complexity of trauma cases with increasing ISS. Greater complexity allows for more mistakes. These findings stay true with a previous study conducted at Karolinska University Hospital by Albaaj et. al [@albaaj2023patient]. Albaaj et. al sought to identify patient factors associated with OFI and found that a higher ISS was significantly correlated with OFI.
+The higher ISS in the patients with OFIs as opposed to patients without
+OFIs could be explained by the greater complexity of trauma cases with
+increasing ISS. Greater complexity allows for more mistakes. These
+findings stay true with a previous study conducted at Karolinska
+University Hospital by Albaaj et. al [@albaaj2023patient]. Albaaj et. al
+sought to identify patient factors associated with OFIs and found that a
+higher ISS was significantly correlated with OFIs.
 
-Audit filters generally exhibited a high
-specificity relative to their sensitivity which may be attributed to the outcome being rather uncommon whilst every individual audit filter miss the
-majority of OFI. Theoretically, adding all audit filters together as one audit filter would
-result in the sensitivity increasing.
+Audit filters generally exhibited a high specificity relative to their
+sensitivity which may be attributed to the outcome being rather
+uncommon, whilst every individual audit filter miss the majority of
+OFIs. Theoretically, adding all audit filters together as one audit
+filter would result in the sensitivity increasing, and simultaneously
+the specificity decreasing.
 
-An extensive review by Evans et. al [@evans2009audit] sought to review the evidence for audit filters as a tool to improve care. They screened for a total of 741 studies by title. Of these studies, 42 abstracts were appraised and five complete articles were examined in detail. None of the five studies met the inclusion criteria established. two of the studies which where examined in detail by Chadbunchachai et. al [@chadbunchachai2001comparative];[@chadbunchachai2003study] where also two of the studies mentioned in WHO:s guidelines for quality improvement programmes [@world2009guidelines]. They were excluded due to no clear pre‐ or post‐intervention data points or clearly defined a point in time when the respective interventions were implemented.
+An extensive review by Evans et. al [@evans2009audit] sought to review
+the evidence for audit filters as a tool to improve care. A total of 741
+studies were screened by title. Of these studies, 42 abstracts were
+appraised and five complete articles were examined in detail. None of
+the five studies met the inclusion criteria established. Two of the
+studies by Chadbunchachai et. al
+[@chadbunchachai2001comparative];[@chadbunchachai2003study], which were
+examined in detail by Evans et. al were mentioned in WHO:s guidelines
+for quality improvement programmes [@world2009guidelines]. They were
+excluded from Evans et. al review due to no clear pre‐ or
+post‐intervention data points or a clearly defined point in time when
+the respective interventions were implemented.
 
-In 2008, Willis et. al [@willis2008interpreting] assessed 14 audit filters, finding only three to be associated with an increased risk of poor outcomes. One audit filter, "GCS<9 and not intubated", also used in this study showed no significant ability to predict poor outcome.
+In 2008, Willis et. al [@willis2008interpreting] assessed 14 audit
+filters, finding only three to be associated with an increased risk of
+poor outcomes. One audit filter, "GCS\<9 and not intubated", also used
+in this study showed no significant ability to predict poor outcome.
 
-The audit filters demonstrating a performance equal to coincidence are deemed unsuitable as screening tools for OFI.
-The audit filters demonstrating a performance superior to that of coincidence could still be used as audit filters. However, it is important to note that even though these audit filters proved meaningful does not mean they are acceptable as a screening tool as that would not have been the case with a diagnostics test where the AUC should at least be 0.8 for it to be considered acceptable [@nahm2022receiver]
+Audit filters demonstrating a performance equal to coincidence are
+deemed unsuitable as screening tools for OFIs. On the contrary, audit
+filters demonstrating a performance superior to that of coincidence
+could still be used as audit filters. However, it is important to note
+that despite these audit filters proving meaningful, it does not mean
+they are acceptable as a screening tool. That would not have been the
+case with a diagnostics test where the AUC should be at least 0.8 for it
+to be considered acceptable [@nahm2022receiver].
 
-<!-- There's considerable scope to expand on why you think that they perform so poorly, along the lines of our discussions during the meeting yesterday. Is it because they've played out there role? Is it because the care has improved to the point that OFIs are no longer related to these filters? What can happen if we replace them with new filters? Is that a feasible and reasonable approach?-->
+A noteworthy challenge with audit filters is the risk of overrelying on
+them. While they may help in deciding the existence of OFI, they could
+overshadow other factors that may contribute to that decision.
+
+Audit filters are static in their criteria, oppositely to healthcare in
+general. This means that audit filters may loose their purpose if new
+guidelines are introduced. For example, liver and spleen injuries did
+not perform at all in predicting OFIs. It could very well be that new
+and improved guidelines and gold standards reduced the number of OFIs.
+
+A further problem with audit filters being static is that they
+themselves can fulfill their purpose and subsequently loose their
+relevance through a negative feedback loop. For example, a problem in
+health care occurs and in response an audit filter is made in order to
+tackle this problem. At first this will theoretically result in a good
+predictability for OFI. However, when such OFIs are taken into
+consideration the audit filter will gradually loose its performance.
+
+Some audit filter criteria are more rigid than others. A criterion too
+rigid will fail to recognise the majority of OFIs while too inclusive
+criteria might flag several patients, who do not necessarily have an
+OFI. This in turn leads to the next problem regarding the resources and
+time needed for making an OFI decision. A very inclusive criterion will
+cause many patient cases being flagged and will lead to many patient
+cases being discussed at MMCs.
+
+Suggest we were to replace audit filters used by Karolinska University
+Hospital with other audit filters. We would have to review them over
+time and simultaneously risk the fact that they might not perform.
+
+Another general challenge with audit filters is the unintended bias that
+comes with postulating audit filters. They might disproportionally
+affect certain groups of people. Moreover, the risk of confounders are
+present when establishing such criteria.
+
+Audit filters currently in use at Karolinska University Hospital focus
+primarily on aspects of trauma care mostly relevant to medical doctors.
+It might be beneficial to consider the interdisciplinary nature of
+trauma care by using criteria related to morbidity for example.
 
 ### Delay
 
-Both audit filters measuring delay: ">60 until first intervention" and ">30min until first CT", showed relatively good performance in predicting OFI<!-- This is an overstatement if we're talking an AUC in the realm of 0.6 -->. This is comparable to what Teixeira et. al [@teixeira2007preventable] demonstrated, with delay being correlated with preventable death. Furthermore Ghorbani et al. [@ghorbani2018analysis]  identified delay in treatment, delay to CT, and clinical judgment errors as common errors in trauma care. This aligns with our findings. A more recent study in Japan by Yamamoto et. al [@yamamoto2023immediate] showed a significant reduction in mortality when patients received a whole body CT within 10 minutes of arrival to the ED. A german study by Bieler et. al [@bieler2020evaluation] evaluated quality indicators through a survey partaken by different medical professionals and agreed on the usefulness of delay as an audit filter in trauma care. 
+Both audit filters measuring delay: "\>60 until first intervention" and
+"\>30min until first CT", showed a correlation with OFI. This is
+comparable to what Teixeira et. al [@teixeira2007preventable]
+demonstrated, with delay correlating to preventable death. Furthermore,
+Ghorbani et al. [@ghorbani2018analysis] identified delay in treatment,
+delay to CT, and clinical judgment errors as common errors in trauma
+care, which aligns with our findings. A more recent study in Japan by
+Yamamoto et. al [@yamamoto2023immediate] showed a significant reduction
+in mortality when patients received a whole body CT within 10 minutes of
+arrival to the ED. It is important to note that OFI in our case was not
+only a reflection of mortality but a broader concept encompassing
+different aspects of care quality. If anything, it highlights the
+difference between hospitals, which audit filters are in use and how
+they are being assessed.
 
-A similar <!-- Similar to what?-->German study [@horster2020empirical] looked at the correlation
-between audit filters and mortality on top of a interdiciplinary expert
-review according to the QUALIFY<!-- What is this?--> process. They looked at two methods in
-assessing the performance of audit filters: The indicator approach and
-the clinical approach. The indicator approach in assessing performance
-of audit filters was to assess if the desired indicator level was
-associated with a lower mortality compared to without the desired level.
-The clinical approach compared different hospitals and ranked them as
-"good hospitals or "bad hospitals". Good hospitals had a lower 5-year
-mortality rate among a selected patient group with quality indicator
-parameters of interest compared to the RISK II predicted mortality.
-Evaluation of each approach ranked the usefulness of each audit filter
-between "strong association with mortality", "unclear association with
-mortality" and "no association with mortality". The expert review was
-carried out in the same fashion as Bieler et. al. Only 3 audit filters
-was similar to the audit filters used in Karolinska university hospital:
-"prehospital intubation in patients with GCS \< 9", "Time to whole body
-CT", "time to first emergency procedure". Prehospital intubation showed
-an unclear correlation to mortality in the clinical approach, a strong
-association in the indicator approach and scored high by the review
-panel. In this study "GCS \< 9 and not intubated" showed no association
-with OFI. "Time to whole body CT" showed unclear association with
-mortality in both approaches but scored high in expert review. "more
-than 30 min until first CT" was in our case associated with OFI<!-- Careful here, was the performance really that good?-->. "time
-to first emergency procedure" had no correlation with mortality but
-expert review agreed that it was still useful. "\>60 min until first
-intervention" was in our case associated with OFI. It is important to
-note that OFI in our case was not only a reflection of mortality but a
-much broader concept encompassing different aspects of care quality. It
-is therefore not a comparison that holds much weight<!-- Well, you've just spent the longest paragraph in your thesis elaborating on this comparison, so it would be a shame if it didn't hold much weight... I'm just pulling your leg, but see if there's a way you can rephrase this, or consider removing it-->. If anything it
-highlights the difference between hospitals in what audit filters are in
-use and how they are being assessed.
+The audit filters "Dead at 30 days" and "CPR and thoracotomy" showed no
+difference from coincidence (AUC = 0.5) in predicting OFI, potentially
+due to severe traumatic injuries inevitably result in death within 30
+days of admission to the hospital resulting in a smaller time frame for
+mistakes to be made.
 
-The audit filters "Dead at 30 days" and "CPR and thoracotomy" showed no difference from
-randomness in predicting OFI, potentially due to severe traumatic injuries inevitably
-result in death within 30 days of admission to the hospital resulting in a smaller time frame for mistakes to be made.
+Albaaj et. al [@albaaj2023patient] examined patient factors associated
+with OFIs, identifying delays of 30-60 minutes until the first CT,
+higher levels of care and higher ISS as linked to OFIs. Similarly, they
+found no clear association between 30 day survival and OFIs. This could
+partly explain the correlation between "ISS \> 15 and no team
+activation" and OFI and similarly regarding "ISS \> 15 and not in
+intensive care unit".
 
+Sanddal et. al [@sanddal2011analysis] highlighted that OFIs
+predominantly exist in the ED and relate to airway management, fluid
+resuscitation, and chest injury management. The only audit filter
+directly associated with airway management was "GCS under 9 and not
+intubated" which performed poorly in our case. This could suggest that
+an alternative audit filter related to airway management could
+potentially perform differently.
 
-Albaaj et. al [@albaaj2023patient] looked at patient factor associated with OFI,  identifying delays of 30-60 minutes until the first CT, higher levels of care and higher ISS as linked to OFI. Similarly they
-found no clear association between 30 day survival and OFI. This could partly explain the association
-between "ISS \> 15 and no team activation" and OFI prediction and
-similarly regarding "ISS \> 15 and not in intensive care unit".
+The sole purpose of audit filters is to elevate the quality of care.
+Audit filters should therefore reflect the current quality gap. However,
+once quality is improved, these audit filters loose their purpose which
+can result in their performance dropping. This could suggest that rather
+than the audit filters performing poorly, they have actually fulfilled
+their purpose. It is therefore crucial to continuously update the audit
+filters. \## Generalizability
 
-Sanddal et. al [@sanddal2011analysis] highlighted that OFIs predominantly exist in the ED and relate to
-airway management, fluid resuscitation, and chest injury management
-The only audit filter directly associated with airway management was "GCS under 9 and not intubated" which performed poorly in our case. This could suggest that an alternative audit filter related to airway management should be considered in the future.
+Given the variability in screening for OFI, what an OFI consists of and
+what specific audit filters are used at a given trauma centre the
+results will vary too. Likewise, audit filters are used to fill quality
+gaps and due to individual trauma centre suffering from unique quality
+gaps, there will not be a golden standard set of audit filters that work
+everywhere.
 
-The sole purpose of audit filters is to elevate the quality of care. Audit filters should therefore reflect the current quality gap. However when quality have been improved, these audit filters loose their purpose which can result in their performance dropping. This could suggest that rather than the audit filters simply being bad, they have actually fulfilled their purpose. It is therefore crucial to continuously update the filters. 
-
-## Generalizability 
-
-Given the variability in screening for OFI, what an OFI consists of and what specific audit filters are used at a given trauma center the results will vary too. Furthermore, audit filters are used to fill quality gaps and due to individual trauma centers suffering from unique problems, there will not be a golden standard set of audit filters that work everywhere.
-
-Audit filters and quality improvement programs are however widely used and the findings in this study suggest that some audit filters perform better than others. The audit filters performing better than coincidence might be a beneficial addon to already existing quality improvement program or work as a guidance in fine-tuning audit filters already in use to suit the hospitals quality gap. However, due to the study being conducted on a single, trauma level I centre in Stockholm it is unfair to assume applicability of these findings at other hospitals in other countries. It is already suggested that the efficacy of audit filters vary depending on country. Low and middle income countries seem to benefit from certain audit filters that high income countries do not benefit from and vice versa [@berg2022perceived].  
+Audit filters and quality improvement programs are widely used and the
+findings in this study suggest that some audit filters perform better
+than others. The audit filters with performance exceeding coincidence
+(AUC = 0.5) might be a beneficial add-on to an already existing quality
+improvement programme or work as a guidance in fine-tuning audit filters
+already in use to suit the hospitals' quality gaps. Due to the study
+being conducted on a single, trauma level I centre in Stockholm it is
+unjust to assume applicability of these findings at other hospitals in
+other countries facing different challenges in trauma care. It is
+already suggested that the efficacy of audit filters vary depending on
+country. Low and middle income countries seem to benefit from certain
+audit filters that high income countries do not and vice versa
+[@berg2022perceived].
 
 ## Strengths
 
-As stated in the method section, some audit filters whose criteria were possible to be retrieved from the registry was manually created instead of relying on the selection process by the specialized nurse. This was done in order to minimize misclassification bias.
+As stated in the method section, some audit filters were manually
+created from registry data instead of relying on the selection process
+by the specialised nurse. This, in order to minimise misclassification
+bias.
 
-Further more there has been very limited high quality evidence supporting audit filter efficacy [@evans2009audit]. This study adds to the evidence suggesting that some audit filters perform better than others. 
+Furthermore, there has been very limited high quality evidence
+supporting the efficacy of audit filters [@evans2009audit]. This study
+adds to the evidence suggesting that some audit filters perform better
+than others.
 
-Previous studies focus primarily on audit filters effects on reducing mortality. In this study the morbidity of patient cases is also taken into account using OFI, as an umbrella term consisting of everything from bad documentation to preventable death. 
+Previous studies focus primarily on audit filters' ability to reduce
+mortality. In this study the morbidity of patient cases is also taken
+into account using OFIs as an umbrella term consisting of everything
+from bad documentation to preventable death.
 
-From 2017 all trauma patients was included in the registry. 
-
+From 2017 all trauma patients admitted to Karolinska University Hospital
+were included in the registry reducing the risk of bias in inclusion of
+patient cases.
 
 ## Limitations
 
-Opportunity for improvement, while dichotomously defined,
-includes a diverse set of outcomes. This makes it difficult to create audit filters that do well in predicting OFI.
+Opportunity for improvement, while dichotomously defined, includes a
+diverse set of outcomes. This makes it difficult to create audit filters
+that do well in predicting OFIs.
 
-The current screening system for OFI might also introduce bias since the
-filters would favour the identification of some, but not all, errors.
+The current screening system for OFIs might also introduce bias since
+the filters would favour the identification of some, but not all,
+errors.
 
-The way the audit filters performance were individually calculated, as
-stated in the method section, was to look at every patient case with or
-without an OFI and simultaneously flagged or not flagged with the audit
-filter. Consequently, even if an audit filter demonstrated a true positive correlation with an OFI, instances where the same patient case had multiple audit filters flagged introduce a degree of uncertainty regarding which specific audit filter accurately predicted the outcome.
+The way the performance of audit filters were individually calculated,
+as stated in the method section, was to look at every patient case with
+or without an OFI and simultaneously flagged or not flagged with the
+audit filter. Consequently, even if an audit filter demonstrated a true
+positive correlation with an OFI, instances where the same patient case
+had multiple audit filters introduce a degree of uncertainty regarding
+which specific audit filter accurately predicted the outcome.
 
-The number of missing values varied greatly among the audit filters. As stated above, missing values from each audit filter was coded as not having that audit filter. This means that in some instances where patient cases not flagged, might actually meet the audit filter criteria, but for some reason not documented. This reduces the validity of some audit filters who displayed high amounts of missing data.
+The number of missing values varied greatly among the audit filters. As
+stated above, missing values from each audit filter was coded as "not
+flagged" by an audit filter. This means that in some instances where
+patient cases not flagged, might actually meet the audit filter
+criteria, but for some reason not documented. This reduces the validity
+of some audit filters who displayed high amounts of missing data.
 
-## Future Studies 
+## Future Studies
 
-Given the expanding field of
-artificial intelligence and machine learning, newer studies should focus
-on using these tools to screen for patient cases at risk of
-an OFI. This will reduce misclassification and ensure constant and continued good performance due to its ability to learn from the current context of trauma care. This approach is new but not unexplored. A preprint is currently available by Attergrim et. al [@attergrim2023predicting] exploring the idea of machine learning models as screening tool for potential OFIs. They found that machine learning models outperformed the currently used audit filters in predicting OFI.    
+Given the expanding field of artificial intelligence and machine
+learning, newer studies should focus on using these tools to screen for
+patient cases at risk of an OFI. This will reduce misclassification and
+ensure constant and continued good performance due to its ability to
+learn from the current context of trauma care. This approach is new but
+not unexplored. A preprint is currently available by Attergrim et. al
+[@attergrim2023predicting] exploring the idea of machine learning models
+as screening tool for potential OFIs. They found that machine learning
+models outperformed the currently used audit filters in predicting OFIs.
 
-further look at OFI subgroups. What kind of OFIs are overrepresented in different audit filters.<!-- I suspect these are sentences that you're planning to complete?-->
+If the use of audit filter is still considered, it is important to
+ensure its performance. Future studies could look at subgroups of OFIs,
+and which audit filter responds to that subgroup. Some audit filters
+might perform well in predicting a subgroup of OFIs but fail to predict
+others.
 
 ## Health Equity
 
-It could be of interest to study the occurrence of OFI among marginalized groups of people and women in order to assess whether some groups tend to fall out from the screening method or at a higher rate falsely labelled without OFI.
+It could be of interest to study the occurrence of OFIs among
+marginalised groups of people and women in order to assess whether some
+groups tend to fall out from the screening method or are at a higher
+rate falsely labelled with or without OFIs.
 
-# Conclusion 
-<!-- 8 filters had very poor performance and 3 were useless... I recommend that you elaborate on potential reasons and alternatives in the text above.-->
-Audit filters as a tool in quality improvement programs are widely used. Strong evidence supporting their efficacy in quality improvement is scarse but seem to depend on were and when they are used, in what context and for what purpose. In this study, 8 out of 11 audit filters currently in use at Karolinska University Hospital was deemed effective in predicting OFI. 3 of the audit filters did not show promising results. These results highlight the importance of continually evaluating the relevancy of certain audit filters and to fine tune audit filter criteria to better reflect the current gap in trauma care quality. 
+Since there is a gender disparity between the number of trauma patients,
+looking further into whether gender disparities in OFIs could reveal
+gender discrimination in the screening and labelling of OFIs.
 
-# Acknowledgements 
+# Conclusion
 
-I want to thank my supervisor Martin Gerdin Wärnberg
-and my co-supervisors Jonatan Attergrim and Kelvin Szolnoky. I also want
-to show appreciation to my good friend and colleague Anton Wasielewski
-for all the support.
+Audit filters as a tool in quality improvement programmes are widely
+used. Strong evidence supporting their efficacy in quality improvement
+is scarse, but seem to depend on where and when they are used, in what
+context and for what purpose. In this study, no audit filter seemed to
+show good performance in predicting OFIs with AUC ranging from 0.5 to
+0.63. These results highlight the importance of either continually
+evaluating the relevancy of certain audit filters. Audit filters should
+reflect the current gap in trauma care quality. This process takes time
+and resources and using an alternative to audit filters is recommended.
+
+# Acknowledgements
+
+I want to thank my supervisor Martin Gerdin Wärnberg and my
+co-supervisors Jonatan Attergrim and Kelvin Szolnoky.
 
 # Tables
-
-
 
 # References
 

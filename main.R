@@ -102,7 +102,13 @@ tableOne <- tableOneData %>%
                                      host_care_level ~ "Highest level of care",
                                      Tr_Nivå ~ "Trauma team activation ")) %>% 
   add_overall(last = TRUE, col_label = "**Overall** (N = {N})")%>%
-  modify_footnote(everything() ~ NA, abbreviation = FALSE) %>%
+  modify_table_styling(footnote = "Definition of abbreviations:
+                         OFI = Opportunity for Improvement;
+                         ISS = Injury Severity Score;
+                         ED = Emergency Department;
+                         SBP = Systolic Blood Pressure;
+                         GCS = Glascow Coma Scale;
+                        CT = Computer Tomopgraphy;") %>%
   modify_header(label = "",
                 stat_1 = "**No**, (N = {n})",
                 stat_2 = "**Yes**, (N = {n})") %>%
@@ -176,11 +182,9 @@ tableFive <- gt(tableFiveData) %>%
   CPR = Cardiopulmonary Resuscitation;
   TBI = Traumatic Brain Injury
   ")
-  
-  tableOne 
-  tableTwo
-  tableThree
-  tableFour
-  tableFive
+  tableTwo %>% gtsave(filename = "tab_2.html")
+  tableThree %>% gtsave(filename = "tab_3.html")
+  tableFour %>% gtsave(filename = "tab_4.html")
+  tableFive %>% gtsave(filename = "tab_5.html")
   
   

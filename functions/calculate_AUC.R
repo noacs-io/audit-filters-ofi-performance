@@ -4,8 +4,7 @@ calculate_AUC <- function(twoVariableData, listOfAuditFiltersClean, counter){
   #Convert values to numbers in order for roc to know what to do
   suppressMessages({rocData <- roc(twoVariableData[,2], twoVariableData[,1])})
   AUCroc <- auc(rocData)
-  AUC <- round(as.numeric(AUCroc), digits = 2)
-  
+  AUC <- as.numeric(AUCroc)
   #plot.roc(rocData, col="blue", grid = TRUE, grid.col=c("green", "red"), 
  #          main = listOfAuditFiltersClean[counter], percent=TRUE,
  #          grid.lwd = 0.5, grid.lty=1 )
