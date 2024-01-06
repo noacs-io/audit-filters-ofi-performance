@@ -23,7 +23,7 @@ listOfAuditFiltersClean <- c("SBP < 90", "Dead at 30 days", "ISS > 15 and no tea
                              "Massive transfusion", "GCS < 9 and not intubated", "ISS > 15 and not in ICU", 
                              "> 60 min until first intervention", "> 30 min until first CT",
                              "CPR and thoracotomy", "Liver or spleen injury", 
-                             "No anticoagulantia within 72 hours after TBI")
+                             "No anticoagulants within 72 hours after TBI")
 ## viktigt att det ska vara samma ordning ^
 selectedAuditFilter <- listOfAuditFilters[1:11]
 
@@ -31,14 +31,13 @@ selectedAuditFilter <- listOfAuditFilters[1:11]
 tableOfCalculatedData1 <- data.frame(Auditfilter = character(0),
                                      Number = numeric(0),
                                      Specificity = numeric(0),
-                                     Sensitivity = numeric(0),
-                                     AUC = numeric(0),
-                                     PValue = character(0))
+                                     Sensitivity = numeric(0))
 
 #A table of sensitivity and specificity
 tableOfCalculatedData2 <- data.frame(Auditfilter = character(0),
                                      AUC = numeric(0),
-                                     PValue = character(0))
+                                     PValue = character(0),
+                                     PValue0.8 = character(0))
 #A table of AUC
 noacsr::source_all_functions()
 importDataOfi <- import_data_ofi(data)
@@ -58,7 +57,7 @@ tableFiveData <- data.frame(Auditfilter = c("SBP > 90", "Dead at 30 days",
                               "> 30 min until first CT",
                               "Massive transfusion", "CPR and thoracotomy", 
                               "Liver or spleen injury", 
-                              "No anticoagulantia within 72 hours after TBI"), 
+                              "No anticoagulants within 72 hours after TBI"), 
                             Design = c("Manually created","Manually created", "Manually created","Manually created","Manually created", "Manually created", "Manually created", "Original", "Original", "Original", "Original"))
 tableOneData <- select(selectedData, ofi, 
                        Gender,pt_age_yrs,ISS,  
@@ -67,9 +66,8 @@ tableOneData <- select(selectedData, ofi,
                        res_survival,dt_ed_emerg_proc,
                        host_care_level,Tr_Nivå
                        )
-#data inclusion for my table one
 
-#plotting my table one
+#data inclusion for my table one
 counter <- 1
 for(auditFilter in selectedAuditFilter){
   twoVariableData <- select(selectedData, all_of(auditFilter), ofi)
@@ -88,7 +86,11 @@ for(auditFilter in selectedAuditFilter){
   counter <- counter + 1
 }
 tableOne <- tableOneData %>%
-  mutate(host_care_level = factor(host_care_level, levels = c("Emergency department", "General ward", "Surgical ward", "Specialist ward/Intermediate ward", "Intensive care unit")))  %>%
+  mutate(host_care_level = factor(host_care_level, levels = c("Emergency department", 
+                                                              "General ward", 
+                                                              "Surgical ward", 
+                                                              "Specialist ward/Intermediate ward", 
+                                                              "Intensive care unit")))  %>%
   tbl_summary(by = ofi,
                         missing = "ifany",
                         type = all_dichotomous() ~ "categorical",
@@ -108,12 +110,16 @@ tableOne <- tableOneData %>%
                          ED = Emergency Department;
                          SBP = Systolic Blood Pressure;
                          GCS = Glascow Coma Scale;
-                        CT = Computer Tomopgraphy;") %>%
+                        CT = Computer Tomography;") %>%
   modify_header(label = "",
                 stat_1 = "**No**, (N = {n})",
                 stat_2 = "**Yes**, (N = {n})") %>%
   modify_spanning_header(c("stat_1", "stat_2") ~ "**OFI**") %>%
-  bold_labels()
+  bold_labels() %>%
+  add_p(test = list(all_continuous() ~ "kruskal.test")) %>%
+  bold_p() %>%
+  as_gt()
+
 ############TABLE ONE#######################
 tableThree <- tableOfCalculatedData1 %>%
   gt() %>% 
@@ -135,7 +141,8 @@ tableThree <- tableOfCalculatedData1 %>%
                   ")
 ############TABLE TWO#######################
 tableFour <- gt(tableOfCalculatedData2) %>% 
-  cols_label(PValue = "p-value",
+  cols_label(PValue = "p-value (AUC = 0.5)",
+             PValue0.8 = "p-value (AUC = 0.8)",
              Auditfilter = "Audit filter") %>%
   cols_align(align = "left") %>%
   tab_source_note("Definition of abbreviations: 
@@ -145,7 +152,7 @@ tableFour <- gt(tableOfCalculatedData2) %>%
   ISS = Injury Severity Score;
   GCS = Glascow Coma Scale;
   ICU = Intensive Care Unit;
-  CT = Computer Tomopgraphy;
+  CT = Computer Tomography;
   ED = Emergency Department; 
   CPR = Cardiopulmonary Resuscitation;
   TBI = Traumatic Brain Injury
@@ -161,7 +168,7 @@ tableTwo <- gt(tableFourData) %>%
   ISS = Injury Severity Score;
   GCS = Glascow Coma Scale;
   ICU = Intensive Care Unit;
-  CT = Computer Tomopgraphy;
+  CT = Computer Tomography;
   ED = Emergency Department; 
   CPR = Cardiopulmonary Resuscitation;
   TBI = Traumatic Brain Injury
@@ -177,7 +184,7 @@ tableFive <- gt(tableFiveData) %>%
   ISS = Injury Severity Score;
   GCS = Glascow Coma Scale;
   ICU = Intensive Care Unit;
-  CT = Computer Tomopgraphy;
+  CT = Computer Tomography;
   ED = Emergency Department; 
   CPR = Cardiopulmonary Resuscitation;
   TBI = Traumatic Brain Injury
@@ -186,5 +193,6 @@ tableFive <- gt(tableFiveData) %>%
   tableThree %>% gtsave(filename = "tab_3.html")
   tableFour %>% gtsave(filename = "tab_4.html")
   tableFive %>% gtsave(filename = "tab_5.html")
+   tableOne %>% gtsave(filename = "tab_1.html")
   
   
