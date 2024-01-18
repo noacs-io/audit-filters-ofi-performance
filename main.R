@@ -116,10 +116,8 @@ tableOne <- tableOneData %>%
                 stat_2 = "**Yes**, (N = {n})") %>%
   modify_spanning_header(c("stat_1", "stat_2") ~ "**OFI**") %>%
   bold_labels() %>%
-  add_p(test = list(all_continuous() ~ "kruskal.test")) %>%
-  bold_p() %>%
-  as_gt()
-
+  add_p(test = list(all_continuous() ~ "wilcox.test")) %>%
+  bold_p() 
 ############TABLE ONE#######################
 tableThree <- tableOfCalculatedData1 %>%
   gt() %>% 
@@ -193,6 +191,6 @@ tableFive <- gt(tableFiveData) %>%
   tableThree %>% gtsave(filename = "tab_3.html")
   tableFour %>% gtsave(filename = "tab_4.html")
   tableFive %>% gtsave(filename = "tab_5.html")
-   tableOne %>% gtsave(filename = "tab_1.html")
+   #tableOne %>% gtsave(filename = "tab_1.html")
   
   
