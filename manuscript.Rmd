@@ -1,258 +1,405 @@
 ---
-title: "Manuscript title here"
-output: html_document
-author: "Your name here"
+title: Performance of Individual Audit Filters in Predicting Opportunities for Improvement
+  in Adult Trauma Patients
+author: "Josef Al-Khalili"
+output:
+  html_document: default
+  word_document: default
+  pdf_document: default
+subtitle: "A single-center registry-based retrospective cohort"
 bibliography: bibliography.bib
 csl: vancouver.csl
+editor_options:
+  markdown:
+    wrap: 72
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r sourcecode, echo=FALSE, fig.align="center", warning=FALSE, message=FALSE,error=FALSE}
+source("main.R")
+library(rofi)
+library(dplyr)
+library(ggplot2)
+library(pROC)
+library(gtsummary)
+library(gt)
+library(boot)
+library(knitr)
+library(webshot2)
+
+
 ```
 
-<!-- This is an R Markdown document. Markdown is a simple formatting
-syntax for authoring HTML, PDF, and MS Word documents. For more
-details on using R Markdown see http://rmarkdown.rstudio.com -->
+# Abstract
 
-<!-- This is a comment and will not be present in the compiled
-document. Try "knitting" this document by clicking the knit button up
-to the left, or by running `rmarkdown::render("manuscript.Rmd")` in
-the console and you should only see headings -->
+## Background
 
-<!-- Structure and most comments are from the Strengthening the
-reporting of observational studies in epidemiology (STROBE) statement,
-see https://www.strobe-statement.org/. For more explanations see the
-paper Strengthening the Reporting of Observational Studies in
-Epidemiology (STROBE):explanation and elaboration.  -->
+Trauma audit filters, based on standards of care, serve as screening
+tools for patient cases to be assessed at interdisciplinary mortality
+and morbidity conferences. These conferences aim to identify potential
+opportunities for improvement in the care of trauma patients. This study
+aimed to determine the effectiveness of individual audit filters in
+predicting opportunities for improvement and their relevance as
+screening tools for morbidity and mortality conferences.
 
-<!-- Indicate the study’s design with a commonly used term in the
-title, for example: "Associations between resuscitation interventions
-and opportunities for improvement in adult trauma patients: A cohort
-study" -->
+## Methods
 
-Abstract
-========
+We conducted a single-centre registry-based retrospective cohort study
+based on register data collected between 2013 and 2022 from the
+Karolinska University Hospital in Sweden. Performance was measured using
+sensitivity, specificity and Cohen's kappa coefficient for ten audit
+filters.
 
-<!-- Provide in the abstract an informative and balanced summary of
-what was done and what was found. Not more than 300 words. -->
+## Results
 
-Background
-----------
+Our analysis included 8,309 patients. Audit filters demonstrated
+inconsistent agreement between filters and opportunities for improvement
+with a Cohen's kappa coefficient ranging from -0.07 (95% confidence
+interval [CI], -0.14-0) for "GCS \< 9 and not intubated" and 0.08 (CI,
+0.05-0.12) for "Massive transfusion". The Cohen's kappa coefficient for
+all audit filters combined was 0.04 (CI, 0.03-0.04).
 
-Methods
--------
+## Conclusion
 
-Results
--------
+No individual audit filter performed well in predicting opportunities
+for improvement, which suggests that the current method of screening for
+mortality and morbidity conferences should be revisited.
 
-Conclusion
-----------
+Level III, Prognostic/Epidemiological ofi, audit filter, quality
+improvement
 
-Introduction
-============
+# Introduction
 
-<!-- Explain the scientific background and rationale for the
-investigation being reported. End by stating the aim or specific
-objectives, including any prespecified hypotheses. The introduction
-should not be longer than 1-1.5 pages, typically 4-5 paragraphs, each
-6-8 lines long. Support every statement with a citation -->
+Trauma, defined as a physical injury and the body's associated response,
+causes 8-9% of global deaths annually [@world2014injuries;
+@roth2018global] and ranks highest in disability-adjusted life-years
+(DALYs) between ages 10-49 years [@vos2020global], impacting
+individuals, communities and society at large [@newnam2014impacts;
+@david2022measuring]. Road traffic injuries alone cost approximately 2%
+of gross domestic product (GDP) in high-income countries
+[@world2014injuries]. Despite advancements in trauma care, preventable
+deaths [@kwon2014pooled; @ghorbani2018analysis;
+@teixeira2007preventable; @vioque2014classifying] and avoidable medical
+errors persist [@nikouline2021errors; @vioque2014classifying;
+@o2013opportunities; @teixeira2007preventable]. To address this, trauma
+quality improvement programs [@American2022resources], commonly
+including mortality and morbidity conferences [@world2009guidelines]
+have been implemented. The conferences have shown to foster error
+reduction and encourage reporting [@kong2016analysis] without negative
+feedback [@lazzara2022morbidity].
 
-You can cite document here like this [@exampleKey9999]. Open the file
-bibliography.bib to learn more.
+Audit filters are criteria used to identify cases for mortality and
+morbidity conferences aiming to pinpoint potential opportunities for
+improvement [@American2022resources]. Audit filters can involve outcomes
+such as "death" or adherence to guidelines, such as "delay to treatment"
+[@world2009guidelines]. Opportunities for improvement are typically
+associated with failures in initial care [@vioque2014classifying] like
+airway management, fluid resuscitation, haemorrhage control and chest
+injury management [@sanddal2011analysis; @roy2017learning;
+@o2013opportunities]. There is a lack of common, evidence-based set of
+audit filters for evaluating trauma care quality [@stelfox2010quality],
+and while early studies reported mortality reduction
+[@chadbunchachai2001comparative; @chadbunchachai2003study], newer
+studies differ [@evans2009audit; @willis2008interpreting]. Moreover, the
+use of audit filters has been associated with high frequencies of false
+positives, ranging from 24% to 80% in different contexts
+[@sanddal2011analysis; @roy2017learning; @ghorbani2018analysis].
 
-Methods 
-=======
+Few studies have focused on non-mortality outcome measures, for
+evaluating performance of audit filters but the evidence remains
+inconsistent [@di2008acscot; @glance2012association] and some audit
+filters do not appear to correlate with opportunities for improvement at
+all [@lewis2017delay]. However, the perceived usefulness of audit
+filters remains high [@berg2022perceived]. The aim of this study is to
+determine the performance of individual audit filters in predicting
+opportunities for improvement and their relevance as a screening tool
+for mortality and morbidity conferences
 
-Study design
-------------
+# Methods
 
-<!-- Present key elements of study design -->
+## Study design
 
-Setting
--------
+We conducted a single-centre registry-based retrospective cohort study
+of all trauma patients included in both the Karolinska University
+Hospital trauma registry and trauma care quality database between 2013
+and 2022 to compare the performance of audit filters in their ability to
+predict opportunities for improvement. This study was approved by the
+Swedish Ethical Review Authority, approval number 2021-02541 and
+2021-03531.
 
-<!-- Describe the setting, locations, and relevant dates, including
-periods of recruitment, exposure, follow-up, and data collection -->
+## Setting
 
-Participants
-------------
+Karolinska University Hospital manages around 1,500 trauma patients
+annually. The Karolinska Trauma Registry, which reports to the national
+trauma registry SweTrau [@SweTrau], includes all patients that result in
+trauma team activation or who have an Injury Severity Score (ISS) of
+more than 9. This registry includes data on vital signs, timings,
+injuries, interventions, and patient demographics as per the European
+consensus statement [@ringdal2008utstein]
 
-<!-- Cohort study: Give the eligibility criteria, and the sources and
-methods of selection of participants. Describe methods of
-follow-up. For matched studies, give matching criteria and number of
-exposed and unexposed -->
+The trauma centre at the Karolinska University Hospital also keeps a
+local care quality database with information intended for the mortality
+and morbidity conferences, including triggered audit filters and
+identified opportunities for improvement. Opportunities for improvement
+are assessed in multiple stages of scrutiny. Notably, patient deaths are
+always reviewed to determine preventability and to identify
+opportunities for improvement.
 
-<!-- Case-control study: Give the eligibility criteria, and the
-sources and + methods of case ascertainment and control
-selection. Give the rationale for the choice of cases and
-controls. For matched studies, give matching criteria and the number
-of controls per case -->
+During the study period, the screening of patient cases for potential
+opportunities for improvement was formalised. Prior to 2017, not all
+patient cases were subjected to an initial evaluation by a specialised
+nurse. However, following 2017 all patient cases underwent screening.
+Importantly, audit filters and an initial evaluation by a specialised
+nurse has consistently functioned as the screening tool for mortality
+and morbidity conferences to identify potential opportunities for
+improvement.
 
-<!-- Cross-sectional study: Give the eligibility criteria, and the
-sources and methods of selection of participants -->
+## Participants
 
-Variables and data sources/measurements
----------------------------------------
+The study included all patients treated at Karolinska University
+Hospital from 2013 to 2022 and who were screened for opportunities for
+improvement. Patients aged under 15 years were excluded.
 
-<!-- Clearly define all outcomes, exposures, predictors, potential
-confounders, and effect modifiers. Give diagnostic criteria, if
-applicable. For each variable of interest, give sources of data and
-details of methods of assessment (measurement). Describe comparability
-of assessment methods if there is more than one group -->
+## Variables and data sources/measurements
 
-Bias 
-----
+The outcome was opportunities for improvement, as established by the
+mortality and morbidity conference, and was treated dichotomously as
+"Yes - At least one opportunity for improvement identified" and "No - No
+opportunity for improvement identified".
 
-<!-- Describe any efforts to address potential sources of bias -->
+The ten audit filters used at the Karolinska University Hospital served
+as the exposure variables. For each audit filter, we identified the
+cohort of patients in which the filter was applicable, and evaluated
+their performance in that cohort: For "ISS \> 15 and no team activation"
+and "ISS \> 15 and not in ICU" we evaluated the filters' performance in
+patients with an ISS greater than 15; for "GCS \< 9 and not intubated"
+we analysed patients with a GCS less than 9; for "\> 30 min until first
+intervention" and "\> 60 min until first CT" we selected patients who
+underwent a first intervention and those who received a CT respectively.
+Lastly, for "No anticoagulants within 72 hours after TBI" we identified
+patients with head trauma as defined by the presence of at least one
+head injury according to available AIS codes. See Table 1 for
 
-Study size 
-----------
+The data was retrieved from the Karolinska Trauma Registry and trauma
+care quality database. Patient data on vital signs, care processes and
+interventions, level of care and time aspects was retrieved from the
+trauma registry whereas the exposure, audit filters and the outcome,
+opportunities for improvement were retrieved from the trauma care
+quality database.
 
-<!-- Explain how the study size was arrived at -->
+## Statistical methods
 
-Quantitative variables
-----------------------
+We used R [@R2022language] for statistical analysis. Patient
+characteristics for cases with and without opportunities for improvement
+were compared using the Wilcoxon signed-rank test for continuous
+variables and the Chi-squared test for categorical variables. The
+performance of audit filters in predicting opportunities for improvement
+was assessed by calculating the sensitivity, specificity and Cohen's
+kappa. A Cohen's kappa of 0-0.2 was interpreted as "no" agreement while
+a value from 0.2 to 1 was interpreted as "minimal" up to "perfect"
+agreement [@mchugh2012interrater]. Bootstrapping with 1,000 iterations
+was applied to estimate 95% confidence intervals for all performance
+metrics. We selected cohorts relevant to each filter: For "ISS \> 15 and
+no team activation" and "ISS \> 15 and not in ICU" we examined patients
+with an ISS greater than 15. For "GCS \< 9 and not intubated," we
+focused on patients with a GCS less than 9. Lastly, for "No
+anticoagulants within 72 hours after TBI" we identified patients with
+head trauma as defined by the presence of at least one head injury
+according to available AIS codes. Missing values were numbered but
+ignored in the analysis for example those without a registered blood
+pressure was ignored when analysing "SBP \< 90".
 
-<!-- Explain how quantitative variables were handled in the
-analyses. If applicable, describe which groupings were chosen and why
--->
+# Results
 
-Statistical methods
--------------------
+After excluding patients younger than 15 years and patients not screened
+for opportunities for improvement, a total of 8,309 individuals were
+included in the study. Out of these 8,309 patients, 512 (6.2%) patients
+had an opportunity for improvement, see Figure 1.
 
-<!-- 
+Patients with an opportunity for improvement had significantly higher
+median age,
+`r inline_text(tableOne, variable = pt_age_yrs, column = stat_2, pattern = "{median} (IQR {p25}, {p75})")`
+years vs
+`r inline_text(tableOne, variable = pt_age_yrs, column = stat_1, pattern = "{median} (IQR {p25}, {p75};")`
+`r inline_text(tableOne, variable = pt_age_yrs, column = "p.value")`)
+years, median ISS
+`r inline_text(tableOne, variable = ISS, column = stat_2, pattern = "{median} (IQR {p25}, {p75})")`
+vs
+`r inline_text(tableOne, variable = ISS, column = stat_1, pattern = "{median} (IQR {p25}, {p75};")`
+`r inline_text(tableOne, variable = ISS, column = "p.value")`) and
+intubations in the emergency department (ED),
+`r inline_text(tableOne, variable = ed_intubated, level = "Yes", column = stat_2)`
+patients vs
+`r inline_text(tableOne, variable = ed_intubated, level = "Yes", column = stat_1, pattern = "{N} ({p}%;")`
+`r inline_text(tableOne, variable = ed_intubated, column = "p.value")`)
+patients. Patients with opportunity for improvement had longer times to
+first major intervention from hospital arrival median
+`r inline_text(tableOne, variable = dt_ed_emerg_proc, column = stat_2, pattern = "{median} (IQR {p25}, {p75})")`
+minutes vs
+`r inline_text(tableOne, variable = dt_ed_emerg_proc, column = stat_1, pattern = "{median} (IQR {p25}, {p75};")`
+`r inline_text(tableOne, variable = dt_ed_emerg_proc, column = "p.value")`)
+minutes. and longer times to first CT, median
+`r inline_text(tableOne, variable = dt_ed_first_ct, column = stat_2, pattern = "{median} (IQR {p25}, {p75})")`
+minutes vs
+`r inline_text(tableOne, variable = dt_ed_first_ct, column = stat_1, pattern = "{median} (IQR {p25}, {p75};")`
+`r inline_text(tableOne, variable = dt_ed_first_ct, column = "p.value")`)
+minutes.
 
-(a) Describe all statistical methods, including those used to control
-for confounding
+The frequency of opportunities for improvement was highest in patients
+admitted to the intensive care unit,
+`r inline_text(tableOne, variable = host_care_level, level = "Intensive care unit", column = stat_2)`
+patients, compared to general ward
+`r inline_text(tableOne, variable = host_care_level, level = "General ward", column = stat_2)`.
+Notably, there was a statistically significant correlation between GCS
+at the ED and opportunities for improvement (p \< 0.001). Gender, mean
+systolic blood pressure, death at 30 days and trauma team activation
+were not significantly correlated with opportunities for improvement
+(p\>0.05). The highest amount of missing data was observed with "time to
+first major intervention", which was missing for 5,990 patients (72.1%),
+partly because the absence of an initial CT or major intervention due to
+the clinical management being observed resulted in their registration as
+missing. See Table 2 for details of selected patient characteristics.
 
-(b) Describe any methods used to examine subgroups and interactions
+## Performance of Individual Audit Filters
 
-(c) Explain how missing data were addressed 
+The number of patient cases flagged by each individual audit filter
+varied between (n = 107, 27.4%) for "GCS \< 9 and not intubated" and (n
+= 3907, 53.5%) for "\>30 min until CT". The highest number of missing
+values was observed with "\> 60 min until first intervention" (n = 5990,
+72,1%). The lowest number of missing values was observed with "dead at
+30 days" and "ISS \> 15 and not in ICU" (n = 11, 0.1%). The largest
+cohort was observed with "Dead at 30 days" (n = 8298, 99.9%) and the
+smallest cohort was observed with "GCS \< 9 and not intubated" (n = 390,
+4.7%). In total 5977 out of 8309 (71.9%) patient cases were flagged by
+at least one audit filter. See Table 1 for the cohort size, number of
+missing values and number of flagged patient cases for each audit
+filter.
 
-(d) 
+The audit filter with the highest sensitivity was "\> 60 min until first
+intervention" (83.3%, 95% CI, 79.2-87.5). The lowest sensitivity was
+seen in "SBP \< 90" (8%, 95% CI, 5.6-10.2) and "Dead at 30 days" (8%,
+95% CI, 5.6-10.2). The audit filter with the highest specificity was
+"Massive transfusion" (95.8%, 95% CI, 95.4-96.3). The lowest specificity
+was seen in "ISS \> 15 and no team activation" (21.6%, 95% CI,
+19.9-23.2). The sensitivity for all audit filters combined was 92.6%
+(95% CI, 90.5-95) and the specificity was 29.4% (95% CI, 28.4-30.5).
 
-Cohort study: If applicable, explain how loss to follow-up was addressed 
+The audit filter with the highest Cohen's kappa was "Massive
+transfusion" (0.08, 95% CI, 0.05-0.12). The smallest Cohen's kappa was
+seen in "GCS \< 9 and not intubated" (-0.07, 95% CI, -0.14-0. The
+Cohen´s kappa for all audit filters combined was 0.04 (95% CI,
+0.03-0.04). See Table 3 for the performance of all audit filters using
+sensitivity, specificity and Cohen's kappa.
 
-Case-control study:If applicable, explain how matching of cases and
-controls was addressed
-
-Cross-sectional study: If applicable, describe analytical methods
-taking account of sampling strategy
-
-(e) Describe any sensitivity analyses
--->
-
-Results
-=======
-
-<!-- 
-
-Participants
-------------
-
-(a) Report numbers of individuals at each stage of study—eg numbers
-potentially eligible, examined for eligibility, confirmed eligible,
-included in the study, completing follow-up, and analysed
-
-(b) Give reasons for non-participation at each stage
-
-(c) Consider use of a flow diagram
-
-Descriptive data
-----------------
-
-(a) Give characteristics of study participants (eg demographic,
-clinical, social) and information on exposures and potential
-confounders
-
-(b) Indicate number of participants with missing data for each
-variable of interest
-
-(c) Cohort study — Summarise follow-up time (eg, average and total
-amount)
-
-Outcome data
-------------
-
-Cohort study — Report numbers of outcome events or summary measures
-over time
-
-Case-control study — Report numbers in each exposure category, or
-summary measures of exposure
-
-Cross-sectional study — Report numbers of outcome events or summary
-measures
-
-Main results
-------------
-
-(a) Give unadjusted estimates and, if applicable, confounder-adjusted
-estimates and their precision (eg, 95% confidence interval). Make
-clear which confounders were adjusted for and why they were included
-
-(b) Report category boundaries when continuous variables were
-categorized
-
-(c) If relevant, consider translating estimates of relative risk into
-absolute risk for a meaningful time period
-
-Other analyses 
---------------
-
-Report other analyses done—eg analyses of subgroups and interactions,
-and sensitivity analyses 
--->
-
-You can include code in this document like this:
-
-```{r main, echo=FALSE}
-source("main.R") ## This "imports" the main script file of your project and run any code in it
+```{r fig1, echo=FALSE, fig.align="center", warning=FALSE, message=FALSE, error=FALSE}
+knitr::include_graphics("ofi-flowchart.pdf")
 ```
 
-You can also embed plots:
+# Discussion
 
-```{r plot, echo=FALSE}
-plot(pressure)
-```
+This study shows that audit filters, individually or in combination,
+were not effective in predicting opportunities for improvement. As a
+result, the development of a new screening method to better identify
+potential opportunities for improvement is advised.
 
-You can also mix text and code, so called inline code, like this: `r 2+5`.
+Few studies have examined the link between individual audit filters and
+opportunities for improvement. Given the numerous different audit
+filters, comparing our findings to studies that utilize a different set
+of audit filters proves challenging. The delay-related audit filters in
+this study: "\> 60 min until first intervention", "\> 30 min until first
+CT" did not predict opportunities for improvement. Interestingly, time
+to definitive treatment and time to first CT was associated with
+opportunities for improvement in the patient characteristics analysis,
+similar to a previous study by Albaaj et al. [@albaaj2023patient] on the
+association between patient factors and opportunities for improvement.
+However, while statistically significant, the observed effect size
+suggests a diminishable clinical relevance. Similarly, one study by
+Lewis et al. [@lewis2017delay] found that delays to the operating room
+exceeding 2 hours from emergency department arrival did not individually
+predict opportunities for improvement.
 
-Discussion
-==========
+Furthermore, the audit filter "GCS \< 9 and not intubated" showed no
+correlation with opportunities for improvement in our study. Comparably,
+Willis et al. [@willis2008interpreting] found no association between
+"GCS below 9 and not intubated" and mortality or length of hospital stay
+but it was associated with shorter stays in the ICU. Contrary, Glance et
+al. [@glance2012association] found that "No definitive airway in a
+patient with GCS score ≤ 8" was associated with increased mortality risk
+but paradoxically a reduced risk of major complication and death
+combined. This was concluded as reflective of differences in clinical
+decision rather than quality of care [@willis2008interpreting;
+@glance2012association]. For instance, an abnormal GCS because of
+intoxication is managed differently to an abnormal GCS due to head
+injury. Furthermore, Willis et al. found that "failure to activate
+trauma team at major trauma service" was not associated with poor
+outcomes, similar to our findings.
 
-<!--
+Di Bartolomeo et al. [@di2008acscot] studied the association between
+four audit filters ("Ambulance scene time \>20 min", "Patient with a
+Glasgow coma scale score (GCS) \< 13 who does not receive a CT scan of
+the head within 2 h of arrival at the hospital", "Patients with epidural
+or subdural haematoma receiving craniotomy \>4 h after arrival at ED,
+excluding those performed for intracranial pressure monitoring",
+"Abdominal, thoracic, vascular or cranial surgery performed \>24 h after
+arrival") and 30-day mortality and 6-month disability. One audit filter:
+"abdominal, thoracic, vascular or cranial surgery performed \>24 h after
+arrival" showed contradictory outcomes with reduced mortality but
+increased disability. This may be explained by aggressive trauma care
+producing additional survivors with poor functional outcomes or
+underestimating the mortality rate beyond 30 days [@di2008acscot]. The
+rest of the audit filters showed no significant association with
+outcomes.
 
-Key results
------------
-Summarise key results with reference to study objectives
+A study by Chadbunchachai et al. [@chadbunchachai2001comparative]
+reported a reduction in preventable deaths following the implementation
+of audit filters, with similar results in a subsequent study
+[@chadbunchachai2003study]. In 2009 Evans et al. [@evans2009audit]
+conducted a review to evaluate the effectiveness of audit filters in
+improving trauma care quality but found no studies of sufficient
+methodological quality for inclusion. The studies by Chadbunchachai et
+al. were excluded due to insufficient pre- and post-implementation data
+points. They concluded that there is no high-quality evidence supporting
+the use of audit filters in improving trauma care. Similarly, Stelfox et
+al. [@stelfox2010quality] found no clearly defined, evidence-based set
+of audit filters. A more recent study by Berg et al. [@berg2024effects]
+also observed decreased mortality after the implementation of audit
+filters in India. Furthermore, the perceived usefulness of audit filters
+in trauma quality improvement among health care professionals remains
+high [@berg2022perceived; @santana2014development].
 
-Limitations
------------
+There are some limitations in this study. Firstly, it is unlikely that
+the specific associations presented in this study are generalizable to
+other hospitals with similar systems [@di2008acscot;
+@glance2012association], but the broader finding that audit filters are
+poorly associated with opportunities for improvement is likely to be
+externally valid [@world2009guidelines]. Secondly, instances where the
+same patient case had multiple audit filters flagged introduce
+uncertainty regarding which specific audit filter truthfully predicted
+an opportunity for improvement, introducing a level of confounding.
+Finally, the number of missing values differed significantly among the
+audit filters, resulting in varying degrees of validity for each audit
+filter.
 
-Discuss limitations of the study, taking into account sources of
-potential bias or imprecision.  Discuss both direction and magnitude
-of any potential bias
+The static nature of audit filters inherently limit their adaptability
+to emerging healthcare challenges and resolved quality gaps, reducing
+their utility over time [@glance2012association]. Therefore, regular
+evidence-based reviews are needed to ensure performance
+[@santana2014development], though such reviews may be cost-prohibitive.
+Furthermore, they may overshadow other contributing factors to
+opportunities for improvement, i.e confounding variables
+[@glance2012association; @willis2008interpreting].
 
-Interpretation
---------------
+In summary, audit filters are widely used as a tool in quality
+improvement programmes and should reflect current gaps in trauma care
+quality. In this study, no individual audit filter or their combination
+were successful in predicting opportunities for improvement. Given these
+results, in combination with the lack of high-quality evidence showing
+that implementing audit filters improve patient outcomes, future studies
+should focus on developing new tools with higher predictive ability to
+identify opportunities for improvement.
 
-Give a cautious overall interpretation of results considering
-objectives, limitations, multiplicity of analyses, results from
-similar studies, and other relevant evidence
+# Acknowledgements
 
-Generalisability
-----------------
+The authors thank all professionals taking part in the monthly mortality
+and morbidity conferences.
 
-Discuss the generalisability (external validity) of the study results
-
--->
-
-Conclusion
-==========
-
-<!-- Give a short conclusion, corresponding to the aim -->
-
-References
-==========
-
-<!-- Do not edit by hand, references will be inserted and formatted automatically once you knit this document -->
+# References
